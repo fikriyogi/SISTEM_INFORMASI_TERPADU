@@ -301,14 +301,14 @@
                 </ul>
             </div>
             <div class="nk-menu-content" data-content="navDashboards">
-                <h5 class="title">Dashboards</h5>
+                <h5 class="title">MENU DESA</h5>
                 <ul class="nk-menu">
                     <li class="nk-menu-item">
                         <a href="index.html" class="nk-menu-link">
                             <span class="nk-menu-icon">
                                 <em class="icon ni ni-dashboard-fill"></em>
                             </span>
-                            <span class="nk-menu-text">Default Dashboard</span>
+                            <span class="nk-menu-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
@@ -316,7 +316,7 @@
                             <span class="nk-menu-icon">
                                 <em class="icon ni ni-bag-fill"></em>
                             </span>
-                            <span class="nk-menu-text">Ecommerce Dashboard</span>
+                            <span class="nk-menu-text">Penduduk</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
@@ -324,7 +324,7 @@
                             <span class="nk-menu-icon">
                                 <em class="icon ni ni-bag-fill"></em>
                             </span>
-                            <span class="nk-menu-text">Sales Dashboard</span>
+                            <span class="nk-menu-text">Dusun</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
@@ -332,7 +332,7 @@
                             <span class="nk-menu-icon">
                                 <em class="icon ni ni-growth-fill"></em>
                             </span>
-                            <span class="nk-menu-text">Analytics Dashboard</span>
+                            <span class="nk-menu-text">RT / RW</span>
                         </a>
                     </li>
                 </ul>

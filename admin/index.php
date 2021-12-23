@@ -374,6 +374,190 @@
                             </div>
                         </div>
                         <div class="nk-block">
+                            <div class="row gy-gs">
+                                <div class="col-lg-5 col-xl-4">
+                                    <div class="nk-block">
+                                        <div class="nk-block-head-xs">
+                                            <div class="nk-block-head-content">
+                                                <h5 class="nk-block-title title">Overview</h5>
+                                            </div>
+                                        </div>
+                                        <div class="nk-block">
+                                            <div class="card card-bordered text-light is-dark h-100">
+                                                <div class="card-inner">
+                                                    <div class="nk-wg7">
+                                                        <div class="nk-wg7-stats">
+                                                            <div class="nk-wg7-title">TOTAL PENDUDUK</div>
+                                                            <div class="number-lg amount"><?= $user_home->count('warga','','') ;?></div>
+                                                        </div>
+                                                        <div class="nk-wg7-stats-group">
+                                                            <div class="nk-wg7-stats w-50">
+                                                                <div class="nk-wg7-title">LAKI-LAKI</div>
+                                                                <div class="number-lg"><?= $user_home->count('warga','jk','L') ;?></div>
+                                                            </div>
+                                                            <div class="nk-wg7-stats w-50">
+                                                                <div class="nk-wg7-title">PEREMPUAN</div>
+                                                                <div class="number-lg"><?= $user_home->count('warga','jk','P') ;?></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-wg7-foot">
+                                                                    <span class="nk-wg7-note">
+                                                                        Last activity at <span>19 Nov, 2019</span>
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-xl-8">
+                                    <div class="nk-block">
+                                        <div class="nk-block-head-xs">
+                                            <div class="nk-block-between-md g-2">
+                                                <div class="nk-block-head-content">
+                                                    <h5 class="nk-block-title title">Statistik</h5>
+                                                </div>
+                                                <div class="nk-block-head-content">
+                                                    <a href="/demo5/crypto/wallets.html" class="link link-primary">See All</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="view.php?v=<?='desa'?>">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-btc"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">DESA</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    <?= $user_home->count('ds_identitas','','') ;?></span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-btc"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">DUSUN</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    <?= $user_home->count('ds_identitas','','') ;?></span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-eth"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">RT / RW</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    0.000560<span class="currency currency-eth">ETH</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nk-block nk-block-md">
+                                        <div class="nk-block-head-xs">
+                                            <div class="nk-block-between-md g-2">
+                                                <div class="nk-block-head-content">
+                                                    <h6 class="nk-block-title title">STRUKTUR ELEMEN</h6>
+                                                </div>
+                                                <div class="nk-block-head-content">
+                                                    <a href="/demo5/crypto/wallets.html" class="link link-primary">See All</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-btc"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">RUMAH SAKIT</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    <?= $user_home->count('rs_identitas','','') ?>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-btc"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">PUSKESMAS</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    4.434953<span class="currency currency-btc">BTC</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card bg-light">
+                                                    <div class="nk-wgw sm">
+                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                            <div class="nk-wgw-name">
+                                                                <div class="nk-wgw-icon">
+                                                                    <em class="icon ni ni-sign-eth"></em>
+                                                                </div>
+                                                                <h5 class="nk-wgw-title title">SEKOLAH</h5>
+                                                            </div>
+                                                            <div class="nk-wgw-balance">
+                                                                <div class="amount">
+                                                                    <?= $user_home->count('sc_sekolah','','') ?>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-block">
                             <div class="row g-gs">
                                 <div class="col-xxl-3 col-sm-6">
                                     <div class="card">
@@ -381,12 +565,12 @@
                                             <div class="card-inner">
                                                 <div class="card-title-group">
                                                     <div class="card-title">
-                                                        <h6 class="title">Total Warga</h6>
+                                                        <h6 class="title">Total Penduduk</h6>
                                                     </div>
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?php echo $user_home->count('warga','',''); ?></div>
+                                                        <div class="amount"><?= $user_home->count('warga','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="ipdIncome"></canvas>
                                                         </div>
@@ -409,12 +593,12 @@
                                             <div class="card-inner">
                                                 <div class="card-title-group">
                                                     <div class="card-title">
-                                                        <h6 class="title">Laki-Laki</h6>
+                                                        <h6 class="title">Total Desa</h6>
                                                     </div>
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?php echo $user_home->count('warga','jk','L'); ?></div>
+                                                        <div class="amount"><?= $user_home->count('ds_identitas','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="opdIncome"></canvas>
                                                         </div>
@@ -437,12 +621,12 @@
                                             <div class="card-inner">
                                                 <div class="card-title-group">
                                                     <div class="card-title ">
-                                                        <h6 class="title">Labotory Income</h6>
+                                                        <h6 class="title">Total Rumah Sakit</h6>
                                                     </div>
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount">$20,847</div>
+                                                        <div class="amount"><?= $user_home->count('rs_identitas','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="labIncome"></canvas>
                                                         </div>
@@ -465,12 +649,12 @@
                                             <div class="card-inner">
                                                 <div class="card-title-group">
                                                     <div class="card-title">
-                                                        <h6 class="title">Expense</h6>
+                                                        <h6 class="title">Total Sekolah</h6>
                                                     </div>
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount">$23,485</div>
+                                                        <div class="amount"><?= $user_home->count('sc_sekolah','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="todayExpense"></canvas>
                                                         </div>

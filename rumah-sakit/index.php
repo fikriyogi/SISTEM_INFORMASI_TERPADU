@@ -415,7 +415,7 @@
                                                 <div class="data">
                                                     <div class="data-group">
                                                         <div class="amount"><?php 
-                                                        $sql = $user_home->runQuery('SELECT count(*) FROM rs_pasien WHERE tgl_masuk=CURDATE()');
+                                                        $sql = $user_home->runQuery('SELECT count(*) FROM rs_pasien WHERE tgl_masuk=CURDATE() AND rs_id=".$_SESSION[app_id]." ');
                                                         $sql->execute(); 
                                                         $number_of_rows = $sql->fetchColumn();  
                                                         echo $number_of_rows;

@@ -3,9 +3,9 @@ session_start();
 require_once 'class.user.php';
 $user = new USER();
 
-if ($user->is_logged_in() != "") {
-    $user->redirect('home.php');
-}
+//if ($user->is_logged_in() != "") {
+//    $user->redirect('home.php');
+//}
 
 if (isset($_POST['btn-submit'])) {
     $email = $_POST['txtemail'];
@@ -48,9 +48,25 @@ if (isset($_POST['btn-submit'])) {
     }
 }
 
-include "header.php";
 ?>
+<!DOCTYPE html>
+<html class="no-js">
 
+<head>
+    <title><?php echo $row['userEmail']; ?></title>
+    <!-- Bootstrap -->
+    <link href="<?php echo SITE_URL; ?>public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="<?php echo SITE_URL; ?>css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="<?php echo SITE_URL; ?>styles.css" rel="stylesheet" media="screen">
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="<?php echo SITE_URL; ?>js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
 <body id="login">
 <div class="container">
 

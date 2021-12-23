@@ -9,7 +9,7 @@ $user_home = new USER();
 if (!$user_home->is_logged_in()) {
     $user_home->redirect('index.php');
 } else {
-    $stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=? AND app_id=?");
+    $stmt = $user_home->runQuery("SELECT * FROM tbl_users, tb_setting WHERE tbl_users.userID=? AND tb_setting.id=?");
     $stmt->execute([$_SESSION['userSession'], $_SESSION['app_id']]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $app_name = '';
@@ -18,7 +18,7 @@ if (!$user_home->is_logged_in()) {
         if ($user_home->set_divisi('admin')) {
             if ($user_home->set_level('Super Admin')) {
                 // code...
-                $app_name = $row['app_id'];
+                $app_name = $row['nama_aplikasi'];
                 $menu = 'Super Admin';
             }
         } else {

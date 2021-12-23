@@ -1,12 +1,13 @@
 
-<?php 
+<?php
     $title = 'Sistem Informasi';
     include 'header.php';
-    include 'menus.php'; 
+    include 'menus.php';
 ?>
+
+
 <div class="nk-main ">
-    <!-- id="testDiv" -->
-    <div class="nk-wrap " >
+    <div class="nk-wrap ">
         <div class="nk-header nk-header-fixed nk-header-fluid">
             <div class="container-fluid">
                 <div class="nk-header-wrap">
@@ -16,9 +17,9 @@
                         </a>
                     </div>
                     <div class="nk-header-brand d-xl-none">
-                        <a href="index.html" class="logo-link">
-                            <img class="logo-light logo-img" src="<?php echo SITE_URL;?>public/images/logo.png" srcset="<?php echo SITE_URL;?>public/images/logo2x.png 2x" alt="logo">
-                            <img class="logo-dark logo-img" src="<?php echo SITE_URL;?>public/images/logo-dark.png" srcset="<?php echo SITE_URL;?>public/images/logo-dark2x.png 2x" alt="logo-dark">
+                        <a href="/demo7/index.html" class="logo-link">
+                            <img class="logo-light logo-img" src="/demo7/images/logo.png" srcset="/demo7/images/logo2x.png 2x" alt="logo">
+                            <img class="logo-dark logo-img" src="/demo7/images/logo-dark.png" srcset="/demo7/images/logo-dark2x.png 2x" alt="logo-dark">
                         </a>
                     </div>
                     <div class="nk-header-search ml-3 ml-xl-0">
@@ -83,7 +84,7 @@
                                             <li class="chat-item">
                                                 <a class="chat-link" href="#">
                                                     <div class="chat-media user-avatar">
-                                                        <img src="<?php echo SITE_URL;?>public/images/avatar/b-sm.jpg" alt="">
+                                                        <img src="/demo7/images/avatar/b-sm.jpg" alt="">
                                                     </div>
                                                     <div class="chat-info">
                                                         <div class="chat-from">
@@ -100,7 +101,7 @@
                                                 <a class="chat-link" href="#">
                                                     <div class="chat-media user-avatar user-avatar-multiple">
                                                         <div class="user-avatar">
-                                                            <img src="<?php echo SITE_URL;?>public/images/avatar/c-sm.jpg" alt="">
+                                                            <img src="/demo7/images/avatar/c-sm.jpg" alt="">
                                                         </div>
                                                         <div class="user-avatar">
                                                             <span>AB</span>
@@ -123,7 +124,7 @@
                                             <li class="chat-item">
                                                 <a class="chat-link" href="#">
                                                     <div class="chat-media user-avatar">
-                                                        <img src="<?php echo SITE_URL;?>public/images/avatar/a-sm.jpg" alt="">
+                                                        <img src="/demo7/images/avatar/a-sm.jpg" alt="">
                                                         <span class="status dot dot-lg dot-success"></span>
                                                     </div>
                                                     <div class="chat-info">
@@ -264,30 +265,30 @@
                                     <div class="dropdown-inner user-card-wrap bg-lighter">
                                         <div class="user-card">
                                             <div class="user-avatar">
-                                                <span><?= $user_home->get_initial($row['userName']);?> </span>
+                                                <span>AB</span>
                                             </div>
                                             <div class="user-info">
-                                                <span class="lead-text"><?= $row['userName']?></span>
-                                                <span class="sub-text"><?= $row['userEmail']?></span>
+                                                <span class="lead-text">Abu Bin Ishtiyak</span>
+                                                <span class="sub-text">info@softnio.com</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="dropdown-inner">
                                         <ul class="link-list">
                                             <li>
-                                                <a href="hospital/user-profile.html">
+                                                <a href="/demo7/hospital/user-profile.html">
                                                     <em class="icon ni ni-user-alt"></em>
                                                     <span>View Profile</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="hospital/settings.html">
+                                                <a href="/demo7/hospital/settings.html">
                                                     <em class="icon ni ni-setting-alt"></em>
                                                     <span>Account Setting</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="hospital/settings-account-log.html">
+                                                <a href="/demo7/hospital/settings-account-log.html">
                                                     <em class="icon ni ni-activity-alt"></em>
                                                     <span>Login Activity</span>
                                                 </a>
@@ -297,7 +298,7 @@
                                     <div class="dropdown-inner">
                                         <ul class="link-list">
                                             <li>
-                                                <a href="<?php echo SITE_URL;?>logout.php">
+                                                <a href="#">
                                                     <em class="icon ni ni-signout"></em>
                                                     <span>Sign out</span>
                                                 </a>
@@ -316,20 +317,33 @@
                 <div class="nk-content-inner">
                     <div class="nk-content-body">
                         <div class="nk-block-head nk-block-head-sm">
-                            <div class="nk-block-between">
+                            <div class="nk-block-between g-3">
                                 <div class="nk-block-head-content">
-                                    <h3 class="nk-block-title page-title">IPD/OPD - Patient Lists</h3>
-                                    <div class="nk-block-des text-soft">
-                                        <p>You have total 163 ipd patients in hospital.</p>
+                                    <h3 class="nk-block-title page-title">Appointment List</h3>
+                                    <div class="nk-block-des text-soft d-none d-md-inline-flex">
+                                        <ul class="breadcrumb breadcrumb-pipe">
+                                            <li class="breadcrumb-item active">
+                                                <a href="#">Today's Total (150)</a>
+                                            </li>
+                                            <li class="breadcrumb-item ">
+                                                <a href="#">Visited (47)</a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="#">Waiting (12)</a>
+                                            </li>
+                                            <li class="breadcrumb-item ">
+                                                <a href="#">Canceled (1)</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="nk-block-head-content">
-                                    <a href="/demo7/hospital/patient-add.html" class="btn btn-icon btn-primary d-md-none">
+                                    <a href="#" data-toggle="modal" data-target="#addAppointment" class="btn btn-icon btn-primary d-md-none">
                                         <em class="icon ni ni-plus"></em>
                                     </a>
-                                    <a href="tambah-pasien.php" class="btn btn-primary d-none d-md-inline-flex">
+                                    <a href="#" data-toggle="modal" data-target="#addAppointment" class="btn btn-primary d-none d-md-inline-flex">
                                         <em class="icon ni ni-plus"></em>
-                                        <span>Tambah Pasien</span>
+                                        <span>Add Appointment</span>
                                     </a>
                                 </div>
                             </div>
@@ -345,19 +359,20 @@
                                                         <select class="form-select form-select-sm" data-search="off" data-placeholder="Bulk Action">
                                                             <option value="">Bulk Action</option>
                                                             <option value="email">Send Email</option>
-                                                            <option value="discharged">Discharged</option>
+                                                            <option value="change">Change Doctor</option>
+                                                            <option value="depart">Change Depart</option>
                                                             <option value="delete">Delete</option>
                                                         </select>
                                                     </div>
                                                     <div class="btn-wrap">
-                                                        <span class="d-none d-md-block">
-                                                            <button class="btn btn-dim btn-outline-light disabled">Apply</button>
-                                                        </span>
+                                                                    <span class="d-none d-md-block">
+                                                                        <button class="btn btn-dim btn-outline-light disabled">Apply</button>
+                                                                    </span>
                                                         <span class="d-md-none">
-                                                            <button class="btn btn-dim btn-outline-light btn-icon disabled">
-                                                                <em class="icon ni ni-arrow-right"></em>
-                                                            </button>
-                                                        </span>
+                                                                        <button class="btn btn-dim btn-outline-light btn-icon disabled">
+                                                                            <em class="icon ni ni-arrow-right"></em>
+                                                                        </button>
+                                                                    </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -389,7 +404,7 @@
                                                                             </a>
                                                                             <div class="filter-wg dropdown-menu dropdown-menu-xl dropdown-menu-right">
                                                                                 <div class="dropdown-head">
-                                                                                    <span class="sub-title dropdown-title">Filter Patient</span>
+                                                                                    <span class="sub-title dropdown-title">Filter Appointment</span>
                                                                                     <div class="dropdown">
                                                                                         <a href="#" class="btn btn-sm btn-icon">
                                                                                             <em class="icon ni ni-more-h"></em>
@@ -400,30 +415,49 @@
                                                                                     <div class="row gx-6 gy-3">
                                                                                         <div class="col-6">
                                                                                             <div class="form-group">
-                                                                                                <label class="overline-title overline-title-alt">Bed</label>
+                                                                                                <label class="overline-title overline-title-alt">Department</label>
                                                                                                 <select class="form-select form-select-sm">
-                                                                                                    <option value="any">Any Bed</option>
-                                                                                                    <option value="cabin">Cabin</option>
-                                                                                                    <option value="mward">Male Ward</option>
-                                                                                                    <option value="fward">Male Ward</option>
-                                                                                                    <option value="vip">VIP Cabin</option>
+                                                                                                    <option value="any">Any Type</option>
+                                                                                                    <option value="medicine">Medicine</option>
+                                                                                                    <option value="gastroenterology">Gastroenterology</option>
+                                                                                                    <option value="cardiology">Cardiology</option>
+                                                                                                    <option value="orthopaedics">Orthopaedics</option>
+                                                                                                    <option value="neurology">Neurology</option>
+                                                                                                    <option value="urology">Urology</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-6">
                                                                                             <div class="form-group">
-                                                                                                <label class="overline-title overline-title-alt">Consulant</label>
+                                                                                                <label class="overline-title overline-title-alt">Status</label>
                                                                                                 <select class="form-select form-select-sm">
-                                                                                                    <option value="any">Any Consulant</option>
-                                                                                                    <option value="ev">Ernesto Vargas</option>
-                                                                                                    <option value="ve">Vargas Ernesto</option>
-                                                                                                    <option value="ti">Tasmin Ifrat</option>
+                                                                                                    <option value="any">Any Status</option>
+                                                                                                    <option value="visited">Visited</option>
+                                                                                                    <option value="canceled">Canceled</option>
+                                                                                                    <option value="waiting">Waiting</option>
+                                                                                                    <option value="pending">Pending</option>
+                                                                                                    <option value="deleted">Deleted</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="col-12">
+                                                                                        <div class="col-6">
                                                                                             <div class="form-group">
-                                                                                                <label class="overline-title overline-title-alt">Admit Date</label>
+                                                                                                <label class="overline-title overline-title-alt">Doctor</label>
+                                                                                                <div class="form-control-wrap">
+                                                                                                    <select class="form-select" data-placeholder="Select Doctor">
+                                                                                                        <option value="">Select Doctor</option>
+                                                                                                        <option value="option_select_consulant">Joe Larson</option>
+                                                                                                        <option value="option_select_consulant">Patrick Newman</option>
+                                                                                                        <option value="option_select_consulant">Newman Freeman</option>
+                                                                                                        <option value="option_select_consulant">Jane Montgomery</option>
+                                                                                                        <option value="option_select_consulant">Emma Walker</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                            <div class="form-group">
+                                                                                                <label class="overline-title overline-title-alt">Date</label>
                                                                                                 <div class="form-control-wrap">
                                                                                                     <div class="form-icon form-icon-right">
                                                                                                         <em class="icon ni ni-calendar"></em>
@@ -493,7 +527,7 @@
                                                     <a href="#" class="search-back btn btn-icon toggle-search" data-target="search">
                                                         <em class="icon ni ni-arrow-left"></em>
                                                     </a>
-                                                    <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search by name or patient id">
+                                                    <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search by patient name or id">
                                                     <button class="search-submit btn btn-icon">
                                                         <em class="icon ni ni-search"></em>
                                                     </button>
@@ -511,74 +545,41 @@
                                                     </div>
                                                 </div>
                                                 <div class="nk-tb-col">
-                                                    <span class="sub-text">Patient</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-sm">
-                                                    <span class="sub-text">ID</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-xxl">
-                                                    <span class="sub-text">Phone</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-lg">
-                                                    <span class="sub-text">Gender</span>
+                                                    <span>Patient</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-mb">
-                                                    <span class="sub-text">Report</span>
+                                                    <span>Department</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-md">
-                                                    <span class="sub-text">Consulant</span>
+                                                    <span>Doctor</span>
+                                                </div>
+                                                <div class="nk-tb-col tb-col-lg">
+                                                    <span>Serial No</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-xxl">
-                                                    <span class="sub-text">Admit Date</span>
+                                                    <span>Mobile No</span>
                                                 </div>
-                                                <div class="nk-tb-col tb-col-xxl">
-                                                    <span class="sub-text">Bed</span>
+                                                <div class="nk-tb-col tb-col-lg">
+                                                    <span>Date</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-md">
-                                                    <span class="sub-text">Charges</span>
+                                                    <span>Status</span>
                                                 </div>
-                                                <div class="nk-tb-col nk-tb-col-tools">
-                                                    <ul class="nk-tb-actions gx-1 my-n1">
-                                                        <li>
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger mr-n1" data-toggle="dropdown">
-                                                                    <em class="icon ni ni-more-h"></em>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-right">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li>
-                                                                            <a href="#">
-                                                                                <em class="icon ni ni-mail"></em>
-                                                                                <span>Send Email to All</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#">
-                                                                                <em class="icon ni ni-edit"></em>
-                                                                                <span>Edit Selected</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#">
-                                                                                <em class="icon ni ni-trash"></em>
-                                                                                <span>Remove Seleted</span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                <div class="nk-tb-col tb-col-xxl">
+                                                    <span>Created By</span>
                                                 </div>
+                                                <div class="nk-tb-col nk-tb-col-tools">&nbsp;</div>
                                             </div>
+
+
                                             <?php
-                                            $id = $_SESSION['app_id'];
-                                            $data = $user_home->runQuery("SELECT * FROM warga, rs_pasien WHERE warga.nik=rs_pasien.nik_id AND rs_pasien.rs_id='$id'");
+                                            $table = $_GET['v'];
+                                            $data = $user_home->runQuery("SELECT * FROM $table");
                                             $data->execute();
                                             $a = $data->fetchAll();
+
                                             foreach ($a as $row) {
-                                            echo
-                                            '<div class="nk-tb-item">
+                                                echo '<div class="nk-tb-item">
                                                 <div class="nk-tb-col nk-tb-col-check">
                                                     <div class="custom-control custom-control-sm custom-checkbox notext">
                                                         <input type="checkbox" class="custom-control-input" id="uid1">
@@ -586,63 +587,61 @@
                                                     </div>
                                                 </div>
                                                 <div class="nk-tb-col">
-                                                    <a href="/demo7/hospital/patient-profile.html">
-                                                        <div class="user-card">
-                                                            <div class="user-avatar bg-primary">
-                                                                <span>'.$user_home->get_initial($row['nama']).'</span>
-                                                            </div>
-                                                            <div class="user-info">
-                                                                <span class="tb-lead">'.$row['nama'].'</span>
-                                                                <span>'.$row['nik'].'</span>
-                                                            </div>
+                                                    <div class="user-card">
+                                                        <div class="user-avatar sm bg-primary-dim">
+                                                            <span>A</span>
                                                         </div>
-                                                    </a>
+                                                        <div class="user-info">
+                                                            <span class="tb-lead">'.$row["nama_sekolah"].'</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="nk-tb-col tb-col-sm">
-                                                    <a href="#">
-                                                        <span class="fw-medium">'.$row['id_pasien'].'</span>
-                                                    </a>
+                                                <div class="nk-tb-col tb-col-mb">
+                                                    <span class="tb-lead-sub">Gastroenterology</span>
+                                                </div>
+                                                <div class="nk-tb-col tb-col-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar sm bg-primary-dim">
+                                                            <img src="/demo7/images/avatar/a-sm.jpg" alt="">
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="tb-lead">Joe Larson</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-col tb-col-lg">
+                                                    <span>05</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-xxl">
                                                     <span>+811 847-4958</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-lg">
-                                                    <span>Male</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-mb">
-                                                    <ul class="list-inline list-download">
-                                                        <li>
-                                                            Reports
-                                                            <a href="#" class="popup">
-                                                                <em class="icon ni ni-download"></em>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
+                                                    <span class="tb-date">18/12/2020</span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-md">
-                                                    <span class="tb-lead">Ernesto Vargas</span>
+                                                    <span class="tb-status text-info">Waiting</span>
+                                                    <span data-toggle="tooltip" title="Waiting at 18 Dec, 2019 01:02 PM" data-placement="top">
+                                                                    <em class="icon ni ni-info"></em>
+                                                                </span>
                                                 </div>
                                                 <div class="nk-tb-col tb-col-xxl">
-                                                    <span>10/02/2020</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-xxl">
-                                                    <span>201-Cabin-3rd Floor</span>
-                                                </div>
-                                                <div class="nk-tb-col tb-col-md">
-                                                    <span class="tb-amount">
-                                                        350.99 <span class="currency">USD</span>
-                                                    </span>
+                                                    <span>Janet Snyder</span>
                                                 </div>
                                                 <div class="nk-tb-col nk-tb-col-tools">
                                                     <ul class="nk-tb-actions gx-1">
                                                         <li class="nk-tb-action-hidden">
-                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Send Email">
-                                                                <em class="icon ni ni-mail-fill"></em>
+                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                                <em class="icon ni ni-eye-fill"></em>
                                                             </a>
                                                         </li>
                                                         <li class="nk-tb-action-hidden">
-                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Move To Discharged">
-                                                                <em class="icon ni ni-curve-up-right"></em>
+                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Approve">
+                                                                <em class="icon ni ni-check-fill-c"></em>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nk-tb-action-hidden">
+                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Reject">
+                                                                <em class="icon ni ni-cross-fill-c"></em>
                                                             </a>
                                                         </li>
                                                         <li>
@@ -653,15 +652,15 @@
                                                                 <div class="dropdown-menu dropdown-menu-right">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li>
-                                                                            <a href="/demo7/hospital/patient-profile.html">
-                                                                                <em class="icon ni ni-eye"></em>
-                                                                                <span>View Details</span>
+                                                                            <a href="#" data-toggle="modal" data-target="#editAppointment">
+                                                                                <em class="icon ni ni-edit"></em>
+                                                                                <span>Edit</span>
                                                                             </a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="#" data-toggle="modal" data-target="#editInPatient">
-                                                                                <em class="icon ni ni-edit"></em>
-                                                                                <span>Edit</span>
+                                                                            <a href="#">
+                                                                                <em class="icon ni ni-trash"></em>
+                                                                                <span>Delete</span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -673,6 +672,8 @@
                                             </div>';
                                             }
                                             ?>
+
+
                                         </div>
                                     </div>
                                     <div class="card-inner">
@@ -689,9 +690,9 @@
                                                         <a class="page-link" href="#">2</a>
                                                     </li>
                                                     <li class="page-item">
-                                                        <span class="page-link">
-                                                            <em class="icon ni ni-more-h"></em>
-                                                        </span>
+                                                                    <span class="page-link">
+                                                                        <em class="icon ni ni-more-h"></em>
+                                                                    </span>
                                                     </li>
                                                     <li class="page-item">
                                                         <a class="page-link" href="#">6</a>
@@ -745,4 +746,3 @@
     </div>
 </div>
 <?php include 'footer.php'; ?>
-        
