@@ -24,6 +24,21 @@ class USER
         $stmt = $this->conn->lastInsertId();
         return $stmt;
     }
+    public function create_id($id, $table, $table_id)
+    {
+        $stmt = $this->conn->prepare("SELECT max($id) as Number FROM $table");
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $kd = $row['Number'];
+        $urutan = (int) substr($kd, 0, 3);
+        $urutan++;
+        $huruf = $table_id.'-';
+        $tanggal = date('Y-m-d');
+        $tanggal_baru = preg_replace("/[^a-zA-Z0-9]/", "", $tanggal);
+        $kd = $huruf . $tanggal_baru . sprintf("%03s", $urutan);
+        return $kd;
+
+    }
 
     public function count($table, $condition, $value){
         if (!$condition=='' && !$value=='') {
@@ -53,7 +68,7 @@ class USER
         //mengambil data
         $query = $this->conn->prepare("SELECT * FROM warga WHERE nik=?");
         $query->execute([$nik]);
-        $warga = $result->fetch(); 
+        $warga = $query->fetch();
         $data = array(
                     'nama'      =>  @$warga['nama'],
                     'jk'      =>  @$warga['jk'],

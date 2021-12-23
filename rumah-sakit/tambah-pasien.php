@@ -337,7 +337,14 @@
                                         </div>
                                         <div class="nk-block">
                                             <div class="row gy-4">
-
+                                                <div class="col-xxl-3 col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="full-name">ID</label>
+                                                        <div class="form-control-wrap">
+                                                            <input type="text" class="form-control"  id="id" name="id" value="<?= $user_home->create_id('id_pasien', 'rs_pasien', $_SESSION['app_id']) ?>" placeholder="Full Name" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-xxl-3 col-md-4">
                                                     <div class="form-group">
                                                         <label class="form-label" for="full-name">NIK</label>
@@ -346,12 +353,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xxl-3 col-md-4">
-                                                    <div class="input-group">
-                                                        <label class="form-label" for="full-name">NIK</label>
 
-                                                        <input type="text" class="form-control" placeholder="Recipient's username"><div class="input-group-append"><button class="btn btn-outline-primary btn-dim">Button</button></div></div>
-                                                </div>
+
                                                 <div class="col-xxl-3 col-md-4">
                                                     <div class="form-group">
                                                         <label class="form-label" for="full-name">Nama</label>

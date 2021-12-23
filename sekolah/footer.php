@@ -1,20 +1,5 @@
 </div>
         <ul class="nk-sticky-toolbar">
-            <li class="demo-layout">
-                <a class="toggle tipinfo" data-target="demoML" href="#" title="Main Demo Preview">
-                    <em class="icon ni ni-dashlite"></em>
-                </a>
-            </li>
-            <li class="demo-thumb">
-                <a class="toggle tipinfo" data-target="demoUC" href="#" title="Use Case Concept">
-                    <em class="icon ni ni-menu-squared"></em>
-                </a>
-            </li>
-            <li class="demo-settings">
-                <a class="toggle tipinfo" data-target="settingPanel" href="#" title="Demo Settings">
-                    <em class="icon ni ni-setting-alt"></em>
-                </a>
-            </li>
             <li class="demo-purchase">
                 <a class="tipinfo" target="_blank" href="https://1.envato.market/e0y3g" title="Purchase">
                     <em class="icon ni ni-cart"></em>
