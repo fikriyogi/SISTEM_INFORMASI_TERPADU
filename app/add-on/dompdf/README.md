@@ -116,7 +116,7 @@ Use the packaged release autoloader to load dompdf, libraries,
 and helper functions in your PHP:
 
 ```php
-// include autoloader
+// includes autoloader
 require_once 'dompdf/autoload.inc.php';
 ```
 

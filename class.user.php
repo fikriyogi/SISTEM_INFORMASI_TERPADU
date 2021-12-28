@@ -24,6 +24,9 @@ class USER
         $stmt = $this->conn->lastInsertId();
         return $stmt;
     }
+    /*
+     * Fungsi create_id adalah untuk membuat Nomor Unik atau ID berdasarkan kriteria yang ada
+     * */
     public function create_id($id, $table, $table_id)
     {
         $stmt = $this->conn->prepare("SELECT max($id) as Number FROM $table");
@@ -40,7 +43,7 @@ class USER
 
     }
 
-    public function count($table, $condition, $value){
+    public function count($table, $condition, $value, $group){
         if (!$condition=='' && !$value=='') {
             // code...
             $sql = "SELECT count(*) FROM $table WHERE $condition = ?"; 
@@ -54,6 +57,14 @@ class USER
             $number_of_rows = $result->fetchColumn(); 
         }
         
+        return $number_of_rows;
+    }
+    public function hitung($table, $group){
+            $sql = "SELECT count(*) FROM $table GROUP BY $group = ?";
+            $result = $this->conn->prepare($sql);
+            $result->execute([$group]);
+            $number_of_rows = $result->fetchColumn();
+
         return $number_of_rows;
     }
     public function sql_count($sql) {
@@ -115,6 +126,34 @@ class USER
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
+    }
+
+    /**
+     * @return PDO|null
+     */
+    public function check_pass($upass)
+    {
+        $number = preg_match('@[0-9]@', $upass);
+        $uppercase = preg_match('@[A-Z]@', $upass);
+        $lowercase = preg_match('@[a-z]@', $upass);
+        $specialChars = preg_match('@[^\w]@', $upass);
+
+        if(strlen($upass) < 8) {
+            $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
+        } elseif (!$number) {
+            $msg = "must contain at least one number";
+        } elseif (!$uppercase) {
+            $msg = "one upper case letter, one lower case letter and one special character.";
+        } elseif (!$lowercase) {
+            $msg = "one lower case letter and one special character.";
+        } elseif (!$specialChars) {
+            $msg = "one special character.";
+        } else {
+            $msg = "Password is strength";
+        }
+
+        return $msg;
+
     }
     public function main_menu($email, $level, $divisi) {
         $stmt = $this->conn->prepare("SELECT * FROM tbl_users WHERE userEmail=? AND level=? AND divisi=?");

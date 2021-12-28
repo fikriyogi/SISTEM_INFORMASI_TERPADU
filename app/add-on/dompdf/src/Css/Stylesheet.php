@@ -63,7 +63,7 @@ class Stylesheet
      * declarations are handled in Style; though technically they should be handled
      * here so that user important declarations can be made to take precedence over
      * user important declarations, this doesn't matter in practice as Dompdf does
-     * not support user stylesheets, and user agent stylesheets can not include
+     * not support user stylesheets, and user agent stylesheets can not includes
      * important declarations.
      */
     private static $_stylesheet_origins = [

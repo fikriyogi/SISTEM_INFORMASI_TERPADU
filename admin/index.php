@@ -388,16 +388,16 @@
                                                     <div class="nk-wg7">
                                                         <div class="nk-wg7-stats">
                                                             <div class="nk-wg7-title">TOTAL PENDUDUK</div>
-                                                            <div class="number-lg amount"><?= $user_home->count('warga','','') ;?></div>
+                                                            <div class="number-lg amount"><?= $user_home->count('warga','','','') ;?></div>
                                                         </div>
                                                         <div class="nk-wg7-stats-group">
                                                             <div class="nk-wg7-stats w-50">
                                                                 <div class="nk-wg7-title">LAKI-LAKI</div>
-                                                                <div class="number-lg"><?= $user_home->count('warga','jk','L') ;?></div>
+                                                                <div class="number-lg"><?= $user_home->count('warga','jk','L','') ;?></div>
                                                             </div>
                                                             <div class="nk-wg7-stats w-50">
                                                                 <div class="nk-wg7-title">PEREMPUAN</div>
-                                                                <div class="number-lg"><?= $user_home->count('warga','jk','P') ;?></div>
+                                                                <div class="number-lg"><?= $user_home->count('warga','jk','P','') ;?></div>
                                                             </div>
                                                         </div>
                                                         <div class="nk-wg7-foot">
@@ -427,7 +427,7 @@
                                             <div class="col-sm-4">
                                                 <div class="card bg-light">
                                                     <div class="nk-wgw sm">
-                                                        <a class="nk-wgw-inner" href="view.php?v=<?='desa'?>">
+                                                        <a class="nk-wgw-inner" href="view.php?v=<?='ds_identitas'?>">
                                                             <div class="nk-wgw-name">
                                                                 <div class="nk-wgw-icon">
                                                                     <em class="icon ni ni-sign-btc"></em>
@@ -436,7 +436,7 @@
                                                             </div>
                                                             <div class="nk-wgw-balance">
                                                                 <div class="amount">
-                                                                    <?= $user_home->count('ds_identitas','','') ;?></span>
+                                                                    <?= $user_home->count('ds_identitas','','','') ;?></span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -446,7 +446,7 @@
                                             <div class="col-sm-4">
                                                 <div class="card bg-light">
                                                     <div class="nk-wgw sm">
-                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                        <a class="nk-wgw-inner" href="view.php?v=<?='ds_dusun'?>">
                                                             <div class="nk-wgw-name">
                                                                 <div class="nk-wgw-icon">
                                                                     <em class="icon ni ni-sign-btc"></em>
@@ -455,7 +455,7 @@
                                                             </div>
                                                             <div class="nk-wgw-balance">
                                                                 <div class="amount">
-                                                                    <?= $user_home->count('ds_identitas','','') ;?></span>
+                                                                    <?= $user_home->hitung('warga','dusun') ;?></span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -498,7 +498,7 @@
                                             <div class="col-sm-4">
                                                 <div class="card bg-light">
                                                     <div class="nk-wgw sm">
-                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                        <a class="nk-wgw-inner" href="view.php?v=rs_identitas">
                                                             <div class="nk-wgw-name">
                                                                 <div class="nk-wgw-icon">
                                                                     <em class="icon ni ni-sign-btc"></em>
@@ -507,7 +507,7 @@
                                                             </div>
                                                             <div class="nk-wgw-balance">
                                                                 <div class="amount">
-                                                                    <?= $user_home->count('rs_identitas','','') ?>
+                                                                    <?= $user_home->count('rs_identitas','','','') ?>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -536,7 +536,7 @@
                                             <div class="col-sm-4">
                                                 <div class="card bg-light">
                                                     <div class="nk-wgw sm">
-                                                        <a class="nk-wgw-inner" href="/demo5/crypto/wallet-bitcoin.html">
+                                                        <a class="nk-wgw-inner" href="view.php?v=sc_sekolah">
                                                             <div class="nk-wgw-name">
                                                                 <div class="nk-wgw-icon">
                                                                     <em class="icon ni ni-sign-eth"></em>
@@ -545,7 +545,7 @@
                                                             </div>
                                                             <div class="nk-wgw-balance">
                                                                 <div class="amount">
-                                                                    <?= $user_home->count('sc_sekolah','','') ?>
+                                                                    <?= $user_home->count('sc_sekolah','','','') ?>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -570,7 +570,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?= $user_home->count('warga','',''); ?></div>
+                                                        <div class="amount"><?= $user_home->count('warga','','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="ipdIncome"></canvas>
                                                         </div>
@@ -598,7 +598,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?= $user_home->count('ds_identitas','',''); ?></div>
+                                                        <div class="amount"><?= $user_home->count('ds_identitas','','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="opdIncome"></canvas>
                                                         </div>
@@ -626,7 +626,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?= $user_home->count('rs_identitas','',''); ?></div>
+                                                        <div class="amount"><?= $user_home->count('rs_identitas','','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="labIncome"></canvas>
                                                         </div>
@@ -654,7 +654,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?= $user_home->count('sc_sekolah','',''); ?></div>
+                                                        <div class="amount"><?= $user_home->count('sc_sekolah','','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="todayExpense"></canvas>
                                                         </div>

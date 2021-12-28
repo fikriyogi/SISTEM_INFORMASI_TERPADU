@@ -63,7 +63,7 @@ if (isset($_POST['btn-signup'])) {
                                                 <a class="nav-link" data-toggle="tab" href="#tabItem4"><em class="icon ni ni-money"></em><span>Laporan Warga</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-toggle="tab" href="#tabItem5"><em class="icon ni ni-wallet-in"></em><span>Payment</span> </a>
+                                                <a class="nav-link" data-toggle="tab" href="#tabItem5"><em class="icon ni ni-wallet-in"></em><span>Vaksinasi*</span> </a>
                                             </li>
                                         </ul>
                                         <div class="card-inner">
@@ -72,7 +72,7 @@ if (isset($_POST['btn-signup'])) {
                                                     <div class="nk-block nk-block-between">
                                                         <div class="nk-block-head">
                                                             <h6 class="title">Personal Information</h6>
-                                                            <p>Patients personal information.</p>
+                                                            <p>Informasi Vaksinasi.</p>
                                                         </div>
                                                         <div class="nk-block">
                                                             <a href="#" class="btn btn-white btn-icon btn-outline-light" data-toggle="modal" data-target="#editPersonal"><em class="icon ni ni-edit"></em></a>
@@ -186,10 +186,10 @@ if (isset($_POST['btn-signup'])) {
                                                                     foreach ($a as $r) {
                                                                         echo '
                                                                     <div class="nk-tb-item">
-                                                                        <div class="nk-tb-col"><span>CT Scan</span></div>
-                                                                        <div class="nk-tb-col tb-col-sm"><span>10 Feb 2020</span></div>
+                                                                        <div class="nk-tb-col"><span>'.$r["nik"].'</span></div>
+                                                                        <div class="nk-tb-col tb-col-sm"><span>'.$r["tgl_lahir"].'</span></div>
                                                                         <div class="nk-tb-col tb-col-md"><span>'.$r["nama"].'</span></div>
-                                                                        <div class="nk-tb-col"><span class="tb-status text-success">Done</span></div>
+                                                                        <div class="nk-tb-col"><span class="tb-status text-success">'.$r["status_keluarga"].'</span></div>
                                                                         <div class="nk-tb-col nk-tb-col-tools">
                                                                             <ul class="nk-tb-actions gx-2">
                                                                                 <li class="nk-tb-action-hidden">
@@ -356,7 +356,7 @@ if (isset($_POST['btn-signup'])) {
                                                     <div class="nk-block nk-block-between">
                                                         <div class="nk-block-head">
                                                             <h6 class="title">Payment Information</h6>
-                                                            <p>Patients payment information.</p>
+                                                            <p>Informasi Vaksinasi.</p>
                                                         </div>
                                                         <div class="nk-block">
                                                             <a href="#" class="btn btn-icon btn-primary" data-toggle="modal" data-target="#addPayment"><em class="icon ni ni-plus"></em></a>
@@ -373,15 +373,15 @@ if (isset($_POST['btn-signup'])) {
                                                                 </div>
                                                                 <div class="nk-tb-item">
                                                                     <div class="nk-tb-col"><span>10 Feb 2020</span></div>
-                                                                    <div class="nk-tb-col tb-col-sm"><span>Cash</span></div>
+                                                                    <div class="nk-tb-col tb-col-sm"><span>Vaksinasi Sinovak</span></div>
                                                                     <div class="nk-tb-col"><span>200</span></div>
-                                                                    <div class="nk-tb-col"><span class="tb-status text-success">Paid</span></div>
+                                                                    <div class="nk-tb-col"><span class="tb-status text-success">Sudah</span></div>
                                                                 </div>
                                                                 <div class="nk-tb-item">
                                                                     <div class="nk-tb-col"><span>11 Feb 2020</span></div>
-                                                                    <div class="nk-tb-col tb-col-sm"><span>Cash</span></div>
+                                                                    <div class="nk-tb-col tb-col-sm"><span>Astrazeneka</span></div>
                                                                     <div class="nk-tb-col"><span>1923</span></div>
-                                                                    <div class="nk-tb-col"><span class="tb-status text-warning">Due</span></div>
+                                                                    <div class="nk-tb-col"><span class="tb-status text-warning">Belum</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>

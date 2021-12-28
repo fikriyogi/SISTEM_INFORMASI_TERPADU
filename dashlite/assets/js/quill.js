@@ -9513,7 +9513,7 @@
                 s(this, e);
                 var r = u(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t, n));
                 if ("function" != typeof r.options.highlight)
-                    throw new Error("Syntax module requires highlight.js. Please include the library on the page before Quill.");
+                    throw new Error("Syntax module requires highlight.js. Please includes the library on the page before Quill.");
                 var o = null;
                 return r.quill.on(i.default.events.SCROLL_OPTIMIZE, (function() {
                     clearTimeout(o),

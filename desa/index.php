@@ -386,7 +386,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?php echo $user_home->count('warga','',''); ?></div>
+                                                        <div class="amount"><?php echo $user_home->count('warga','','',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="ipdIncome"></canvas>
                                                         </div>
@@ -414,7 +414,7 @@
                                                 </div>
                                                 <div class="data">
                                                     <div class="data-group">
-                                                        <div class="amount"><?php echo $user_home->count('warga','jk','L'); ?></div>
+                                                        <div class="amount"><?php echo $user_home->count('warga','jk','L',''); ?></div>
                                                         <div class="nk-ecwg6-ck">
                                                             <canvas class="ecommerce-line-chart-s3" id="opdIncome"></canvas>
                                                         </div>

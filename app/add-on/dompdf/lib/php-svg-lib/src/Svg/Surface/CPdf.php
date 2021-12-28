@@ -2296,7 +2296,7 @@ EOT;
                             break;
 
                         case 'KPX':
-                            break; // don't include them as they are not used yet
+                            break; // don't includes them as they are not used yet
                             //KPX Adieresis yacute -40
                             $bits = explode(' ', trim($row));
                             $data['KPX'][$bits[1]][$bits[2]] = $bits[3];

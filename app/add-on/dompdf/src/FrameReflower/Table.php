@@ -95,7 +95,7 @@ class Table extends AbstractFrameReflower
 
         $min_table_width = (float)$style->length_in_pt($style->min_width, $cb["w"] - $delta);
 
-        // min & max widths already include borders & padding
+        // min & max widths already includes borders & padding
         $min_width -= $delta;
         $max_width -= $delta;
 

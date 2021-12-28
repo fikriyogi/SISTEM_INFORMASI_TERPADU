@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        .overline-title-sap:before {
+            right: 100%;
+        }
+        .overline-title-sap:before, .overline-title-sap:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 1px;
+            content: '';
+            background: #b6c6e3;
+        }
+        .overline-title-sap:after {
+            left: 100%;
+        }
+        .overline-title-sap:before, .overline-title-sap:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 1px;
+            content: '';
+            background: #b6c6e3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <h2>Welcome back</h2>
+        <p>Enter your credential login</p>
+        <form class="row g-3 needs-validation bd-example" novalidate>
+            <div class="">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       autocomplete="off" required>
+                <!--        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Sometime error!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group mb-3">
+                    <label for="exampleInputPassword1" class="input-group form-label">Password</label>
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="password" class="form-control" placeholder="Username" id="exampleInputPassword1" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div>
+<!--                <label for="exampleInputPassword1" class="form-label">Password</label>-->
+<!--                <input type="password" class="form-control" id="exampleInputPassword1" required>-->
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Need strength password error!
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+
+</div>
+<script src="bootstrap.bundle.min.js"></script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+</body>
+</html>

@@ -43927,65 +43927,66 @@ body.dark-mode.nk-body.ui-softy,body.dark-mode.nk-body.ui-shady {
 .sm.nk-wgw .nk-wgw-inner {
     padding: 1.25rem;
 }
-@media (min-width: 576px)
-.nk-wgw-inner {
-    padding: 1.5rem;
-}
-.nk-wgw-inner {
-    padding: 1.25rem;
-    display: block;
-}
+@media (min-width: 576px) {
+    .nk-wgw-inner {
+        padding: 1.5rem;
+    }
 
-.nk-wgw-name {
-    display: flex;
-    align-items: center;
-}
-.nk-wgw.sm .nk-wgw-icon {
-    height: 24px;
-    width: 24px;
-    font-size: 14px;
-    margin-right: 0.5rem;
-}
-.nk-wgw-icon {
-    position: relative;
-    height: 32px;
-    width: 32px;
-    font-size: 20px;
-    border-radius: 50%;
-    background: #8094ae;
-    color: #fff;
-    margin-right: 0.75rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.nk-wgw.sm .nk-wgw-title {
-    font-weight: 700;
-    font-size: 13px;
-}
-.nk-wgw.sm .nk-wgw-balance {
-    padding-top: 0.75rem;
-}
+    .nk-wgw-inner {
+        padding: 1.25rem;
+        display: block;
+    }
 
-.nk-wgw-balance {
-    line-height: 1.3;
-    padding-top: 1.25rem;
+    .nk-wgw-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .nk-wgw.sm .nk-wgw-icon {
+        height: 24px;
+        width: 24px;
+        font-size: 14px;
+        margin-right: 0.5rem;
+    }
+
+    .nk-wgw-icon {
+        position: relative;
+        height: 32px;
+        width: 32px;
+        font-size: 20px;
+        border-radius: 50%;
+        background: #8094ae;
+        color: #fff;
+        margin-right: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nk-wgw.sm .nk-wgw-title {
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    .nk-wgw.sm .nk-wgw-balance {
+        padding-top: 0.75rem;
+    }
+
+    .nk-wgw-balance {
+        line-height: 1.3;
+        padding-top: 1.25rem;
+    }
+
+    .nk-wgw.sm .nk-wgw-balance .amount {
+        font-size: 1rem;
+    }
+
+    .nk-wgw-balance .amount {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #364a63;
+    }
 }
-.nk-wgw.sm .nk-wgw-balance .amount {
-    font-size: 1rem;
-}
-.nk-wgw-balance .amount {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #364a63;
-}
-
-
-
-
-
-
-
 
 
 

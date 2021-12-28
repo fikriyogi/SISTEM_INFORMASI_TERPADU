@@ -573,6 +573,7 @@
 
 
                                             <?php
+
                                             $table = $_GET['v'];
                                             $data = $user_home->runQuery("SELECT * FROM $table");
                                             $data->execute();
@@ -592,7 +593,7 @@
                                                             <span>A</span>
                                                         </div>
                                                         <div class="user-info">
-                                                            <span class="tb-lead">'.$row["nama_sekolah"].'</span>
+                                                            <span class="tb-lead">'.$row["nama"].'</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -630,7 +631,7 @@
                                                 <div class="nk-tb-col nk-tb-col-tools">
                                                     <ul class="nk-tb-actions gx-1">
                                                         <li class="nk-tb-action-hidden">
-                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                            <a href="#" class="btn btn-trigger btn-icon" data-toggle="modal" data-target="#editPersonal'.$row[id].'" data-placement="top" title="Quick View">
                                                                 <em class="icon ni ni-eye-fill"></em>
                                                             </a>
                                                         </li>
@@ -741,6 +742,231 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="editPersonal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <a href="#" class="close" data-dismiss="modal">
+                <em class="icon ni ni-cross-sm"></em>
+            </a>
+            <div class="modal-body modal-body-md">
+                <h5 class="modal-title">Update Personal Info</h5>
+                <form action="#" class="mt-4">
+                    <div class="row g-gs">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="editName">Name</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control" id="editName" value="Abu Bin Isthiyak" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="editEmail">Email</label>
+                                <div class="form-control-wrap">
+                                    <input type="email" class="form-control" id="editEmail" value="info@softnio.com" placeholder="example@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="editMobile">Mobile Number</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control" id="editMobile" placeholder="Mobile No." value="+811 847-4958">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Gender</label>
+                                <div class="form-control-wrap">
+                                    <select class="form-select" data-placeholder="Select Gender">
+                                        <option value="">Select</option>
+                                        <option value="option_select_sex">Male</option>
+                                        <option value="option_select_sex">Female</option>
+                                        <option value="option_select_sex">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth</label>
+                                <div class="form-control-wrap">
+                                    <div class="form-icon form-icon-right">
+                                        <em class="icon ni ni-calendar"></em>
+                                    </div>
+                                    <input type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Bed Group</label>
+                                <div class="form-control-wrap">
+                                    <select class="form-select" data-placeholder="Select Bed Group">
+                                        <option value="">Select</option>
+                                        <option value="option_select_bed">Cabin - 4th Floor</option>
+                                        <option value="option_select_bed">Male Ward - 1st Floor</option>
+                                        <option value="option_select_bed">Female Ward - 1st Floor</option>
+                                        <option value="option_select_bed">Private Ward - 2nd Floor</option>
+                                        <option value="option_select_bed">Cabin - 4th Floor</option>
+                                        <option value="option_select_bed">ICU - 3rd Floor</option>
+                                        <option value="option_select_bed">NICU - 3rd Floor</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Bed Number</label>
+                                <div class="form-control-wrap">
+                                    <select class="form-select" data-placeholder="Select Bed Number">
+                                        <option value="">Select</option>
+                                        <option value="default_option">201</option>
+                                        <option value="option_select_bednum">101</option>
+                                        <option value="option_select_bednum">102</option>
+                                        <option value="option_select_bednum">103</option>
+                                        <option value="option_select_bednum">105</option>
+                                        <option value="option_select_bednum">201</option>
+                                        <option value="option_select_bednum">202</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Consulant By</label>
+                                <div class="form-control-wrap">
+                                    <select class="form-select" data-placeholder="Select Doctor">
+                                        <option value="">Select</option>
+                                        <option value="default_option">Ernesto Vargas</option>
+                                        <option value="option_select_consulant">Ernesto Vargas</option>
+                                        <option value="option_select_consulant">Janet Snyder</option>
+                                        <option value="option_select_consulant">Amelia Grant</option>
+                                        <option value="option_select_consulant">Debra Grant</option>
+                                        <option value="option_select_consulant">Snyder Debra</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Admit Date</label>
+                                <div class="form-control-wrap">
+                                    <div class="form-icon form-icon-right">
+                                        <em class="icon ni ni-calendar"></em>
+                                    </div>
+                                    <input type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="10-02-2020">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Discharged Date</label>
+                                <div class="form-control-wrap">
+                                    <div class="form-icon form-icon-right">
+                                        <em class="icon ni ni-calendar"></em>
+                                    </div>
+                                    <input type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" value="10-02-2020">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                <li>
+                                    <button data-dismiss="modal" class="btn btn-primary">Update</button>
+                                </li>
+                                <li>
+                                    <a href="#" class="link link-light" data-dismiss="modal">Cancel</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="addDiagnosis">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <a href="#" class="close" data-dismiss="modal">
+                <em class="icon ni ni-cross-sm"></em>
+            </a>
+            <div class="modal-body modal-body-md">
+                <h5 class="modal-title">Diagnosis Info</h5>
+                <form action="#" class="mt-4">
+                    <div class="row g-gs">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="reportType">Report Type</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control" id="reportType" placeholder="Report Type">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date</label>
+                                <div class="form-control-wrap">
+                                    <div class="form-icon form-icon-right">
+                                        <em class="icon ni ni-calendar"></em>
+                                    </div>
+                                    <input type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Status</label>
+                                <div class="form-control-wrap">
+                                    <select class="form-select" data-placeholder="Select Status">
+                                        <option value="">Select</option>
+                                        <option value="option_select_status">Done</option>
+                                        <option value="option_select_status">Pending</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Test Report</label>
+                                <div class="form-control-wrap">
+                                    <div class="custom-file">
+                                        <input type="file" multiple class="custom-file-input" id="testReport">
+                                        <label class="custom-file-label" for="testReport">Choose files</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Description</label>
+                                <div class="form-control-wrap">
+                                    <div class="quill-basic">
+                                        <p>Hello World!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                <li>
+                                    <button data-dismiss="modal" class="btn btn-primary">Add Diagnosis</button>
+                                </li>
+                                <li>
+                                    <a href="#" class="link link-light" data-dismiss="modal">Cancel</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
