@@ -8,7 +8,7 @@ $pathsPath = realpath(FCPATH . 'app/Config/Paths.php');
 $patc = str_replace(realpath(dirname(__FILE__) . '/..'), '', realpath(dirname(__FILE__)));
 dirname(__DIR__);
 
-require $pathsPath;
+include  $pathsPath;
 $paths = new Paths();
 
 session_start();

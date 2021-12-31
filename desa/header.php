@@ -9,10 +9,10 @@ $user_home = new USER();
 if (!$user_home->is_logged_in()) {
     $user_home->redirect('index.php');
 } else {
-    $stmt = $user_home->runQuery("SELECT * FROM tbl_users, ds_identitas WHERE userID=? AND app_id=?");
-    $stmt->execute([$_SESSION['userSession'], $_SESSION['app_id']]);
+    $stmt = $user_home->runQuery("SELECT * FROM tbl_users, ds_identitas, warga WHERE userID=? AND app_id=? AND warga.nik=?");
+    $stmt->execute([$_SESSION['userSession'], $_SESSION['app_id'], $_SESSION['nik']]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $app_name = $row['nama_desa'];
+        $app_name = $row['nama'];
         $menu = '';
         // Menu code
         if ($user_home->set_divisi('desa')) {

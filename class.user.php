@@ -128,6 +128,31 @@ class USER
         }
     }
 
+
+    public function send_message($title, $description, $userID, $divisi,  $uid)
+    {
+        try {
+            $stmt = $this->conn->prepare("INSERT INTO tb_message(title,uid,description,desa_id,user_id) 
+                                                VALUES(?,?,?,?,?)");
+            $stmt->execute([$title, $uid, $description, $divisi, $userID]);
+            return $stmt;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }
+    public function create_log($userID, $action)
+    {
+        try {
+            $stmt = $this->conn->prepare("INSERT INTO tb_log(user_id,description) 
+                                                VALUES(?,?)");
+            $stmt->execute([$userID, $action]);
+            return $stmt;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }
+
+
     /**
      * @return PDO|null
      */
@@ -254,7 +279,7 @@ class USER
                 $state = $this->conn->prepare("UPDATE tbl_users SET otp=:otp WHERE userEmail=:email");
                 $state->execute([":otp" => $otp, ":email" => $email]);
                 $subject = "OTP Code";
-                $message = "Your OTP Code is " . $otp;
+                $message = "Your OTP Code is" . $otp;
                 $send = $this->send_mail($email, $message, $subject);
                 session_start();
                 $_SESSION['email'] = $email;
@@ -266,6 +291,7 @@ class USER
                         $_SESSION['app_id'] = $app_id;
                         $_SESSION['level'] = $level;
                         $_SESSION['divisi'] = $divisi;
+                        $_SESSION['nik'] = $userRow['nik_id'];
                         if ($this->set_divisi('admin')) {
                             if ($this->set_level('Super Admin')) {
                                 header('location:'.SITE_URL.'admin');
