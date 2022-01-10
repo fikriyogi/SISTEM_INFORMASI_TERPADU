@@ -206,7 +206,7 @@ var PAGE_HEIGHT = 800;
  *
  * http://www.w3.org/TR/DOM-Level-3-Events/#events-wheelevents
  *
- * The basics is that it includes a unit, deltaMode (pixels, lines, pages), and
+ * The basics is that it inc a unit, deltaMode (pixels, lines, pages), and
  * deltaX, deltaY and deltaZ.  Some browsers provide other values to maintain
  * backward compatibility with older events.  Those other values help us
  * better normalize spin speed.  Example of what the browsers provide:
@@ -20630,7 +20630,7 @@ function PullQuoteEdit({
   }
 
   Object(external_wp_element_["useEffect"])(() => {
-    // If the block includes a named color and we switched from the
+    // If the block inc a named color and we switched from the
     // solid color style to the default style.
     if (mainColor && !isSolidColorStyle) {
       // Remove the named color, and set the color as a custom color.
@@ -29852,7 +29852,7 @@ const query_settings = {
   save: QuerySave,
   variations: query_variations,
   deprecated: query_deprecated
-}; // Importing this file includes side effects and is whitelisted
+}; // Importing this file inc side effects and is whitelisted
 // in block-library/package.json under `sideEffects`.
 
 Object(external_wp_hooks_["addFilter"])('editor.BlockEdit', 'core/query', hooks);
@@ -33669,7 +33669,7 @@ function _populate() {
 
   // To work around buggy JS libraries that can't handle multi-digit
   // version numbers, Opera 10's user agent string claims it's Opera
-  // 9, then later includes a Version/X.Y field:
+  // 9, then later inc a Version/X.Y field:
   //
   // Opera/9.80 (foo) Presto/2.2.15 Version/10.10
   var uas = navigator.userAgent;

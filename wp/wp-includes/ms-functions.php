@@ -496,7 +496,7 @@ function wpmu_validate_user_signup( $user_name, $user_email ) {
 		$errors->add( 'user_name', __( 'Sorry, that username is not allowed.' ) );
 	}
 
-	/** This filter is documented in wp-includes/user.php */
+	/** This filter is documented in wp-inc/user.php */
 	$illegal_logins = (array) apply_filters( 'illegal_user_logins', array() );
 
 	if ( in_array( strtolower( $user_name ), array_map( 'strtolower', $illegal_logins ), true ) ) {
@@ -1976,7 +1976,7 @@ function get_most_recent_post_of_user( $user_id ) {
  * Check an array of MIME types against a list of allowed types.
  *
  * WordPress ships with a set of allowed upload filetypes,
- * which is defined in wp-includes/functions.php in
+ * which is defined in wp-inc/functions.php in
  * get_allowed_mime_types(). This function is used to filter
  * that list against the filetypes allowed provided by Multisite
  * Super Admins at wp-admin/network/settings.php.
@@ -2560,7 +2560,7 @@ function wp_maybe_update_network_site_counts( $network_id = null ) {
 function wp_maybe_update_network_user_counts( $network_id = null ) {
 	$is_small_network = ! wp_is_large_network( 'users', $network_id );
 
-	/** This filter is documented in wp-includes/ms-functions.php */
+	/** This filter is documented in wp-inc/ms-functions.php */
 	if ( ! apply_filters( 'enable_live_network_counts', $is_small_network, 'users' ) ) {
 		return;
 	}
@@ -2760,7 +2760,7 @@ function wp_is_large_network( $using = 'sites', $network_id = null ) {
 
 	$count = get_blog_count( $network_id );
 
-	/** This filter is documented in wp-includes/ms-functions.php */
+	/** This filter is documented in wp-inc/ms-functions.php */
 	return apply_filters( 'wp_is_large_network', $count > 10000, 'sites', $count, $network_id );
 }
 
@@ -2780,7 +2780,7 @@ function get_subdirectory_reserved_names() {
 		'feed',
 		'wp-admin',
 		'wp-content',
-		'wp-includes',
+		'wp-inc',
 		'wp-json',
 		'embed',
 	);
@@ -2789,7 +2789,7 @@ function get_subdirectory_reserved_names() {
 	 * Filters reserved site names on a sub-directory Multisite installation.
 	 *
 	 * @since 3.0.0
-	 * @since 4.4.0 'wp-admin', 'wp-content', 'wp-includes', 'wp-json', and 'embed' were added
+	 * @since 4.4.0 'wp-admin', 'wp-content', 'wp-inc', 'wp-json', and 'embed' were added
 	 *              to the reserved names list.
 	 *
 	 * @param string[] $subdirectory_reserved_names Array of reserved names.

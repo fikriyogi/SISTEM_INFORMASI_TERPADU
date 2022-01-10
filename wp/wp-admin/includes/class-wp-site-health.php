@@ -2025,7 +2025,7 @@ class WP_Site_Health {
 			'Cache-Control' => 'no-cache',
 			'X-WP-Nonce'    => wp_create_nonce( 'wp_rest' ),
 		);
-		/** This filter is documented in wp-includes/class-wp-http-streams.php */
+		/** This filter is documented in wp-inc/class-wp-http-streams.php */
 		$sslverify = apply_filters( 'https_local_ssl_verify', false );
 
 		// Include Basic auth in loopback requests.
@@ -2639,7 +2639,7 @@ class WP_Site_Health {
 		$headers = array(
 			'Cache-Control' => 'no-cache',
 		);
-		/** This filter is documented in wp-includes/class-wp-http-streams.php */
+		/** This filter is documented in wp-inc/class-wp-http-streams.php */
 		$sslverify = apply_filters( 'https_local_ssl_verify', false );
 
 		// Include Basic auth in loopback requests.
@@ -2712,7 +2712,7 @@ class WP_Site_Health {
 	 */
 	public function wp_cron_scheduled_check() {
 		// Bootstrap wp-admin, as WP_Cron doesn't do this for us.
-		require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/admin.php';
+		require_once trailingslashit( ABSPATH ) . 'wp-admin/inc/admin.php';
 
 		$tests = WP_Site_Health::get_tests();
 

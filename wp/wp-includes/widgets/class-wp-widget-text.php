@@ -227,7 +227,7 @@ class WP_Widget_Text extends WP_Widget {
 
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		$text                  = ! empty( $instance['text'] ) ? $instance['text'] : '';
@@ -470,7 +470,7 @@ class WP_Widget_Text extends WP_Widget {
 				$default_editor = 'html';
 			}
 
-			/** This filter is documented in wp-includes/class-wp-editor.php */
+			/** This filter is documented in wp-inc/class-wp-editor.php */
 			$text = apply_filters( 'the_editor_content', $instance['text'], $default_editor );
 
 			// Reset filter addition.

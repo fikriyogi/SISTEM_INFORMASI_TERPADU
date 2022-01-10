@@ -14,7 +14,7 @@
  * or uploaded zip file.
  *
  * @since 2.8.0
- * @since 4.6.0 Moved to its own file from wp-admin/includes/class-wp-upgrader.php.
+ * @since 4.6.0 Moved to its own file from wp-admin/inc/class-wp-upgrader.php.
  *
  * @see WP_Upgrader
  */
@@ -270,7 +270,7 @@ class Theme_Upgrader extends WP_Upgrader {
 		wp_clean_themes_cache( $parsed_args['clear_update_cache'] );
 
 		if ( $parsed_args['overwrite_package'] ) {
-			/** This action is documented in wp-admin/includes/class-plugin-upgrader.php */
+			/** This action is documented in wp-admin/inc/class-plugin-upgrader.php */
 			do_action( 'upgrader_overwrote_package', $package, $this->new_theme_data, 'theme' );
 		}
 
@@ -461,7 +461,7 @@ class Theme_Upgrader extends WP_Upgrader {
 		// Refresh the Theme Update information.
 		wp_clean_themes_cache( $parsed_args['clear_update_cache'] );
 
-		/** This action is documented in wp-admin/includes/class-wp-upgrader.php */
+		/** This action is documented in wp-admin/inc/class-wp-upgrader.php */
 		do_action(
 			'upgrader_process_complete',
 			$this,

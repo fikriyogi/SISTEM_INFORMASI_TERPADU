@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/autosave.js
+ * @output wp-inc/js/autosave.js
  */
 
 /* global tinymce, wpCookies, autosaveL10n, switchEditors */

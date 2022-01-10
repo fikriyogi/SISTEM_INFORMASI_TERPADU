@@ -210,7 +210,7 @@ class WP_REST_Server {
 	 *
 	 * Note: This should only be used in WP_REST_Server::serve_request(), as it
 	 * cannot handle WP_Error internally. All callbacks and other internal methods
-	 * should instead return a WP_Error with the data set to an array that includes
+	 * should instead return a WP_Error with the data set to an array that inc
 	 * a 'status' key, with the value being the HTTP status to send.
 	 *
 	 * @since 4.4.0
@@ -697,7 +697,7 @@ class WP_REST_Server {
 
 					$response = $this->dispatch( $request );
 
-					/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+					/** This filter is documented in wp-inc/rest-api/class-wp-rest-server.php */
 					$response = apply_filters( 'rest_post_dispatch', rest_ensure_response( $response ), $this, $request );
 
 					$this->embed_cache[ $item['href'] ] = $this->response_to_data( $response, false );
@@ -1232,7 +1232,7 @@ class WP_REST_Server {
 		/**
 		 * Filters the REST API root index data.
 		 *
-		 * This contains the data describing the API. This includes information
+		 * This contains the data describing the API. This inc information
 		 * about supported authentication schemes, supported namespaces, routes
 		 * available on the API, and a small amount of data about the site.
 		 *
@@ -1599,7 +1599,7 @@ class WP_REST_Server {
 			$clean_request->set_attributes( array() );
 			$clean_request->set_default_params( array() );
 
-			/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+			/** This filter is documented in wp-inc/rest-api/class-wp-rest-server.php */
 			$result = apply_filters( 'rest_pre_dispatch', null, $this, $clean_request );
 
 			if ( empty( $result ) ) {
@@ -1627,7 +1627,7 @@ class WP_REST_Server {
 				}
 			}
 
-			/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+			/** This filter is documented in wp-inc/rest-api/class-wp-rest-server.php */
 			$result = apply_filters( 'rest_post_dispatch', rest_ensure_response( $result ), $this, $single_request );
 
 			$responses[] = $this->envelope_response( $result, false )->get_data();

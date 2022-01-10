@@ -6521,7 +6521,7 @@
 				urlParser = document.createElement( 'a' );
 				urlParser.href = to;
 
-				// Abort if URL is for admin or (static) files in wp-includes or wp-content.
+				// Abort if URL is for admin or (static) files in wp-inc or wp-content.
 				if ( /\/wp-(admin|includes|content)(\/|$)/.test( urlParser.pathname ) ) {
 					return null;
 				}

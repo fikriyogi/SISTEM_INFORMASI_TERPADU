@@ -5,7 +5,7 @@
  * @package WordPress
  * @since 3.3.0
  *
- * Private, not included by default. See wp_editor() in wp-includes/general-template.php.
+ * Private, not included by default. See wp_editor() in wp-inc/general-template.php.
  */
 
 final class _WP_Editors {
@@ -290,10 +290,10 @@ final class _WP_Editors {
 
 		// Back-compat for the `htmledit_pre` and `richedit_pre` filters.
 		if ( 'html' === $default_editor && has_filter( 'htmledit_pre' ) ) {
-			/** This filter is documented in wp-includes/deprecated.php */
+			/** This filter is documented in wp-inc/deprecated.php */
 			$content = apply_filters_deprecated( 'htmledit_pre', array( $content ), '4.3.0', 'format_for_editor' );
 		} elseif ( 'tinymce' === $default_editor && has_filter( 'richedit_pre' ) ) {
-			/** This filter is documented in wp-includes/deprecated.php */
+			/** This filter is documented in wp-inc/deprecated.php */
 			$content = apply_filters_deprecated( 'richedit_pre', array( $content ), '4.3.0', 'format_for_editor' );
 		}
 
@@ -552,7 +552,7 @@ final class _WP_Editors {
 					$settings['external_plugins'] = wp_json_encode( $mce_external_plugins );
 				}
 
-				/** This filter is documented in wp-admin/includes/media.php */
+				/** This filter is documented in wp-admin/inc/media.php */
 				if ( apply_filters( 'disable_captions', '' ) ) {
 					$settings['wpeditimage_disable_captions'] = true;
 				}
@@ -902,7 +902,7 @@ final class _WP_Editors {
 
 		self::enqueue_scripts( true );
 
-		// Also add wp-includes/css/editor.css.
+		// Also add wp-inc/css/editor.css.
 		wp_enqueue_style( 'editor-buttons' );
 
 		if ( is_admin() ) {

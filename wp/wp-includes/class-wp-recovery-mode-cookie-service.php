@@ -94,7 +94,7 @@ final class WP_Recovery_Mode_Cookie_Service {
 			return new WP_Error( 'invalid_created_at', __( 'Invalid cookie format.' ) );
 		}
 
-		/** This filter is documented in wp-includes/class-wp-recovery-mode-cookie-service.php */
+		/** This filter is documented in wp-inc/class-wp-recovery-mode-cookie-service.php */
 		$length = apply_filters( 'recovery_mode_cookie_length', WEEK_IN_SECONDS );
 
 		if ( time() > $created_at + $length ) {

@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/customize-preview-nav-menus.js
+ * @output wp-inc/js/customize-preview-nav-menus.js
  */
 
 /* global _wpCustomizePreviewNavMenusExports */

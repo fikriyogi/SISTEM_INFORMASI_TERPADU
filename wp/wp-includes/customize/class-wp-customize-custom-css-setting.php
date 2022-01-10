@@ -138,7 +138,7 @@ final class WP_Customize_Custom_CSS_Setting extends WP_Customize_Setting {
 			$value = $this->default;
 		}
 
-		/** This filter is documented in wp-includes/class-wp-customize-setting.php */
+		/** This filter is documented in wp-inc/class-wp-customize-setting.php */
 		$value = apply_filters( "customize_value_{$id_base}", $value, $this );
 
 		return $value;

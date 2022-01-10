@@ -130,7 +130,7 @@ class WP_Widget_Custom_HTML extends WP_Widget {
 
 		$instance = array_merge( $this->default_instance, $instance );
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 
 		// Prepare instance data that looks like a normal Text widget.
@@ -144,7 +144,7 @@ class WP_Widget_Custom_HTML extends WP_Widget {
 		);
 		unset( $simulated_text_widget_instance['content'] ); // Was moved to 'text' prop.
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-text.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-text.php */
 		$content = apply_filters( 'widget_text', $instance['content'], $simulated_text_widget_instance, $this );
 
 		// Adds 'noopener' relationship, without duplicating values, to all HTML A elements that have a target.

@@ -48,7 +48,7 @@ class WP_Widget_Categories extends WP_Widget {
 		$default_title = __( 'Categories' );
 		$title         = ! empty( $instance['title'] ) ? $instance['title'] : $default_title;
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		$count        = ! empty( $instance['count'] ) ? '1' : '0';
@@ -113,7 +113,7 @@ class WP_Widget_Categories extends WP_Widget {
 		} else {
 			$format = current_theme_supports( 'html5', 'navigation-widgets' ) ? 'html5' : 'xhtml';
 
-			/** This filter is documented in wp-includes/widgets/class-wp-nav-menu-widget.php */
+			/** This filter is documented in wp-inc/widgets/class-wp-nav-menu-widget.php */
 			$format = apply_filters( 'navigation_widgets_format', $format );
 
 			if ( 'html5' === $format ) {

@@ -410,7 +410,7 @@ if ( ! function_exists( 'wp_mail' ) ) :
 			$mail_error_data                             = compact( 'to', 'subject', 'message', 'headers', 'attachments' );
 			$mail_error_data['phpmailer_exception_code'] = $e->getCode();
 
-			/** This filter is documented in wp-includes/pluggable.php */
+			/** This filter is documented in wp-inc/pluggable.php */
 			do_action( 'wp_mail_failed', new WP_Error( 'wp_mail_failed', $e->getMessage(), $mail_error_data ) );
 
 			return false;
@@ -905,7 +905,7 @@ if ( ! function_exists( 'wp_set_auth_cookie' ) ) :
 			 */
 			$expire = $expiration + ( 12 * HOUR_IN_SECONDS );
 		} else {
-			/** This filter is documented in wp-includes/pluggable.php */
+			/** This filter is documented in wp-inc/pluggable.php */
 			$expiration = time() + apply_filters( 'auth_cookie_expiration', 2 * DAY_IN_SECONDS, $user_id, $remember );
 			$expire     = 0;
 		}
@@ -1022,7 +1022,7 @@ if ( ! function_exists( 'wp_clear_auth_cookie' ) ) :
 		 */
 		do_action( 'clear_auth_cookie' );
 
-		/** This filter is documented in wp-includes/pluggable.php */
+		/** This filter is documented in wp-inc/pluggable.php */
 		if ( ! apply_filters( 'send_auth_cookies', true ) ) {
 			return;
 		}
@@ -2242,7 +2242,7 @@ if ( ! function_exists( 'wp_create_nonce' ) ) :
 		$user = wp_get_current_user();
 		$uid  = (int) $user->ID;
 		if ( ! $uid ) {
-			/** This filter is documented in wp-includes/pluggable.php */
+			/** This filter is documented in wp-inc/pluggable.php */
 			$uid = apply_filters( 'nonce_user_logged_out', $uid, $action );
 		}
 
@@ -2352,7 +2352,7 @@ if ( ! function_exists( 'wp_salt' ) ) :
 
 		$cached_salts[ $scheme ] = $values['key'] . $values['salt'];
 
-		/** This filter is documented in wp-includes/pluggable.php */
+		/** This filter is documented in wp-inc/pluggable.php */
 		return apply_filters( 'salt', $cached_salts[ $scheme ], $scheme );
 	}
 endif;
@@ -2459,7 +2459,7 @@ if ( ! function_exists( 'wp_check_password' ) ) :
 
 		$check = $wp_hasher->CheckPassword( $password, $hash );
 
-		/** This filter is documented in wp-includes/pluggable.php */
+		/** This filter is documented in wp-inc/pluggable.php */
 		return apply_filters( 'check_password', $check, $password, $hash, $user_id );
 	}
 endif;
@@ -2718,7 +2718,7 @@ if ( ! function_exists( 'get_avatar' ) ) :
 		$avatar = apply_filters( 'pre_get_avatar', null, $id_or_email, $args );
 
 		if ( ! is_null( $avatar ) ) {
-			/** This filter is documented in wp-includes/pluggable.php */
+			/** This filter is documented in wp-inc/pluggable.php */
 			return apply_filters( 'get_avatar', $avatar, $id_or_email, $args['size'], $args['default'], $args['alt'], $args );
 		}
 

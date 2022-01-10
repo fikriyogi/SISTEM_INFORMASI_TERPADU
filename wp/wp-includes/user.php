@@ -236,7 +236,7 @@ function wp_authenticate_email_password( $user, $email, $password ) {
 		);
 	}
 
-	/** This filter is documented in wp-includes/user.php */
+	/** This filter is documented in wp-inc/user.php */
 	$user = apply_filters( 'wp_authenticate_user', $user, $password );
 
 	if ( is_wp_error( $user ) ) {
@@ -416,7 +416,7 @@ function wp_authenticate_application_password( $input_user, $username, $password
 		do_action( 'wp_authenticate_application_password_errors', $error, $user, $item, $password );
 
 		if ( is_wp_error( $error ) && $error->has_errors() ) {
-			/** This action is documented in wp-includes/user.php */
+			/** This action is documented in wp-inc/user.php */
 			do_action( 'application_password_failed_authentication', $error );
 
 			return $error;
@@ -442,7 +442,7 @@ function wp_authenticate_application_password( $input_user, $username, $password
 		__( 'The provided password is an invalid application password.' )
 	);
 
-	/** This action is documented in wp-includes/user.php */
+	/** This action is documented in wp-inc/user.php */
 	do_action( 'application_password_failed_authentication', $error );
 
 	return $error;
@@ -1460,7 +1460,7 @@ function sanitize_user_field( $field, $value, $user_id, $context ) {
 	if ( 'edit' === $context ) {
 		if ( $prefixed ) {
 
-			/** This filter is documented in wp-includes/post.php */
+			/** This filter is documented in wp-inc/post.php */
 			$value = apply_filters( "edit_{$field}", $value, $user_id );
 		} else {
 
@@ -1485,7 +1485,7 @@ function sanitize_user_field( $field, $value, $user_id, $context ) {
 		}
 	} elseif ( 'db' === $context ) {
 		if ( $prefixed ) {
-			/** This filter is documented in wp-includes/post.php */
+			/** This filter is documented in wp-inc/post.php */
 			$value = apply_filters( "pre_{$field}", $value );
 		} else {
 
@@ -1505,7 +1505,7 @@ function sanitize_user_field( $field, $value, $user_id, $context ) {
 		// Use display filters by default.
 		if ( $prefixed ) {
 
-			/** This filter is documented in wp-includes/post.php */
+			/** This filter is documented in wp-inc/post.php */
 			$value = apply_filters( "{$field}", $value, $user_id, $context );
 		} else {
 
@@ -2013,7 +2013,7 @@ function wp_insert_user( $userdata ) {
 	/**
 	 * Filters user data before the record is created or updated.
 	 *
-	 * It only includes data in the users table, not any user metadata.
+	 * It only inc data in the users table, not any user metadata.
 	 *
 	 * @since 4.9.0
 	 * @since 5.8.0 The $userdata parameter was added.
@@ -2379,7 +2379,7 @@ All at ###SITENAME###
 			// Here we calculate the expiration length of the current auth cookie and compare it to the default expiration.
 			// If it's greater than this, then we know the user checked 'Remember Me' when they logged in.
 			$logged_in_cookie = wp_parse_auth_cookie( '', 'logged_in' );
-			/** This filter is documented in wp-includes/pluggable.php */
+			/** This filter is documented in wp-inc/pluggable.php */
 			$default_cookie_life = apply_filters( 'auth_cookie_expiration', ( 2 * DAY_IN_SECONDS ), $ID, false );
 			$remember            = false;
 			if ( false !== $logged_in_cookie && ( $logged_in_cookie['expiration'] - time() ) > $default_cookie_life ) {
@@ -2930,7 +2930,7 @@ function register_new_user( $user_login, $user_email ) {
 		$errors->add( 'username_exists', __( '<strong>Error</strong>: This username is already registered. Please choose another one.' ) );
 
 	} else {
-		/** This filter is documented in wp-includes/user.php */
+		/** This filter is documented in wp-inc/user.php */
 		$illegal_user_logins = (array) apply_filters( 'illegal_user_logins', array() );
 		if ( in_array( strtolower( $sanitized_user_login ), array_map( 'strtolower', $illegal_user_logins ), true ) ) {
 			$errors->add( 'invalid_username', __( '<strong>Error</strong>: Sorry, that username is not allowed.' ) );
@@ -3205,7 +3205,7 @@ function _wp_get_current_user() {
  * Send a confirmation request email when a change of user email address is attempted.
  *
  * @since 3.0.0
- * @since 4.9.0 This function was moved from wp-admin/includes/ms.php so it's no longer Multisite specific.
+ * @since 4.9.0 This function was moved from wp-admin/inc/ms.php so it's no longer Multisite specific.
  *
  * @global WP_Error $errors WP_Error object.
  */
@@ -3316,7 +3316,7 @@ All at ###SITENAME###
  * after email address change.
  *
  * @since 3.0.0
- * @since 4.9.0 This function was moved from wp-admin/includes/ms.php so it's no longer Multisite specific.
+ * @since 4.9.0 This function was moved from wp-admin/inc/ms.php so it's no longer Multisite specific.
  *
  * @global string $pagenow
  */

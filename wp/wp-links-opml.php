@@ -63,7 +63,7 @@ if ( empty( $link_cat ) ) {
 }
 
 foreach ( (array) $cats as $cat ) :
-	/** This filter is documented in wp-includes/bookmark-template.php */
+	/** This filter is documented in wp-inc/bookmark-template.php */
 	$catname = apply_filters( 'link_category', $cat->name );
 
 	?>

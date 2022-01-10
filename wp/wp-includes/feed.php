@@ -190,7 +190,7 @@ function get_the_content_feed( $feed_type = null ) {
 		$feed_type = get_default_feed();
 	}
 
-	/** This filter is documented in wp-includes/post-template.php */
+	/** This filter is documented in wp-inc/post-template.php */
 	$content = apply_filters( 'the_content', get_the_content() );
 	$content = str_replace( ']]>', ']]&gt;', $content );
 
@@ -813,7 +813,7 @@ function fetch_feed( $url ) {
 	$feed->set_file_class( 'WP_SimplePie_File' );
 
 	$feed->set_feed_url( $url );
-	/** This filter is documented in wp-includes/class-wp-feed-cache-transient.php */
+	/** This filter is documented in wp-inc/class-wp-feed-cache-transient.php */
 	$feed->set_cache_duration( apply_filters( 'wp_feed_cache_transient_lifetime', 12 * HOUR_IN_SECONDS, $url ) );
 
 	/**

@@ -44,7 +44,7 @@ function check_comment( $author, $email, $url, $comment, $user_ip, $user_agent, 
 		return false;
 	}
 
-	/** This filter is documented in wp-includes/comment-template.php */
+	/** This filter is documented in wp-inc/comment-template.php */
 	$comment = apply_filters( 'comment_text', $comment, null, array() );
 
 	// Check for the number of external links if a max allowed number is set.
@@ -791,7 +791,7 @@ function wp_allow_comment( $commentdata, $wp_error = false ) {
 	);
 
 	if ( $is_flood ) {
-		/** This filter is documented in wp-includes/comment-template.php */
+		/** This filter is documented in wp-inc/comment-template.php */
 		$comment_flood_message = apply_filters( 'comment_flood_message', __( 'You are posting comments too quickly. Slow down.' ) );
 
 		return new WP_Error( 'comment_flood', $comment_flood_message, 429 );
@@ -1528,7 +1528,7 @@ function wp_delete_comment( $comment_id, $force_delete = false ) {
 
 	clean_comment_cache( $comment->comment_ID );
 
-	/** This action is documented in wp-includes/comment.php */
+	/** This action is documented in wp-inc/comment.php */
 	do_action( 'wp_set_comment_status', $comment->comment_ID, 'delete' );
 
 	wp_transition_comment_status( 'delete', $comment->comment_approved, $comment );
@@ -2080,7 +2080,7 @@ function wp_filter_comment( $commentdata ) {
 		 */
 		$commentdata['user_id'] = apply_filters( 'pre_user_id', $commentdata['user_ID'] );
 	} elseif ( isset( $commentdata['user_id'] ) ) {
-		/** This filter is documented in wp-includes/comment.php */
+		/** This filter is documented in wp-inc/comment.php */
 		$commentdata['user_id'] = apply_filters( 'pre_user_id', $commentdata['user_id'] );
 	}
 
@@ -2092,7 +2092,7 @@ function wp_filter_comment( $commentdata ) {
 	 * @param string $comment_agent The comment author's browser user agent.
 	 */
 	$commentdata['comment_agent'] = apply_filters( 'pre_comment_user_agent', ( isset( $commentdata['comment_agent'] ) ? $commentdata['comment_agent'] : '' ) );
-	/** This filter is documented in wp-includes/comment.php */
+	/** This filter is documented in wp-inc/comment.php */
 	$commentdata['comment_author'] = apply_filters( 'pre_comment_author_name', $commentdata['comment_author'] );
 	/**
 	 * Filters the comment content before it is set.
@@ -2110,9 +2110,9 @@ function wp_filter_comment( $commentdata ) {
 	 * @param string $comment_author_ip The comment author's IP address.
 	 */
 	$commentdata['comment_author_IP'] = apply_filters( 'pre_comment_user_ip', $commentdata['comment_author_IP'] );
-	/** This filter is documented in wp-includes/comment.php */
+	/** This filter is documented in wp-inc/comment.php */
 	$commentdata['comment_author_url'] = apply_filters( 'pre_comment_author_url', $commentdata['comment_author_url'] );
-	/** This filter is documented in wp-includes/comment.php */
+	/** This filter is documented in wp-inc/comment.php */
 	$commentdata['comment_author_email'] = apply_filters( 'pre_comment_author_email', $commentdata['comment_author_email'] );
 	$commentdata['filtered']             = true;
 	return $commentdata;
@@ -2207,7 +2207,7 @@ function wp_new_comment( $commentdata, $wp_error = false ) {
 	 * Filters a comment's data before it is sanitized and inserted into the database.
 	 *
 	 * @since 1.5.0
-	 * @since 5.6.0 Comment data includes the `comment_agent` and `comment_author_IP` values.
+	 * @since 5.6.0 Comment data inc the `comment_agent` and `comment_author_IP` values.
 	 *
 	 * @param array $commentdata Comment data.
 	 */
@@ -2302,7 +2302,7 @@ function wp_new_comment_notify_moderator( $comment_ID ) {
 	// Only send notifications for pending comments.
 	$maybe_notify = ( '0' == $comment->comment_approved );
 
-	/** This filter is documented in wp-includes/comment.php */
+	/** This filter is documented in wp-inc/comment.php */
 	$maybe_notify = apply_filters( 'notify_moderator', $maybe_notify, $comment_ID );
 
 	if ( ! $maybe_notify ) {
@@ -2700,10 +2700,10 @@ function wp_update_comment_count_now( $post_id ) {
 	 */
 	do_action( 'wp_update_comment_count', $post_id, $new, $old );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( "edit_post_{$post->post_type}", $post_id, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'edit_post', $post_id, $post );
 
 	return true;
@@ -2909,17 +2909,17 @@ function do_trackbacks( $post_id ) {
 	}
 
 	if ( empty( $post->post_excerpt ) ) {
-		/** This filter is documented in wp-includes/post-template.php */
+		/** This filter is documented in wp-inc/post-template.php */
 		$excerpt = apply_filters( 'the_content', $post->post_content, $post->ID );
 	} else {
-		/** This filter is documented in wp-includes/post-template.php */
+		/** This filter is documented in wp-inc/post-template.php */
 		$excerpt = apply_filters( 'the_excerpt', $post->post_excerpt );
 	}
 
 	$excerpt = str_replace( ']]>', ']]&gt;', $excerpt );
 	$excerpt = wp_html_excerpt( $excerpt, 252, '&#8230;' );
 
-	/** This filter is documented in wp-includes/post-template.php */
+	/** This filter is documented in wp-inc/post-template.php */
 	$post_title = apply_filters( 'the_title', $post->post_title, $post->ID );
 	$post_title = strip_tags( $post_title );
 
@@ -3337,7 +3337,7 @@ function _close_comments_for_old_post( $open, $post_id ) {
 
 	$post = get_post( $post_id );
 
-	/** This filter is documented in wp-includes/comment.php */
+	/** This filter is documented in wp-inc/comment.php */
 	$post_types = apply_filters( 'close_comments_for_post_types', array( 'post' ) );
 	if ( ! in_array( $post->post_type, $post_types, true ) ) {
 		return $open;

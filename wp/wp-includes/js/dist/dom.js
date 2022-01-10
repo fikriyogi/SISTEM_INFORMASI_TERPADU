@@ -706,7 +706,7 @@ function inputFieldHasUncollapsedSelection(element) {
 
 
 /**
- * Check whether the current document has any sort of selection. This includes
+ * Check whether the current document has any sort of selection. This inc
  * ranges of text across elements and any selection inside <input> and
  * <textarea> elements.
  *
@@ -1567,7 +1567,7 @@ function stripHTML(html) {
 function isEmpty(element) {
   switch (element.nodeType) {
     case element.TEXT_NODE:
-      // We cannot use \s since it includes special spaces which we want
+      // We cannot use \s since it inc special spaces which we want
       // to preserve.
       return /^[ \f\n\r\t\v\u00a0]*$/.test(element.nodeValue || '');
 

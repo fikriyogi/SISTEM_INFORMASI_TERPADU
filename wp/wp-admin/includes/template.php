@@ -242,7 +242,7 @@ function wp_popular_terms_checklist( $taxonomy, $default = 0, $number = 10, $ech
 			<label class="selectit">
 				<input id="in-<?php echo $id; ?>" type="checkbox" <?php echo $checked; ?> value="<?php echo (int) $term->term_id; ?>" <?php disabled( ! current_user_can( $tax->cap->assign_terms ) ); ?> />
 				<?php
-				/** This filter is documented in wp-includes/category-template.php */
+				/** This filter is documented in wp-inc/category-template.php */
 				echo esc_html( apply_filters( 'the_category', $term->name, '', '' ) );
 				?>
 			</label>
@@ -290,7 +290,7 @@ function wp_link_category_checklist( $link_id = 0 ) {
 	foreach ( $categories as $category ) {
 		$cat_id = $category->term_id;
 
-		/** This filter is documented in wp-includes/category-template.php */
+		/** This filter is documented in wp-inc/category-template.php */
 		$name    = esc_html( apply_filters( 'the_category', $category->name, '', '' ) );
 		$checked = in_array( $cat_id, $checked_categories, true ) ? ' checked="checked"' : '';
 		echo '<li id="link-category-', $cat_id, '"><label for="in-link-category-', $cat_id, '" class="selectit"><input value="', $cat_id, '" type="checkbox" name="link_category[]" id="in-link-category-', $cat_id, '"', $checked, '/> ', $name, '</label></li>';
@@ -2560,9 +2560,9 @@ function convert_to_screen( $hook_name ) {
 		_doing_it_wrong(
 			'convert_to_screen(), add_meta_box()',
 			sprintf(
-				/* translators: 1: wp-admin/includes/template.php, 2: add_meta_box(), 3: add_meta_boxes */
+				/* translators: 1: wp-admin/inc/template.php, 2: add_meta_box(), 3: add_meta_boxes */
 				__( 'Likely direct inclusion of %1$s in order to use %2$s. This is very wrong. Hook the %2$s call into the %3$s action instead.' ),
-				'<code>wp-admin/includes/template.php</code>',
+				'<code>wp-admin/inc/template.php</code>',
 				'<code>add_meta_box()</code>',
 				'<code>add_meta_boxes</code>'
 			),

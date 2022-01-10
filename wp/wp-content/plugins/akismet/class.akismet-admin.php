@@ -84,7 +84,7 @@ class Akismet_Admin {
 		if ( function_exists( 'wp_add_privacy_policy_content' ) ) {
 			wp_add_privacy_policy_content(
 				__( 'Akismet', 'akismet' ),
-				__( 'We collect information about visitors who comment on Sites that use our Akismet anti-spam service. The information we collect depends on how the User sets up Akismet for the Site, but typically includes the commenter\'s IP address, user agent, referrer, and Site URL (along with other information directly provided by the commenter such as their name, username, email address, and the comment itself).', 'akismet' )
+				__( 'We collect information about visitors who comment on Sites that use our Akismet anti-spam service. The information we collect depends on how the User sets up Akismet for the Site, but typically inc the commenter\'s IP address, user agent, referrer, and Site URL (along with other information directly provided by the commenter such as their name, username, email address, and the comment itself).', 'akismet' )
 			);
 		}
 	}

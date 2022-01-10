@@ -5475,7 +5475,7 @@ TokenStream.prototype = mix(new TokenStreamBase(), {
         for (c = reader.peek(); c; c = reader.peek()) {
             // Note that the grammar at
             // https://www.w3.org/TR/CSS2/grammar.html#scanner
-            // incorrectly includes the backslash character in the
+            // incorrectly inc the backslash character in the
             // `url` production, although it is correctly omitted in
             // the `baduri1` production.
             if (nonascii.test(c) || /^[\-!#$%&*-\[\]-~]$/.test(c)) {

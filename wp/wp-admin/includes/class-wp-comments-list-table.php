@@ -818,7 +818,7 @@ class WP_Comments_List_Table extends WP_List_Table {
 			);
 		}
 
-		/** This filter is documented in wp-admin/includes/dashboard.php */
+		/** This filter is documented in wp-admin/inc/dashboard.php */
 		$actions = apply_filters( 'comment_row_actions', array_filter( $actions ), $comment );
 
 		$always_visible = false;
@@ -904,7 +904,7 @@ class WP_Comments_List_Table extends WP_List_Table {
 		comment_text( $comment );
 
 		if ( $this->user_can ) {
-			/** This filter is documented in wp-admin/includes/comment.php */
+			/** This filter is documented in wp-admin/inc/comment.php */
 			$comment_content = apply_filters( 'comment_edit_pre', $comment->comment_content );
 			?>
 		<div id="inline-<?php echo $comment->comment_ID; ?>" class="hidden">
@@ -944,7 +944,7 @@ class WP_Comments_List_Table extends WP_List_Table {
 
 		if ( $this->user_can ) {
 			if ( ! empty( $comment->comment_author_email ) ) {
-				/** This filter is documented in wp-includes/comment-template.php */
+				/** This filter is documented in wp-inc/comment-template.php */
 				$email = apply_filters( 'comment_email', $comment->comment_author_email, $comment );
 
 				if ( ! empty( $email ) && '@' !== $email ) {

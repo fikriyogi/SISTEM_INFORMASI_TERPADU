@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-util.js
+ * @output wp-inc/js/wp-util.js
  */
 
 /* global _wpUtilSettings */

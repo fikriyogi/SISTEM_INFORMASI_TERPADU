@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __DIR__ ) . '/' );
 }
 
-define( 'WPINC', 'wp-includes' );
+define( 'WPINC', 'wp-inc' );
 define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 
 require ABSPATH . 'wp-admin/includes/noop.php';

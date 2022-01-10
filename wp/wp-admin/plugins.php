@@ -189,7 +189,7 @@ if ( $action ) {
 			ini_set( 'display_errors', true ); // Ensure that fatal errors are displayed.
 			// Go back to "sandbox" scope so we get the same errors as before.
 			plugin_sandbox_scrape( $plugin );
-			/** This action is documented in wp-admin/includes/plugin.php */
+			/** This action is documented in wp-admin/inc/plugin.php */
 			do_action( "activate_{$plugin}" );
 			exit;
 
@@ -503,7 +503,7 @@ if ( $action ) {
 				$redirect     = add_query_arg( $query_args, $redirect );
 			}
 
-			/** This filter is documented in wp-admin/includes/class-wp-plugins-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-plugins-list-table.php */
 			$all_items = apply_filters( 'all_plugins', get_plugins() );
 
 			// Remove plugins that don't exist or have been deleted since the option was last updated.

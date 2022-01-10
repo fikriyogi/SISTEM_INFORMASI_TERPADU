@@ -1030,7 +1030,7 @@ class Akismet {
 			&& intval( $comment1['comment_post_ID'] ) == intval( $comment2['comment_post_ID'] )
 			&& (
 				// The comment author length max is 255 characters, limited by the TINYTEXT column type.
-				// If the comment author includes multibyte characters right around the 255-byte mark, they
+				// If the comment author inc multibyte characters right around the 255-byte mark, they
 				// may be stripped when the author is saved in the DB, so a 300+ char author may turn into
 				// a 253-char author when it's saved, not 255 exactly.  The longest possible character is
 				// theoretically 6 bytes, so we'll only look at the first 248 bytes to be safe.

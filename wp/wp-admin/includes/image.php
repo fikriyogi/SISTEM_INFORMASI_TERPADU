@@ -171,7 +171,7 @@ function wp_update_image_subsizes( $attachment_id ) {
 		$image_meta = _wp_make_subsizes( $missing_sizes, $image_file, $image_meta, $attachment_id );
 	}
 
-	/** This filter is documented in wp-admin/includes/image.php */
+	/** This filter is documented in wp-admin/inc/image.php */
 	$image_meta = apply_filters( 'wp_generate_attachment_metadata', $image_meta, $attachment_id, 'update' );
 
 	// Save the updated metadata.
@@ -683,7 +683,7 @@ function wp_exif_date2ts( $str ) {
  * created_timestamp, focal_length, shutter_speed, and title.
  *
  * The IPTC metadata that is retrieved is APP13, credit, byline, created date
- * and time, caption, copyright, and title. Also includes FNumber, Model,
+ * and time, caption, copyright, and title. Also inc FNumber, Model,
  * DateTimeDigitized, FocalLength, ISOSpeedRatings, and ExposureTime.
  *
  * @todo Try other exif libraries if available.

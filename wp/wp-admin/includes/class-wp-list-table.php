@@ -126,7 +126,7 @@ class WP_List_Table {
 	 *                            in the list table, e.g. 'posts'. Default empty.
 	 *     @type string $singular Singular label for an object being listed, e.g. 'post'.
 	 *                            Default empty
-	 *     @type bool   $ajax     Whether the list table supports Ajax. This includes loading
+	 *     @type bool   $ajax     Whether the list table supports Ajax. This inc loading
 	 *                            and sorting data, for example. If true, the class will call
 	 *                            the _js_vars() method in the footer to provide variables
 	 *                            to any scripts handling Ajax events. Default false.

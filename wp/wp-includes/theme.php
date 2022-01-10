@@ -1027,7 +1027,7 @@ function get_theme_mod( $name, $default = false ) {
 		}
 	}
 
-	/** This filter is documented in wp-includes/theme.php */
+	/** This filter is documented in wp-inc/theme.php */
 	return apply_filters( "theme_mod_{$name}", $default );
 }
 
@@ -3300,7 +3300,7 @@ function check_theme_switched() {
 			 */
 			do_action( 'after_switch_theme', $old_theme->get( 'Name' ), $old_theme );
 		} else {
-			/** This action is documented in wp-includes/theme.php */
+			/** This action is documented in wp-inc/theme.php */
 			do_action( 'after_switch_theme', $stylesheet, $old_theme );
 		}
 		flush_rewrite_rules();
@@ -3313,7 +3313,7 @@ function check_theme_switched() {
  * Includes and instantiates the WP_Customize_Manager class.
  *
  * Loads the Customizer at plugins_loaded when accessing the customize.php admin
- * page or when any request includes a wp_customize=on param or a customize_changeset
+ * page or when any request inc a wp_customize=on param or a customize_changeset
  * param (a UUID). This param is a signal for whether to bootstrap the Customizer when
  * WordPress is loading, especially in the Customizer preview
  * or when making Customizer Ajax requests for widgets or menus.
@@ -3456,7 +3456,7 @@ function _wp_customize_publish_changeset( $new_status, $old_status, $changeset_p
 		remove_action( 'customize_register', array( $wp_customize, 'register_controls' ) );
 		$wp_customize->register_controls();
 
-		/** This filter is documented in /wp-includes/class-wp-customize-manager.php */
+		/** This filter is documented in /wp-inc/class-wp-customize-manager.php */
 		do_action( 'customize_register', $wp_customize );
 	}
 	$wp_customize->_publish_changeset_values( $changeset_post->ID );

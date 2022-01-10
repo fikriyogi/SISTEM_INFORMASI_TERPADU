@@ -881,7 +881,7 @@ final class WP_Customize_Nav_Menus {
 	 * Return an array of all the available item types.
 	 *
 	 * @since 4.3.0
-	 * @since 4.7.0  Each array item now includes a `$type_label` in addition to `$title`, `$type`, and `$object`.
+	 * @since 4.7.0  Each array item now inc a `$type_label` in addition to `$title`, `$type`, and `$object`.
 	 *
 	 * @return array The available menu item types.
 	 */
@@ -919,7 +919,7 @@ final class WP_Customize_Nav_Menus {
 		 * Filters the available menu item types.
 		 *
 		 * @since 4.3.0
-		 * @since 4.7.0  Each array item now includes a `$type_label` in addition to `$title`, `$type`, and `$object`.
+		 * @since 4.7.0  Each array item now inc a `$type_label` in addition to `$title`, `$type`, and `$object`.
 		 *
 		 * @param array $item_types Navigation menu item types.
 		 */

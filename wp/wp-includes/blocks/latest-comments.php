@@ -11,7 +11,7 @@
  * The post title is fetched and if it is blank then a default string is
  * returned.
  *
- * Copied from `wp-admin/includes/template.php`, but we can't include that
+ * Copied from `wp-admin/inc/template.php`, but we can't include that
  * file because:
  *
  * 1. It causes bugs with test fixture generation and strange Docker 255 error
@@ -42,7 +42,7 @@ function wp_latest_comments_draft_or_post_title( $post = 0 ) {
  */
 function render_block_core_latest_comments( $attributes = array() ) {
 	$comments = get_comments(
-		// This filter is documented in wp-includes/widgets/class-wp-widget-recent-comments.php.
+		// This filter is documented in wp-inc/widgets/class-wp-widget-recent-comments.php.
 		apply_filters(
 			'widget_comments_args',
 			array(

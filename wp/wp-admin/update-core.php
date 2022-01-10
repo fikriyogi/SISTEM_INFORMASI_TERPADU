@@ -358,11 +358,11 @@ function core_auto_updates_settings() {
 		$can_set_update_option = false;
 	}
 
-	/** This filter is documented in wp-admin/includes/class-core-upgrader.php */
+	/** This filter is documented in wp-admin/inc/class-core-upgrader.php */
 	$upgrade_dev = apply_filters( 'allow_dev_auto_core_updates', $upgrade_dev );
-	/** This filter is documented in wp-admin/includes/class-core-upgrader.php */
+	/** This filter is documented in wp-admin/inc/class-core-upgrader.php */
 	$upgrade_minor = apply_filters( 'allow_minor_auto_core_updates', $upgrade_minor );
-	/** This filter is documented in wp-admin/includes/class-core-upgrader.php */
+	/** This filter is documented in wp-admin/inc/class-core-upgrader.php */
 	$upgrade_major = apply_filters( 'allow_major_auto_core_updates', $upgrade_major );
 
 	$auto_update_settings = array(

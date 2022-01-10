@@ -528,7 +528,7 @@ final class WP_Privacy_Policy_Content {
 			/* translators: Default privacy policy text. */
 			$strings[] = '<p>' . __( 'When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.' ) . '</p>';
 			/* translators: Default privacy policy text. */
-			$strings[] = '<p>' . __( 'If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.' ) . '</p>';
+			$strings[] = '<p>' . __( 'If you edit or publish an article, an additional cookie will be saved in your browser. This cookie inc no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.' ) . '</p>';
 		}
 
 		if ( ! $description ) {
@@ -638,7 +638,7 @@ final class WP_Privacy_Policy_Content {
 			/* translators: Default privacy policy heading. */
 			$strings[] = '<h2>' . __( 'What automated decision making and/or profiling we do with user data' ) . '</h2>';
 			/* translators: Privacy policy tutorial. */
-			$strings[] = '<p class="privacy-policy-tutorial">' . __( 'If your web site provides a service which includes automated decision making - for example, allowing customers to apply for credit, or aggregating their data into an advertising profile - you must note that this is taking place, and include information about how that information is used, what decisions are made with that aggregated data, and what rights users have over decisions made without human intervention.' ) . '</p>';
+			$strings[] = '<p class="privacy-policy-tutorial">' . __( 'If your web site provides a service which inc automated decision making - for example, allowing customers to apply for credit, or aggregating their data into an advertising profile - you must note that this is taking place, and include information about how that information is used, what decisions are made with that aggregated data, and what rights users have over decisions made without human intervention.' ) . '</p>';
 		}
 
 		if ( $description ) {

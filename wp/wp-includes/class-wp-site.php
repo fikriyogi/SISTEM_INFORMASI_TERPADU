@@ -335,7 +335,7 @@ final class WP_Site {
 			wp_cache_set( $this->blog_id, $details, 'site-details' );
 		}
 
-		/** This filter is documented in wp-includes/ms-blogs.php */
+		/** This filter is documented in wp-inc/ms-blogs.php */
 		$details = apply_filters_deprecated( 'blog_details', array( $details ), '4.7.0', 'site_details' );
 
 		/**

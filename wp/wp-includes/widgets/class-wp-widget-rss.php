@@ -83,7 +83,7 @@ class WP_Widget_RSS extends WP_Widget {
 			$title = ! empty( $desc ) ? $desc : __( 'Unknown Feed' );
 		}
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		$url  = strip_tags( $url );
@@ -99,7 +99,7 @@ class WP_Widget_RSS extends WP_Widget {
 
 		$format = current_theme_supports( 'html5', 'navigation-widgets' ) ? 'html5' : 'xhtml';
 
-		/** This filter is documented in wp-includes/widgets/class-wp-nav-menu-widget.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-nav-menu-widget.php */
 		$format = apply_filters( 'navigation_widgets_format', $format );
 
 		if ( 'html5' === $format ) {

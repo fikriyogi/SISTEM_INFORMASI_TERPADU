@@ -11257,7 +11257,7 @@
   var NoWork = 0; // TODO: Think of a better name for Never. The key difference with Idle is that
   // Never work can be committed in an inconsistent state without tearing the UI.
   // The main example is offscreen content, like a hidden subtree. So one possible
-  // name is Offscreen. However, it also includes dehydrated Suspense boundaries,
+  // name is Offscreen. However, it also inc dehydrated Suspense boundaries,
   // which are inconsistent in the sense that they haven't finished yet, but
   // aren't visibly inconsistent because the server rendered HTML matches what the
   // hydrated tree would look like.
@@ -21167,7 +21167,7 @@
   var workInProgressRootLatestProcessedExpirationTime = Sync;
   var workInProgressRootLatestSuspenseTimeout = Sync;
   var workInProgressRootCanSuspendUsingConfig = null; // The work left over by components that were visited during this render. Only
-  // includes unprocessed updates, not work in bailed out children.
+  // inc unprocessed updates, not work in bailed out children.
 
   var workInProgressRootNextUnprocessedUpdateTime = NoWork; // If we're pinged while rendering we don't always restart immediately.
   // This flag determines if it might be worthwhile to restart if an opportunity

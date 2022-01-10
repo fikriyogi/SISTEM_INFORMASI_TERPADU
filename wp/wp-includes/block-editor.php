@@ -156,7 +156,7 @@ function get_default_block_editor_settings() {
 		$max_upload_size = 0;
 	}
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$image_size_names = apply_filters(
 		'image_size_names_choose',
 		array(

@@ -509,7 +509,7 @@ add_action( 'parse_request', 'rest_api_loaded' );
 add_action( 'init', 'wp_sitemaps_get_server' );
 
 /**
- * Filters formerly mixed into wp-includes.
+ * Filters formerly mixed into wp-inc.
  */
 // Theme.
 add_action( 'setup_theme', 'create_initial_theme_features', 0 );

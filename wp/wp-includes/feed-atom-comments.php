@@ -8,7 +8,7 @@
 header( 'Content-Type: ' . feed_content_type( 'atom' ) . '; charset=' . get_option( 'blog_charset' ), true );
 echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '" ?' . '>';
 
-/** This action is documented in wp-includes/feed-rss2.php */
+/** This action is documented in wp-inc/feed-rss2.php */
 do_action( 'rss_tag_pre', 'atom-comments' );
 ?>
 <feed
@@ -16,7 +16,7 @@ do_action( 'rss_tag_pre', 'atom-comments' );
 	xml:lang="<?php bloginfo_rss( 'language' ); ?>"
 	xmlns:thr="http://purl.org/syndication/thread/1.0"
 	<?php
-		/** This action is documented in wp-includes/feed-atom.php */
+		/** This action is documented in wp-inc/feed-atom.php */
 		do_action( 'atom_ns' );
 
 		/**
@@ -77,7 +77,7 @@ while ( have_comments() ) :
 		<?php
 		if ( ! is_singular() ) {
 			$title = get_the_title( $comment_post->ID );
-			/** This filter is documented in wp-includes/feed.php */
+			/** This filter is documented in wp-inc/feed.php */
 			$title = apply_filters( 'the_title_rss', $title );
 			/* translators: Individual comment title. 1: Post title, 2: Comment author name. */
 			printf( ent2ncr( __( 'Comment on %1$s by %2$s' ) ), $title, get_comment_author_rss() );

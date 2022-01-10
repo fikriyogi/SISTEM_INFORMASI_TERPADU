@@ -1319,7 +1319,7 @@ function wp_comment_form_unfiltered_html_nonce() {
  * and the post ID respectively.
  *
  * The `$file` path is passed through a filter hook called {@see 'comments_template'},
- * which includes the TEMPLATEPATH and $file combined. Tries the $filtered path
+ * which inc the TEMPLATEPATH and $file combined. Tries the $filtered path
  * first and if it fails it will require the default comment template from the
  * default theme. If either does not exist, then the WordPress process will be
  * halted. It is advised for that reason, that the default theme is not deleted.
@@ -2447,7 +2447,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			sprintf(
 				/* translators: %s: Login URL. */
 				__( 'You must be <a href="%s">logged in</a> to post a comment.' ),
-				/** This filter is documented in wp-includes/link-template.php */
+				/** This filter is documented in wp-inc/link-template.php */
 				wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
 			)
 		),
@@ -2460,7 +2460,7 @@ function comment_form( $args = array(), $post_id = null ) {
 				/* translators: %s: User name. */
 				esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
 				$user_identity,
-				/** This filter is documented in wp-includes/link-template.php */
+				/** This filter is documented in wp-inc/link-template.php */
 				wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
 			)
 		),
@@ -2693,7 +2693,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			/**
 			 * Filters the submit field for the comment form to display.
 			 *
-			 * The submit field includes the submit button, hidden fields for the
+			 * The submit field inc the submit button, hidden fields for the
 			 * comment form, and any wrapper markup.
 			 *
 			 * @since 4.2.0

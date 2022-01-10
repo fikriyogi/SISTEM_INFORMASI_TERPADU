@@ -465,7 +465,7 @@ class WP_REST_Widget_Types_Controller extends WP_REST_Controller {
 
 			$instance = $widget_object->update( $new_instance, $old_instance );
 
-			/** This filter is documented in wp-includes/class-wp-widget.php */
+			/** This filter is documented in wp-inc/class-wp-widget.php */
 			$instance = apply_filters(
 				'widget_update_callback',
 				$instance,
@@ -534,7 +534,7 @@ class WP_REST_Widget_Types_Controller extends WP_REST_Controller {
 	private function get_widget_form( $widget_object, $instance ) {
 		ob_start();
 
-		/** This filter is documented in wp-includes/class-wp-widget.php */
+		/** This filter is documented in wp-inc/class-wp-widget.php */
 		$instance = apply_filters(
 			'widget_form_callback',
 			$instance,
@@ -544,7 +544,7 @@ class WP_REST_Widget_Types_Controller extends WP_REST_Controller {
 		if ( false !== $instance ) {
 			$return = $widget_object->form( $instance );
 
-			/** This filter is documented in wp-includes/class-wp-widget.php */
+			/** This filter is documented in wp-inc/class-wp-widget.php */
 			do_action_ref_array(
 				'in_widget_form',
 				array( &$widget_object, &$return, $instance )

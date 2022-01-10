@@ -227,7 +227,7 @@ class WP_Comment_Query {
 	 *                                                   'approve' (`comment_status=1`), 'all', or a custom
 	 *                                                   comment status. Default 'all'.
 	 *     @type string|array $type                      Include comments of a given type, or array of types.
-	 *                                                   Accepts 'comment', 'pings' (includes 'pingback' and
+	 *                                                   Accepts 'comment', 'pings' (inc 'pingback' and
 	 *                                                   'trackback'), or any custom type string. Default empty.
 	 *     @type string[]     $type__in                  Include comments from a given array of comment types.
 	 *                                                   Default empty.

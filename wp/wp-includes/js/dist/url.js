@@ -579,7 +579,7 @@ function getQueryArgs(url) {
 
 /**
  * Appends arguments as querystring to the provided URL. If the URL already
- * includes query arguments, the arguments are merged with (and take precedent
+ * inc query arguments, the arguments are merged with (and take precedent
  * over) the existing set.
  *
  * @param {string} [url='']  URL to which arguments should be appended. If omitted,

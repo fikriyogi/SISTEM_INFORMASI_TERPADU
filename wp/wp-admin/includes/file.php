@@ -530,7 +530,7 @@ function wp_edit_theme_plugin_file( $args ) {
 			'Cache-Control' => 'no-cache',
 		);
 
-		/** This filter is documented in wp-includes/class-wp-http-streams.php */
+		/** This filter is documented in wp-inc/class-wp-http-streams.php */
 		$sslverify = apply_filters( 'https_local_ssl_verify', false );
 
 		// Include Basic auth in loopback requests.
@@ -1922,7 +1922,7 @@ function WP_Filesystem( $args = false, $context = false, $allow_relaxed_file_own
 		 * @param string $path   Path to the specific filesystem method class file.
 		 * @param string $method The filesystem method to use.
 		 */
-		$abstraction_file = apply_filters( 'filesystem_method_file', ABSPATH . 'wp-admin/includes/class-wp-filesystem-' . $method . '.php', $method );
+		$abstraction_file = apply_filters( 'filesystem_method_file', ABSPATH . 'wp-admin/inc/class-wp-filesystem-' . $method . '.php', $method );
 
 		if ( ! file_exists( $abstraction_file ) ) {
 			return;

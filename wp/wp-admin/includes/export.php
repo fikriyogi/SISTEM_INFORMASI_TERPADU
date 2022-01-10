@@ -519,7 +519,7 @@ function export_wp( $args = array() ) {
 	?>
 
 	<?php
-	/** This action is documented in wp-includes/feed-rss2.php */
+	/** This action is documented in wp-inc/feed-rss2.php */
 	do_action( 'rss2_head' );
 	?>
 

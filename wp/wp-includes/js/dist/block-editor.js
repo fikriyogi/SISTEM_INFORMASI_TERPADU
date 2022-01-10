@@ -6054,7 +6054,7 @@ each(['Width', 'Height'], function (name) {
   };
 
   domUtils['viewport' + name] = function (win) {
-    // pc browser includes scrollbar in window.innerWidth
+    // pc browser inc scrollbar in window.innerWidth
     var prop = 'client' + name;
     var doc = win.document;
     var body = doc.body;
@@ -9471,7 +9471,7 @@ const getClientIdsWithDescendants = Object(rememo["a" /* default */])(state => {
 }, state => [state.blocks.order]);
 /**
  * Returns the total number of blocks, or the total number of blocks with a specific name in a post.
- * The number returned includes nested blocks.
+ * The number returned inc nested blocks.
  *
  * @param {Object}  state     Global application state.
  * @param {?string} blockName Optional block name, if specified only blocks of that type will be counted.
@@ -10374,7 +10374,7 @@ const checkAllowList = (list, item, defaultResult = null) => {
   if (Object(external_lodash_["isArray"])(list)) {
     // TODO: when there is a canonical way to detect that we are editing a post
     // the following check should be changed to something like:
-    // if ( list.includes( 'core/post-content' ) && getEditorMode() === 'post-content' && item === null )
+    // if ( list.inc( 'core/post-content' ) && getEditorMode() === 'post-content' && item === null )
     if (list.includes('core/post-content') && item === null) {
       return true;
     }
@@ -12927,7 +12927,7 @@ function BlockAlignmentToolbar(props) {
 
 
 /**
- * An array which includes all possible valid alignments,
+ * An array which inc all possible valid alignments,
  * used to validate if an alignment is valid or not.
  *
  * @constant
@@ -12936,7 +12936,7 @@ function BlockAlignmentToolbar(props) {
 
 const ALL_ALIGNMENTS = ['left', 'center', 'right', 'wide', 'full'];
 /**
- * An array which includes all wide alignments.
+ * An array which inc all wide alignments.
  * In order for this alignments to be valid they need to be supported by the block,
  * and by the theme.
  *
@@ -12963,7 +12963,7 @@ function getValidAlignments(blockAlign, hasWideBlockSupport = true, hasWideEnabl
   if (Array.isArray(blockAlign)) {
     validAlignments = ALL_ALIGNMENTS.filter(value => blockAlign.includes(value));
   } else if (blockAlign === true) {
-    // `true` includes all alignments...
+    // `true` inc all alignments...
     validAlignments = ALL_ALIGNMENTS;
   } else {
     validAlignments = [];
@@ -34758,7 +34758,7 @@ function MediaPlaceholder({
               ({
                 id
               }) => Number(id) === Number(item.id));
-            } // Compare transient images via .includes since gallery may append extra info onto the url.
+            } // Compare transient images via .inc since gallery may append extra info onto the url.
 
 
             return !lastMediaPassed.some(({
@@ -34769,7 +34769,7 @@ function MediaPlaceholder({
           onSelect(filteredMedia.concat(newMedia)); // Reset lastMediaPassed and set it with ids and urls from newMedia.
 
           lastMediaPassed = newMedia.map(media => {
-            // Add everything up to '.fileType' to compare via .includes.
+            // Add everything up to '.fileType' to compare via .inc.
             const cutOffIndex = media.url.lastIndexOf('.');
             const urlSlug = media.url.slice(0, cutOffIndex);
             return {

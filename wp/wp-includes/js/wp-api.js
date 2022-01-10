@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-api.js
+ * @output wp-inc/js/wp-api.js
  */
 
 (function( window, undefined ) {

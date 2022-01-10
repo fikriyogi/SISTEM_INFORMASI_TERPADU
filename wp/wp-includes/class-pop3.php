@@ -415,7 +415,7 @@ class POP3 {
     }
 
     function reset () {
-        //  Resets the status of the remote server. This includes
+        //  Resets the status of the remote server. This inc
         //  resetting the status of ALL msgs to not be deleted.
         //  This method automatically closes the connection to the server.
 

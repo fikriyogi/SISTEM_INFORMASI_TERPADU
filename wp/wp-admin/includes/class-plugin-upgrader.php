@@ -14,7 +14,7 @@
  * or uploaded zip file.
  *
  * @since 2.8.0
- * @since 4.6.0 Moved to its own file from wp-admin/includes/class-wp-upgrader.php.
+ * @since 4.6.0 Moved to its own file from wp-admin/inc/class-wp-upgrader.php.
  *
  * @see WP_Upgrader
  */
@@ -360,7 +360,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 		// Force refresh of plugin update information.
 		wp_clean_plugins_cache( $parsed_args['clear_update_cache'] );
 
-		/** This action is documented in wp-admin/includes/class-wp-upgrader.php */
+		/** This action is documented in wp-admin/inc/class-wp-upgrader.php */
 		do_action(
 			'upgrader_process_complete',
 			$this,
@@ -642,7 +642,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 		}
 
 		// If plugin is in its own directory, recursively delete the directory.
-		// Base check on if plugin includes directory separator AND that it's not the root plugin folder.
+		// Base check on if plugin inc directory separator AND that it's not the root plugin folder.
 		if ( strpos( $plugin, '/' ) && $this_plugin_dir !== $plugins_dir ) {
 			$deleted = $wp_filesystem->delete( $this_plugin_dir, true );
 		} else {

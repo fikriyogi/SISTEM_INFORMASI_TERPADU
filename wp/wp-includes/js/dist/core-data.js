@@ -2464,7 +2464,7 @@ function itemIsComplete(state = {}, action) {
 }
 /**
  * Reducer tracking queries state, keyed by stable query key. Each reducer
- * query object includes `itemIds` and `requestingPageByPerPage`.
+ * query object inc `itemIds` and `requestingPageByPerPage`.
  *
  * @param {Object} state  Current state.
  * @param {Object} action Dispatched action.

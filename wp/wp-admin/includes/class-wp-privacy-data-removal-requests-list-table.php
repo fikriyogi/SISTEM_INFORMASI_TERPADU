@@ -51,7 +51,7 @@ class WP_Privacy_Data_Removal_Requests_List_Table extends WP_Privacy_Requests_Ta
 		$request_id  = $item->ID;
 		$row_actions = array();
 		if ( 'request-confirmed' !== $status ) {
-			/** This filter is documented in wp-admin/includes/ajax-actions.php */
+			/** This filter is documented in wp-admin/inc/ajax-actions.php */
 			$erasers       = apply_filters( 'wp_privacy_personal_data_erasers', array() );
 			$erasers_count = count( $erasers );
 			$nonce         = wp_create_nonce( 'wp-privacy-erase-personal-data-' . $request_id );
@@ -122,7 +122,7 @@ class WP_Privacy_Data_Removal_Requests_List_Table extends WP_Privacy_Requests_Ta
 				esc_html_e( 'Waiting for confirmation' );
 				break;
 			case 'request-confirmed':
-				/** This filter is documented in wp-admin/includes/ajax-actions.php */
+				/** This filter is documented in wp-admin/inc/ajax-actions.php */
 				$erasers       = apply_filters( 'wp_privacy_personal_data_erasers', array() );
 				$erasers_count = count( $erasers );
 				$request_id    = $item->ID;

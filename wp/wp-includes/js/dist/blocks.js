@@ -1196,7 +1196,7 @@ function getBlockLabel(blockType, attributes, context = 'visual') {
 }
 /**
  * Get a label for the block for use by screenreaders, this is more descriptive
- * than the visual label and includes the block title and the value of the
+ * than the visual label and inc the block title and the value of the
  * `getLabel` function if it's specified.
  *
  * @param {Object}  blockType              The block type.
@@ -2373,7 +2373,7 @@ function findTransform(transforms, predicate) {
  * Returns normal block transforms for a given transform direction, optionally
  * for a specific block by name, or an empty array if there are no transforms.
  * If no block name is provided, returns transforms for all blocks. A normal
- * transform object includes `blockName` as a property.
+ * transform object inc `blockName` as a property.
  *
  * @param {string}  direction Transform direction ("to", "from").
  * @param {string|Object} blockTypeOrName  Block type or name.
@@ -5424,7 +5424,7 @@ function convertLegacyBlocks(name, attributes) {
 function createBlockWithFallback(blockNode) {
   const {
     blockName: originalName
-  } = blockNode; // The fundamental structure of a blocktype includes its attributes, inner
+  } = blockNode; // The fundamental structure of a blocktype inc its attributes, inner
   // blocks, and inner HTML. It is important to distinguish inner blocks from
   // the HTML content of the block as only the latter is relevant for block
   // validation and edit operations.
@@ -7148,7 +7148,7 @@ function synchronizeBlocksWithTemplate(blocks = [], template) {
 
  // While block transformations account for a specific surface of the API, there
 // are also raw transformations which handle arbitrary sources not made out of
-// blocks but producing block basaed on various heursitics. This includes
+// blocks but producing block basaed on various heursitics. This inc
 // pasting rich text or HTML data.
 
  // The process of serialization aims to deflate the internal memory of the block

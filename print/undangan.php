@@ -1,5 +1,5 @@
 <?php
-//includes master file
+//inc master file
 require('../add-on/fpdf/fpdf.php');
 
 //extending class fpdf

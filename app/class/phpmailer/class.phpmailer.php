@@ -198,7 +198,7 @@ class PHPMailer
 
     /**
      * Path to PHPMailer plugins.
-     * Useful if the SMTP class is not in the PHP includes path.
+     * Useful if the SMTP class is not in the PHP inc path.
      *
      * @var string
      *
@@ -2759,7 +2759,7 @@ class PHPMailer
                 $cidUniq[$cid] = true;
 
                 $mime[] = sprintf('--%s%s', $boundary, $this->LE);
-                //Only includes a filename property if we have one
+                //Only inc a filename property if we have one
                 if (!empty($name)) {
                     $mime[] = sprintf(
                         'Content-Type: %s; name="%s"%s',
@@ -3198,7 +3198,7 @@ class PHPMailer
 
     /**
      * Add an embedded (inline) attachment from a file.
-     * This can includes images, sounds, and just about any other document type.
+     * This can inc images, sounds, and just about any other document type.
      * These differ from 'regular' attachments in that they are intended to be
      * displayed inline with the message, not just attached for download.
      * This is used in HTML messages that embed the images
@@ -3250,7 +3250,7 @@ class PHPMailer
 
     /**
      * Add an embedded stringified attachment.
-     * This can includes images, sounds, and just about any other document type.
+     * This can inc images, sounds, and just about any other document type.
      * Be sure to set the $type to an image type for images:
      * JPEG images use 'image/jpeg', GIF uses 'image/gif', PNG uses 'image/png'.
      *
@@ -4170,7 +4170,7 @@ class PHPMailer
      */
     public static function hasLineLongerThanMax($str)
     {
-        //+2 to includes CRLF line break for a 1000 total
+        //+2 to inc CRLF line break for a 1000 total
         return (bool) preg_match('/^(.{'.(self::MAX_LINE_LENGTH + 2).',})/m', $str);
     }
 

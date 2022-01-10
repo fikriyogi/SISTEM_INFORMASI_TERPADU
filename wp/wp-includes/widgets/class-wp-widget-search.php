@@ -43,7 +43,7 @@ class WP_Widget_Search extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		echo $args['before_widget'];

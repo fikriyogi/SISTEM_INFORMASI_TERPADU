@@ -1,7 +1,7 @@
 /**
  * Interim login dialog.
  *
- * @output wp-includes/js/wp-auth-check.js
+ * @output wp-inc/js/wp-auth-check.js
  */
 
 ( function( $ ) {

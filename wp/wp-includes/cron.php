@@ -266,7 +266,7 @@ function wp_schedule_event( $timestamp, $recurrence, $hook, $args = array(), $wp
 		'interval'  => $schedules[ $recurrence ]['interval'],
 	);
 
-	/** This filter is documented in wp-includes/cron.php */
+	/** This filter is documented in wp-inc/cron.php */
 	$pre = apply_filters( 'pre_schedule_event', null, $event, $wp_error );
 
 	if ( null !== $pre ) {
@@ -284,7 +284,7 @@ function wp_schedule_event( $timestamp, $recurrence, $hook, $args = array(), $wp
 		return $pre;
 	}
 
-	/** This filter is documented in wp-includes/cron.php */
+	/** This filter is documented in wp-inc/cron.php */
 	$event = apply_filters( 'schedule_event', $event );
 
 	// A plugin disallowed this event.
@@ -914,7 +914,7 @@ function spawn_cron( $gmt_time = 0 ) {
 			'args' => array(
 				'timeout'   => 0.01,
 				'blocking'  => false,
-				/** This filter is documented in wp-includes/class-wp-http-streams.php */
+				/** This filter is documented in wp-inc/class-wp-http-streams.php */
 				'sslverify' => apply_filters( 'https_local_ssl_verify', false ),
 			),
 		),

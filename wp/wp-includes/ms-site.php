@@ -605,7 +605,7 @@ function wp_validate_site_data( $errors, $data, $old_site = null ) {
 /**
  * Runs the initialization routine for a given site.
  *
- * This process includes creating the site's database tables and
+ * This process inc creating the site's database tables and
  * populating them with defaults.
  *
  * @since 5.1.0
@@ -749,7 +749,7 @@ function wp_initialize_site( $site_id, array $args = array() ) {
 /**
  * Runs the uninitialization routine for a given site.
  *
- * This process includes dropping the site's database tables and deleting its uploads directory.
+ * This process inc dropping the site's database tables and deleting its uploads directory.
  *
  * @since 5.1.0
  *

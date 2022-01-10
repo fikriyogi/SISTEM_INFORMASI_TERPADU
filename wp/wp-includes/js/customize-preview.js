@@ -1,7 +1,7 @@
 /*
  * Script run inside a Customizer preview frame.
  *
- * @output wp-includes/js/customize-preview.js
+ * @output wp-inc/js/customize-preview.js
  */
 (function( exports, $ ){
 	var api = wp.customize,
@@ -314,7 +314,7 @@
 			return args.allowAdminAjax;
 		}
 
-		// Disallow links to admin, includes, and content.
+		// Disallow links to admin, inc, and content.
 		if ( /\/wp-(admin|includes|content)(\/|$)/.test( element.pathname ) ) {
 			return false;
 		}
@@ -657,7 +657,7 @@
 			/*
 			 * The body will support custom backgrounds if either the color or image are set.
 			 *
-			 * See get_body_class() in /wp-includes/post-template.php
+			 * See get_body_class() in /wp-inc/post-template.php
 			 */
 			$( document.body ).toggleClass( 'custom-background', !! ( settings.color() || settings.image() ) );
 

@@ -276,7 +276,7 @@ jQuery( function( $ ) {
 						headers: this.headers
 					} )
 						.done( function( response ) {
-							/** This filter is documented in wp-admin/includes/class-wp-site-health.php */
+							/** This filter is documented in wp-admin/inc/class-wp-site-health.php */
 							appendIssue( wp.hooks.applyFilters( 'site_status_test_result', response ) );
 						} )
 						.fail( function( response ) {
@@ -298,7 +298,7 @@ jQuery( function( $ ) {
 						ajaxurl,
 						data
 					).done( function( response ) {
-						/** This filter is documented in wp-admin/includes/class-wp-site-health.php */
+						/** This filter is documented in wp-admin/inc/class-wp-site-health.php */
 						appendIssue( wp.hooks.applyFilters( 'site_status_test_result', response.data ) );
 					} ).fail( function( response ) {
 						var description;
@@ -343,7 +343,7 @@ jQuery( function( $ ) {
 			'actions': ''
 		};
 
-		/** This filter is documented in wp-admin/includes/class-wp-site-health.php */
+		/** This filter is documented in wp-admin/inc/class-wp-site-health.php */
 		appendIssue( wp.hooks.applyFilters( 'site_status_test_result', issue ) );
 	}
 

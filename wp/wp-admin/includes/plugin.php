@@ -361,7 +361,7 @@ function get_plugins( $plugin_folder = '' ) {
 /**
  * Check the mu-plugins directory and retrieve all mu-plugin files with any plugin data.
  *
- * WordPress only includes mu-plugin files in the base mu-plugins directory (wp-content/mu-plugins).
+ * WordPress only inc mu-plugin files in the base mu-plugins directory (wp-content/mu-plugins).
  *
  * @since 3.0.0
  * @return array[] Array of arrays of mu-plugin data, keyed by plugin file name. See `get_plugin_data()`.
@@ -977,7 +977,7 @@ function delete_plugins( $plugins, $deprecated = '' ) {
 		$this_plugin_dir = trailingslashit( dirname( $plugins_dir . $plugin_file ) );
 
 		// If plugin is in its own directory, recursively delete the directory.
-		// Base check on if plugin includes directory separator AND that it's not the root plugin folder.
+		// Base check on if plugin inc directory separator AND that it's not the root plugin folder.
 		if ( strpos( $plugin_file, '/' ) && $this_plugin_dir !== $plugins_dir ) {
 			$deleted = $wp_filesystem->delete( $this_plugin_dir, true );
 		} else {
@@ -2273,7 +2273,7 @@ function wp_clean_plugins_cache( $clear_update_cache = true ) {
  * Load a given plugin attempt to generate errors.
  *
  * @since 3.0.0
- * @since 4.4.0 Function was moved into the `wp-admin/includes/plugin.php` file.
+ * @since 4.4.0 Function was moved into the `wp-admin/inc/plugin.php` file.
  *
  * @param string $plugin Path to the plugin file relative to the plugins directory.
  */

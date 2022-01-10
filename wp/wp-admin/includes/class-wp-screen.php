@@ -1252,19 +1252,19 @@ final class WP_Screen {
 		if ( 'edit_comments_per_page' === $option ) {
 			$comment_status = isset( $_REQUEST['comment_status'] ) ? $_REQUEST['comment_status'] : 'all';
 
-			/** This filter is documented in wp-admin/includes/class-wp-comments-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-comments-list-table.php */
 			$per_page = apply_filters( 'comments_per_page', $per_page, $comment_status );
 		} elseif ( 'categories_per_page' === $option ) {
-			/** This filter is documented in wp-admin/includes/class-wp-terms-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-terms-list-table.php */
 			$per_page = apply_filters( 'edit_categories_per_page', $per_page );
 		} else {
-			/** This filter is documented in wp-admin/includes/class-wp-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-list-table.php */
 			$per_page = apply_filters( "{$option}", $per_page );
 		}
 
 		// Back compat.
 		if ( isset( $this->post_type ) ) {
-			/** This filter is documented in wp-admin/includes/post.php */
+			/** This filter is documented in wp-admin/inc/post.php */
 			$per_page = apply_filters( 'edit_posts_per_page', $per_page, $this->post_type );
 		}
 

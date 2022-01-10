@@ -355,7 +355,7 @@
 		 * Initializes the tags box by setting up the links, buttons. Sets up event
 		 * handling.
 		 *
-		 * This includes handling of pressing the enter key in the input field and the
+		 * This inc handling of pressing the enter key in the input field and the
 		 * retrieval of tag suggestions.
 		 *
 		 * @since 2.9.0

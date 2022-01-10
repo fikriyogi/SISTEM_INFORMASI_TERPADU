@@ -586,7 +586,7 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
                     <action type="None" />
                 </rule>
                 <rule name="WordPress Rule 4" stopProcessing="true">
-                    <match url="^' . $iis_subdir_match . '(wp-(content|admin|includes).*)" ignoreCase="false" />
+                    <match url="^' . $iis_subdir_match . '(wp-(content|admin|inc).*)" ignoreCase="false" />
                     <action type="Rewrite" url="' . $iis_rewrite_base . '{R:1}" />
                 </rule>
                 <rule name="WordPress Rule 5" stopProcessing="true">
@@ -650,7 +650,7 @@ RewriteRule ^{$subdir_match}wp-admin$ {$subdir_replacement_01}wp-admin/ [R=301,L
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
-RewriteRule ^{$subdir_match}(wp-(content|admin|includes).*) {$rewrite_base}{$subdir_replacement_12} [L]
+RewriteRule ^{$subdir_match}(wp-(content|admin|inc).*) {$rewrite_base}{$subdir_replacement_12} [L]
 RewriteRule ^{$subdir_match}(.*\.php)$ {$rewrite_base}$subdir_replacement_12 [L]
 RewriteRule . index.php [L]
 

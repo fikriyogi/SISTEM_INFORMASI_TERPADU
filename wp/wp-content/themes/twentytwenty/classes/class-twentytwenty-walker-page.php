@@ -64,7 +64,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
 				$css_class[] = 'current_page_parent';
 			}
 
-			/** This filter is documented in wp-includes/class-walker-page.php */
+			/** This filter is documented in wp-inc/class-walker-page.php */
 			$css_classes = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
 			$css_classes = $css_classes ? ' class="' . esc_attr( $css_classes ) . '"' : '';
 
@@ -80,7 +80,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
 			$atts['href']         = get_permalink( $page->ID );
 			$atts['aria-current'] = ( $page->ID === $current_page ) ? 'page' : '';
 
-			/** This filter is documented in wp-includes/class-walker-page.php */
+			/** This filter is documented in wp-inc/class-walker-page.php */
 			$atts = apply_filters( 'page_menu_link_attributes', $atts, $page, $depth, $args, $current_page );
 
 			$attributes = '';
@@ -128,7 +128,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
 				$args['list_item_before'],
 				$attributes,
 				$args['link_before'],
-				/** This filter is documented in wp-includes/post-template.php */
+				/** This filter is documented in wp-inc/post-template.php */
 				apply_filters( 'the_title', $page->post_title, $page->ID ),
 				$args['link_after'],
 				$args['list_item_after']

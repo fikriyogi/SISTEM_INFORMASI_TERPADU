@@ -11,7 +11,7 @@
  * Core class used to store translated data for a locale.
  *
  * @since 2.1.0
- * @since 4.6.0 Moved to its own file from wp-includes/locale.php.
+ * @since 4.6.0 Moved to its own file from wp-inc/locale.php.
  */
 class WP_Locale {
 	/**

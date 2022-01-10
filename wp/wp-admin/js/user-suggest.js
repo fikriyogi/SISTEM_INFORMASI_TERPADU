@@ -40,7 +40,7 @@
 		 *   The field that is returned as the value for the suggestion.
 		 *   Default: user_login
 		 *
-		 * @see wp-admin/includes/admin-actions.php:wp_ajax_autocomplete_user()
+		 * @see wp-admin/inc/admin-actions.php:wp_ajax_autocomplete_user()
 		 */
 		$( '.wp-suggest-user' ).each( function(){
 			var $this = $( this ),

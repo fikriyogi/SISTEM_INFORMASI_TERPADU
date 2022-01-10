@@ -20,7 +20,7 @@ use Dompdf\Helpers;
  * Represents CSS properties.
  *
  * The Style class is responsible for handling and storing CSS properties.
- * It includes methods to resolve colors and lengths, as well as getters &
+ * It inc methods to resolve colors and lengths, as well as getters &
  * setters for many CSS properites.
  *
  * Actual CSS parsing is performed in the {@link Stylesheet} class.

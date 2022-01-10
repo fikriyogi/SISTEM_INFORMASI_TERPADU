@@ -6529,7 +6529,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		// some versions of this test; make sure not to make it pass there!
 		//
 		// Support: Firefox 70+
-		// Only Firefox includes border widths
+		// Only Firefox inc border widths
 		// in computed dimensions. (gh-4529)
 		reliableTrDimensions: function() {
 			var table, tr, trChild, trStyle;

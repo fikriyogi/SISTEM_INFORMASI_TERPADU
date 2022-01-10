@@ -697,7 +697,7 @@ class WP_Terms_List_Table extends WP_List_Table {
 					continue;
 				}
 
-				/** This action is documented in wp-admin/includes/class-wp-posts-list-table.php */
+				/** This action is documented in wp-admin/inc/class-wp-posts-list-table.php */
 				do_action( 'quick_edit_custom_box', $column_name, 'edit-tags', $this->screen->taxonomy );
 			}
 			?>

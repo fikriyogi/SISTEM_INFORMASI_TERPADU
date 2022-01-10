@@ -83,7 +83,7 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 			return;
 		}
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		echo $args['before_widget'];
@@ -93,7 +93,7 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 
 		$format = current_theme_supports( 'html5', 'navigation-widgets' ) ? 'html5' : 'xhtml';
 
-		/** This filter is documented in wp-includes/widgets/class-wp-nav-menu-widget.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-nav-menu-widget.php */
 		$format = apply_filters( 'navigation_widgets_format', $format );
 
 		if ( 'html5' === $format ) {

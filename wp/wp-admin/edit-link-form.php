@@ -33,7 +33,7 @@ add_meta_box( 'linktargetdiv', __( 'Target' ), 'link_target_meta_box', null, 'no
 add_meta_box( 'linkxfndiv', __( 'Link Relationship (XFN)' ), 'link_xfn_meta_box', null, 'normal', 'core' );
 add_meta_box( 'linkadvanceddiv', __( 'Advanced' ), 'link_advanced_meta_box', null, 'normal', 'core' );
 
-/** This action is documented in wp-admin/includes/meta-boxes.php */
+/** This action is documented in wp-admin/inc/meta-boxes.php */
 do_action( 'add_meta_boxes', 'link', $link );
 
 /**
@@ -45,11 +45,11 @@ do_action( 'add_meta_boxes', 'link', $link );
  */
 do_action( 'add_meta_boxes_link', $link );
 
-/** This action is documented in wp-admin/includes/meta-boxes.php */
+/** This action is documented in wp-admin/inc/meta-boxes.php */
 do_action( 'do_meta_boxes', 'link', 'normal', $link );
-/** This action is documented in wp-admin/includes/meta-boxes.php */
+/** This action is documented in wp-admin/inc/meta-boxes.php */
 do_action( 'do_meta_boxes', 'link', 'advanced', $link );
-/** This action is documented in wp-admin/includes/meta-boxes.php */
+/** This action is documented in wp-admin/inc/meta-boxes.php */
 do_action( 'do_meta_boxes', 'link', 'side', $link );
 
 add_screen_option(
@@ -138,7 +138,7 @@ wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
 <div id="postbox-container-1" class="postbox-container">
 <?php
 
-/** This action is documented in wp-admin/includes/meta-boxes.php */
+/** This action is documented in wp-admin/inc/meta-boxes.php */
 do_action( 'submitlink_box' );
 $side_meta_boxes = do_meta_boxes( 'link', 'side', $link );
 

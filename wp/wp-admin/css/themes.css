@@ -1269,7 +1269,7 @@ div#custom-background-image img {
 .background-position-control .button-group .button {
 	border-radius: 0;
 	box-shadow: none;
-	/* Following properties are overridden by buttons responsive styles (see: wp-includes/css/buttons.css). */
+	/* Following properties are overridden by buttons responsive styles (see: wp-inc/css/buttons.css). */
 	height: 40px !important;
 	line-height: 2.9 !important;
 	margin: 0 -1px 0 0 !important;

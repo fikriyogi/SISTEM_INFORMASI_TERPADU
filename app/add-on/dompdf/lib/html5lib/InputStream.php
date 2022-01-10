@@ -186,7 +186,7 @@ class HTML5_InputStream {
         // strrpos is weird, and the offset needs to be negative for what we
         // want (i.e., the last \n before $this->char). This needs to not have
         // one (to make it point to the next character, the one we want the
-        // position of) added to it because strrpos's behaviour includes the
+        // position of) added to it because strrpos's behaviour inc the
         // final offset byte.
         $lastLine = strrpos($this->data, "\n", $this->char - 1 - strlen($this->data));
 

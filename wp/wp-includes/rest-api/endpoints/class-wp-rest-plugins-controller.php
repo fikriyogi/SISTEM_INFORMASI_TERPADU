@@ -360,7 +360,7 @@ class WP_REST_Plugins_Controller extends WP_REST_Controller {
 
 		// Install translations.
 		$installed_locales = array_values( get_available_languages() );
-		/** This filter is documented in wp-includes/update.php */
+		/** This filter is documented in wp-inc/update.php */
 		$installed_locales = apply_filters( 'plugins_update_check_locales', $installed_locales );
 
 		$language_packs = array_map(

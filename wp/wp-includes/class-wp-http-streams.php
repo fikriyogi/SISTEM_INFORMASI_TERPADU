@@ -104,7 +104,7 @@ class WP_Http_Streams {
 			 */
 			$ssl_verify = apply_filters( 'https_local_ssl_verify', $ssl_verify, $url );
 		} elseif ( ! $is_local ) {
-			/** This filter is documented in wp-includes/class-http.php */
+			/** This filter is documented in wp-inc/class-http.php */
 			$ssl_verify = apply_filters( 'https_ssl_verify', $ssl_verify, $url );
 		}
 
@@ -397,7 +397,7 @@ class WP_Http_Streams {
 				}
 			}
 		} elseif ( ! empty( $cert['subject']['CN'] ) ) {
-			// Only use the CN when the certificate includes no subjectAltName extension.
+			// Only use the CN when the certificate inc no subjectAltName extension.
 			$certificate_hostnames[] = strtolower( $cert['subject']['CN'] );
 		}
 

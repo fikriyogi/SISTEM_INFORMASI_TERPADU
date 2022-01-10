@@ -401,7 +401,7 @@ function edit_post( $post_data = null ) {
 
 		$attachment_data = isset( $post_data['attachments'][ $post_ID ] ) ? $post_data['attachments'][ $post_ID ] : array();
 
-		/** This filter is documented in wp-admin/includes/media.php */
+		/** This filter is documented in wp-admin/inc/media.php */
 		$translated = apply_filters( 'attachment_fields_to_save', $translated, $attachment_data );
 	}
 
@@ -1623,7 +1623,7 @@ function wp_check_post_lock( $post_id ) {
 		return false;
 	}
 
-	/** This filter is documented in wp-admin/includes/ajax-actions.php */
+	/** This filter is documented in wp-admin/inc/ajax-actions.php */
 	$time_window = apply_filters( 'wp_check_post_lock_window', 150 );
 
 	if ( $time && $time > time() - $time_window && get_current_user_id() != $user ) {
@@ -2186,7 +2186,7 @@ function use_block_editor_for_post_type( $post_type ) {
 /**
  * Prepares server-registered blocks for the block editor.
  *
- * Returns an associative array of registered block data keyed by block name. Data includes properties
+ * Returns an associative array of registered block data keyed by block name. Data inc properties
  * of a block relevant for client registration.
  *
  * @since 5.0.0

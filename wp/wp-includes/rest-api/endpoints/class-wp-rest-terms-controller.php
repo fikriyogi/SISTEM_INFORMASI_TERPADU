@@ -609,7 +609,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 
 		$term = get_term( $term->term_id, $this->taxonomy );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-terms-controller.php */
 		do_action( "rest_insert_{$this->taxonomy}", $term, $request, false );
 
 		$schema = $this->get_item_schema();
@@ -629,7 +629,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 
 		$request->set_param( 'context', 'edit' );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-terms-controller.php */
 		do_action( "rest_after_insert_{$this->taxonomy}", $term, $request, false );
 
 		$response = $this->prepare_item_for_response( $term, $request );

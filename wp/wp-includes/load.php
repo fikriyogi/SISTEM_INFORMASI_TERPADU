@@ -1673,7 +1673,7 @@ function wp_is_jsonp_request() {
 		return false;
 	}
 
-	/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+	/** This filter is documented in wp-inc/rest-api/class-wp-rest-server.php */
 	$jsonp_enabled = apply_filters( 'rest_jsonp_enabled', true );
 
 	return $jsonp_enabled;

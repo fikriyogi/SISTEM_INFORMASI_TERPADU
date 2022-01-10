@@ -658,7 +658,7 @@ class WP_User {
 	/**
 	 * Update the maximum user level for the user.
 	 *
-	 * Updates the 'user_level' user metadata (includes prefix that is the
+	 * Updates the 'user_level' user metadata (inc prefix that is the
 	 * database table prefix) with the maximum user level. Gets the value from
 	 * the all of the capabilities that the user has.
 	 *

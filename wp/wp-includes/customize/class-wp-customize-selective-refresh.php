@@ -97,10 +97,10 @@ final class WP_Customize_Selective_Refresh {
 		} else {
 			$class = 'WP_Customize_Partial';
 
-			/** This filter is documented in wp-includes/customize/class-wp-customize-selective-refresh.php */
+			/** This filter is documented in wp-inc/customize/class-wp-customize-selective-refresh.php */
 			$args = apply_filters( 'customize_dynamic_partial_args', $args, $id );
 
-			/** This filter is documented in wp-includes/customize/class-wp-customize-selective-refresh.php */
+			/** This filter is documented in wp-inc/customize/class-wp-customize-selective-refresh.php */
 			$class = apply_filters( 'customize_dynamic_partial_class', $class, $id, $args );
 
 			$partial = new $class( $this, $id, $args );

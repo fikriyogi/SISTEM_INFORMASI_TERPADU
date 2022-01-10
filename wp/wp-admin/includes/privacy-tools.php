@@ -193,7 +193,7 @@ function _wp_personal_data_handle_actions() {
  * @access private
  */
 function _wp_personal_data_cleanup_requests() {
-	/** This filter is documented in wp-includes/user.php */
+	/** This filter is documented in wp-inc/user.php */
 	$expires = (int) apply_filters( 'user_request_key_expiration', DAY_IN_SECONDS );
 
 	$requests_query = new WP_Query(
@@ -602,7 +602,7 @@ function wp_privacy_send_personal_data_export_email( $request_id ) {
 
 	$switched_locale = switch_to_locale( $locale );
 
-	/** This filter is documented in wp-includes/functions.php */
+	/** This filter is documented in wp-inc/functions.php */
 	$expiration      = apply_filters( 'wp_privacy_export_expiration', 3 * DAY_IN_SECONDS );
 	$expiration_date = date_i18n( get_option( 'date_format' ), time() + $expiration );
 
@@ -814,7 +814,7 @@ function wp_privacy_process_personal_data_export_page( $response, $exporter_inde
 	update_post_meta( $request_id, '_export_data_raw', $export_data );
 
 	// If we are not yet on the last page of the last exporter, return now.
-	/** This filter is documented in wp-admin/includes/ajax-actions.php */
+	/** This filter is documented in wp-admin/inc/ajax-actions.php */
 	$exporters        = apply_filters( 'wp_privacy_personal_data_exporters', array() );
 	$is_last_exporter = count( $exporters ) === $exporter_index;
 	$exporter_done    = $response['done'];
@@ -947,7 +947,7 @@ function wp_privacy_process_personal_data_erasure_page( $response, $eraser_index
 		wp_send_json_error( __( 'Invalid request ID when processing personal data to erase.' ) );
 	}
 
-	/** This filter is documented in wp-admin/includes/ajax-actions.php */
+	/** This filter is documented in wp-admin/inc/ajax-actions.php */
 	$erasers        = apply_filters( 'wp_privacy_personal_data_erasers', array() );
 	$is_last_eraser = count( $erasers ) === $eraser_index;
 	$eraser_done    = $response['done'];

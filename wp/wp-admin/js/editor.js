@@ -413,7 +413,7 @@ window.wp = window.wp || {};
 				 * Only move to the start of the HTML tag (to select the whole element) if the tag
 				 * is part of the voidElements list above.
 				 *
-				 * This list includes tags that are self-contained and don't need a closing tag, according to the
+				 * This list inc tags that are self-contained and don't need a closing tag, according to the
 				 * HTML5 specification.
 				 *
 				 * This is done in order to make selection of text a bit more consistent when selecting text in
@@ -638,7 +638,7 @@ window.wp = window.wp || {};
 
 		/**
 		 * This method was extracted from the `SaveContent` hook in
-		 * `wp-includes/js/tinymce/plugins/wordpress/plugin.js`.
+		 * `wp-inc/js/tinymce/plugins/wordpress/plugin.js`.
 		 *
 		 * It's needed here, since the method changes the content a bit, which confuses the cursor position.
 		 *

@@ -226,7 +226,7 @@ function string(options) {
  * Generate a RegExp to identify a shortcode.
  *
  * The base regex is functionally equivalent to the one found in
- * `get_shortcode_regex()` in `wp-includes/shortcodes.php`.
+ * `get_shortcode_regex()` in `wp-inc/shortcodes.php`.
  *
  * Capture groups:
  *
@@ -267,7 +267,7 @@ function regexp(tag) {
 const attrs = memize__WEBPACK_IMPORTED_MODULE_1___default()(text => {
   const named = {};
   const numeric = []; // This regular expression is reused from `shortcode_parse_atts()` in
-  // `wp-includes/shortcodes.php`.
+  // `wp-inc/shortcodes.php`.
   //
   // Capture groups:
   //

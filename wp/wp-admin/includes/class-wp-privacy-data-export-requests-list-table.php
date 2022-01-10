@@ -44,7 +44,7 @@ class WP_Privacy_Data_Export_Requests_List_Table extends WP_Privacy_Requests_Tab
 	 * @return string Email column markup.
 	 */
 	public function column_email( $item ) {
-		/** This filter is documented in wp-admin/includes/ajax-actions.php */
+		/** This filter is documented in wp-admin/inc/ajax-actions.php */
 		$exporters       = apply_filters( 'wp_privacy_personal_data_exporters', array() );
 		$exporters_count = count( $exporters );
 		$status          = $item->status;
@@ -116,7 +116,7 @@ class WP_Privacy_Data_Export_Requests_List_Table extends WP_Privacy_Requests_Tab
 				esc_html_e( 'Waiting for confirmation' );
 				break;
 			case 'request-confirmed':
-				/** This filter is documented in wp-admin/includes/ajax-actions.php */
+				/** This filter is documented in wp-admin/inc/ajax-actions.php */
 				$exporters       = apply_filters( 'wp_privacy_personal_data_exporters', array() );
 				$exporters_count = count( $exporters );
 				$request_id      = $item->ID;

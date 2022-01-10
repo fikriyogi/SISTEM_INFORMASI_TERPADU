@@ -348,7 +348,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 
 		$item = WP_Application_Passwords::get_user_application_password( $user->ID, $item['uuid'] );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-application-passwords-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-application-passwords-controller.php */
 		do_action( 'rest_after_insert_application_password', $item, $request, false );
 
 		$request->set_param( 'context', 'edit' );

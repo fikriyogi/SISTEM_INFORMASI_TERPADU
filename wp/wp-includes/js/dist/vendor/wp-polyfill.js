@@ -771,7 +771,7 @@ var getOwnPropertyNamesModule = __webpack_require__(37);
 var getOwnPropertySymbolsModule = __webpack_require__(44);
 var anObject = __webpack_require__(21);
 
-// all object keys, includes non-enumerable and symbols
+// all object keys, inc non-enumerable and symbols
 module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
   var keys = getOwnPropertyNamesModule.f(anObject(it));
   var getOwnPropertySymbols = getOwnPropertySymbolsModule.f;
@@ -853,20 +853,20 @@ var toIndexedObject = __webpack_require__(9);
 var toLength = __webpack_require__(40);
 var toAbsoluteIndex = __webpack_require__(42);
 
-// `Array.prototype.{ indexOf, includes }` methods implementation
+// `Array.prototype.{ indexOf, inc }` methods implementation
 var createMethod = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIndexedObject($this);
     var length = toLength(O.length);
     var index = toAbsoluteIndex(fromIndex, length);
     var value;
-    // Array#includes uses SameValueZero equality algorithm
+    // Array#inc uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare -- NaN check
     if (IS_INCLUDES && el != el) while (length > index) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare -- NaN check
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
+    // Array#indexOf ignores holes, Array#inc - not
     } else for (;length > index; index++) {
       if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
@@ -874,7 +874,7 @@ var createMethod = function (IS_INCLUDES) {
 };
 
 module.exports = {
-  // `Array.prototype.includes` method
+  // `Array.prototype.inc` method
   // https://tc39.es/ecma262/#sec-array.prototype.includes
   includes: createMethod(true),
   // `Array.prototype.indexOf` method
@@ -1788,7 +1788,7 @@ if (!set || !clear) {
     defer = function (id) {
       Dispatch.now(runner(id));
     };
-  // Browsers with MessageChannel, includes WebWorkers
+  // Browsers with MessageChannel, inc WebWorkers
   // except iOS - https://github.com/zloirock/core-js/issues/624
   } else if (MessageChannel && !IS_IOS) {
     channel = new MessageChannel();

@@ -746,7 +746,7 @@ function wp_image_matches_ratio( $source_width, $source_height, $target_width, $
  * @param string|int[] $size    Optional. Image size. Accepts any registered image size name, or an array
  *                              of width and height values in pixels (in that order). Default 'thumbnail'.
  * @return array|false {
- *     Array of file relative path, width, and height on success. Additionally includes absolute
+ *     Array of file relative path, width, and height on success. Additionally inc absolute
  *     path and URL if registered size is passed to `$size` parameter. False on failure.
  *
  *     @type string $file   Path of image relative to uploads directory.
@@ -958,7 +958,7 @@ function wp_get_attachment_image_src( $attachment_id, $size = 'thumbnail', $icon
 			$src = wp_mime_type_icon( $attachment_id );
 
 			if ( $src ) {
-				/** This filter is documented in wp-includes/post.php */
+				/** This filter is documented in wp-inc/post.php */
 				$icon_dir = apply_filters( 'icon_dir', ABSPATH . WPINC . '/images/media' );
 
 				$src_file               = $icon_dir . '/' . wp_basename( $src );
@@ -2434,7 +2434,7 @@ function gallery_shortcode( $attr ) {
 			#{$selector} .gallery-caption {
 				margin-left: 0;
 			}
-			/* see gallery_shortcode() in wp-includes/media.php */
+			/* see gallery_shortcode() in wp-inc/media.php */
 		</style>\n\t\t";
 	}
 
@@ -3931,7 +3931,7 @@ function wp_plupload_default_settings() {
  *     @type string $filesizeHumanReadable Filesize of the attachment in human readable format (e.g. 1 MB).
  *     @type int    $filesizeInBytes       Filesize of the attachment in bytes.
  *     @type int    $height                If the attachment is an image, represents the height of the image in pixels.
- *     @type string $icon                  Icon URL of the attachment (e.g. /wp-includes/images/media/archive.png).
+ *     @type string $icon                  Icon URL of the attachment (e.g. /wp-inc/images/media/archive.png).
  *     @type int    $id                    ID of the attachment.
  *     @type string $link                  URL to the attachment.
  *     @type int    $menuOrder             Menu order of the attachment post.
@@ -4056,7 +4056,7 @@ function wp_prepare_attachment_for_js( $attachment ) {
 	if ( $meta && ( 'image' === $type || ! empty( $meta['sizes'] ) ) ) {
 		$sizes = array();
 
-		/** This filter is documented in wp-admin/includes/media.php */
+		/** This filter is documented in wp-admin/inc/media.php */
 		$possible_sizes = apply_filters(
 			'image_size_names_choose',
 			array(
@@ -4076,7 +4076,7 @@ function wp_prepare_attachment_for_js( $attachment ) {
 		 */
 		foreach ( $possible_sizes as $size => $label ) {
 
-			/** This filter is documented in wp-includes/media.php */
+			/** This filter is documented in wp-inc/media.php */
 			$downsize = apply_filters( 'image_downsize', false, $attachment->ID, $size );
 
 			if ( $downsize ) {
@@ -4235,7 +4235,7 @@ function wp_enqueue_media( $args = array() ) {
 		'library'  => '',
 	);
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$tabs = apply_filters( 'media_upload_tabs', $tabs );
 	unset( $tabs['type'], $tabs['type_url'], $tabs['gallery'], $tabs['library'] );
 
@@ -4369,7 +4369,7 @@ function wp_enqueue_media( $args = array() ) {
 		'tabs'              => $tabs,
 		'tabUrl'            => add_query_arg( array( 'chromeless' => true ), admin_url( 'media-upload.php' ) ),
 		'mimeTypes'         => wp_list_pluck( get_post_mime_types(), 0 ),
-		/** This filter is documented in wp-admin/includes/media.php */
+		/** This filter is documented in wp-admin/inc/media.php */
 		'captions'          => ! apply_filters( 'disable_captions', '' ),
 		'nonce'             => array(
 			'sendToEditor' => wp_create_nonce( 'media-send-to-editor' ),

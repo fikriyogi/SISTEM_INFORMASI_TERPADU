@@ -1885,11 +1885,11 @@ function selectors_isEditedPostNew(state) {
   return selectors_getCurrentPost(state).status === 'auto-draft';
 }
 /**
- * Returns true if content includes unsaved changes, or false otherwise.
+ * Returns true if content inc unsaved changes, or false otherwise.
  *
  * @param {Object} state Editor state.
  *
- * @return {boolean} Whether content includes unsaved changes.
+ * @return {boolean} Whether content inc unsaved changes.
  */
 
 function hasChangedContent(state) {
@@ -2271,7 +2271,7 @@ function selectors_isEditedPostSaveable(state) {
   // the post is not dirty. Currently this restriction is imposed at UI, but
   // should be moved here.
   //
-  //  See: `isEditedPostPublishable` (includes `isEditedPostDirty` condition)
+  //  See: `isEditedPostPublishable` (inc `isEditedPostDirty` condition)
   //  See: <PostSavedState /> (`forceIsDirty` prop)
   //  See: <PostPublishButton /> (`forceIsDirty` prop)
   //  See: https://github.com/WordPress/gutenberg/pull/4184
@@ -3783,7 +3783,7 @@ function* trashPost() {
 }
 /**
  * Action generator used in signalling that the post should autosave.  This
- * includes server-side autosaving (default) and client-side (a.k.a. local)
+ * inc server-side autosaving (default) and client-side (a.k.a. local)
  * autosaving (e.g. on the Web, the post might be committed to Session
  * Storage).
  *

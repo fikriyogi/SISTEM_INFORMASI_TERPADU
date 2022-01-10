@@ -1509,7 +1509,7 @@ function wp_ajax_add_menu_item() {
 		}
 	}
 
-	/** This filter is documented in wp-admin/includes/nav-menu.php */
+	/** This filter is documented in wp-admin/inc/nav-menu.php */
 	$walker_class_name = apply_filters( 'wp_edit_nav_menu_walker', 'Walker_Nav_Menu_Edit', $_POST['menu'] );
 
 	if ( ! class_exists( $walker_class_name ) ) {
@@ -1811,7 +1811,7 @@ function wp_ajax_menu_get_metabox() {
 	if ( ! empty( $_POST['item-object'] ) && isset( $items[ $_POST['item-object'] ] ) ) {
 		$menus_meta_box_object = $items[ $_POST['item-object'] ];
 
-		/** This filter is documented in wp-admin/includes/nav-menu.php */
+		/** This filter is documented in wp-admin/inc/nav-menu.php */
 		$item = apply_filters( 'nav_menu_meta_box_object', $menus_meta_box_object );
 
 		$box_args = array(
@@ -2052,7 +2052,7 @@ function wp_ajax_inline_save() {
 	if ( ! empty( $data['tax_input'] ) ) {
 		foreach ( $data['tax_input'] as $taxonomy => $terms ) {
 			$tax_object = get_taxonomy( $taxonomy );
-			/** This filter is documented in wp-admin/includes/class-wp-posts-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-posts-list-table.php */
 			if ( ! apply_filters( 'quick_edit_show_taxonomy', $tax_object->show_in_quick_edit, $taxonomy, $post['post_type'] ) ) {
 				unset( $data['tax_input'][ $taxonomy ] );
 			}
@@ -2393,9 +2393,9 @@ function wp_ajax_delete_inactive_widgets() {
 	}
 
 	unset( $_POST['removeinactivewidgets'], $_POST['action'] );
-	/** This action is documented in wp-admin/includes/ajax-actions.php */
+	/** This action is documented in wp-admin/inc/ajax-actions.php */
 	do_action( 'load-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
-	/** This action is documented in wp-admin/includes/ajax-actions.php */
+	/** This action is documented in wp-admin/inc/ajax-actions.php */
 	do_action( 'widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 	/** This action is documented in wp-admin/widgets.php */
 	do_action( 'sidebar_admin_setup' );
@@ -3132,7 +3132,7 @@ function wp_ajax_save_attachment_compat() {
 		wp_send_json_error();
 	}
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$post = apply_filters( 'attachment_fields_to_save', $post, $attachment_data );
 
 	if ( isset( $post['errors'] ) ) {
@@ -3278,7 +3278,7 @@ function wp_ajax_send_attachment_to_editor() {
 		}
 	}
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$html = apply_filters( 'media_send_to_editor', $html, $id, $attachment );
 
 	wp_send_json_success( $html );
@@ -3350,7 +3350,7 @@ function wp_ajax_send_link_to_editor() {
 		}
 	}
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$html = apply_filters( "{$type}_send_to_editor_url", $html, $src, $link_text );
 
 	wp_send_json_success( $html );
@@ -3547,7 +3547,7 @@ function wp_ajax_query_themes() {
 
 	$old_filter = isset( $args['browse'] ) ? $args['browse'] : 'search';
 
-	/** This filter is documented in wp-admin/includes/class-wp-theme-install-list-table.php */
+	/** This filter is documented in wp-admin/inc/class-wp-theme-install-list-table.php */
 	$args = apply_filters( 'install_themes_table_api_args_' . $old_filter, $args );
 
 	$api = themes_api( 'query_themes', $args );
@@ -3909,7 +3909,7 @@ function wp_ajax_crop_image() {
 				break;
 			}
 
-			/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
+			/** This filter is documented in wp-admin/inc/class-custom-image-header.php */
 			$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 			$object  = $wp_site_icon->create_attachment_object( $cropped, $attachment_id );
 			unset( $object['ID'] );
@@ -3937,7 +3937,7 @@ function wp_ajax_crop_image() {
 			 */
 			do_action( 'wp_ajax_crop_image_pre_save', $context, $attachment_id, $cropped );
 
-			/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
+			/** This filter is documented in wp-admin/inc/class-custom-image-header.php */
 			$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 
 			$parent_url = wp_get_attachment_url( $attachment_id );
@@ -5386,7 +5386,7 @@ function wp_ajax_toggle_auto_updates() {
 			}
 
 			$option = 'auto_update_plugins';
-			/** This filter is documented in wp-admin/includes/class-wp-plugins-list-table.php */
+			/** This filter is documented in wp-admin/inc/class-wp-plugins-list-table.php */
 			$all_items = apply_filters( 'all_plugins', get_plugins() );
 			break;
 		case 'theme':

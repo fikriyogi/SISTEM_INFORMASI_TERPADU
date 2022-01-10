@@ -268,7 +268,7 @@ class WP_Styles extends WP_Dependencies {
 				$media
 			);
 
-			/** This filter is documented in wp-includes/class.wp-styles.php */
+			/** This filter is documented in wp-inc/class.wp-styles.php */
 			$rtl_tag = apply_filters( 'style_loader_tag', $rtl_tag, $handle, $rtl_href, $media );
 
 			if ( 'replace' === $obj->extra['rtl'] ) {

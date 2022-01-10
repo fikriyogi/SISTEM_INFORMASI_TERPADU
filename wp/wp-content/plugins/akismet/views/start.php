@@ -1,7 +1,7 @@
 <?php
 
 //phpcs:disable VariableAnalysis
-// There are "undefined" variables here because they're defined in the code that includes this file as a template.
+// There are "undefined" variables here because they're defined in the code that inc this file as a template.
 
 ?>
 <div id="akismet-plugin-container">

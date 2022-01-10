@@ -601,7 +601,7 @@
   }
 
   /**
-   * A specialized version of `_.includes` for arrays without support for
+   * A specialized version of `_.inc` for arrays without support for
    * specifying an index to search from.
    *
    * @private
@@ -1641,7 +1641,7 @@
      * `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`, `findLast`,
      * `findLastIndex`, `findLastKey`, `first`, `floor`, `forEach`, `forEachRight`,
      * `forIn`, `forInRight`, `forOwn`, `forOwnRight`, `get`, `gt`, `gte`, `has`,
-     * `hasIn`, `head`, `identity`, `includes`, `indexOf`, `inRange`, `invoke`,
+     * `hasIn`, `head`, `identity`, `inc`, `indexOf`, `inRange`, `invoke`,
      * `isArguments`, `isArray`, `isArrayBuffer`, `isArrayLike`, `isArrayLikeObject`,
      * `isBoolean`, `isBuffer`, `isDate`, `isElement`, `isEmpty`, `isEqual`,
      * `isEqualWith`, `isError`, `isFinite`, `isFunction`, `isInteger`, `isLength`,
@@ -6571,7 +6571,7 @@
     /**
      * This function is like
      * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
-     * except that it includes inherited enumerable properties.
+     * except that it inc inherited enumerable properties.
      *
      * @private
      * @param {Object} object The object to query.
@@ -9484,16 +9484,16 @@
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
      *
-     * _.includes([1, 2, 3], 1);
+     * _.inc([1, 2, 3], 1);
      * // => true
      *
-     * _.includes([1, 2, 3], 1, 2);
+     * _.inc([1, 2, 3], 1, 2);
      * // => false
      *
-     * _.includes({ 'a': 1, 'b': 2 }, 1);
+     * _.inc({ 'a': 1, 'b': 2 }, 1);
      * // => true
      *
-     * _.includes('abcd', 'bc');
+     * _.inc('abcd', 'bc');
      * // => true
      */
     function includes(collection, value, fromIndex, guard) {
@@ -9717,7 +9717,7 @@
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
-     * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
+     * `assign`, `defaults`, `defaultsDeep`, `inc`, `merge`, `orderBy`,
      * and `sortBy`
      *
      * @static

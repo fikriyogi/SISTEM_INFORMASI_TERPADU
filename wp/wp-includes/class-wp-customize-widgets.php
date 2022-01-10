@@ -331,10 +331,10 @@ final class WP_Customize_Widgets {
 	 * @since 3.9.0
 	 */
 	public function customize_controls_init() {
-		/** This action is documented in wp-admin/includes/ajax-actions.php */
+		/** This action is documented in wp-admin/inc/ajax-actions.php */
 		do_action( 'load-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
-		/** This action is documented in wp-admin/includes/ajax-actions.php */
+		/** This action is documented in wp-admin/inc/ajax-actions.php */
 		do_action( 'widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
 		/** This action is documented in wp-admin/widgets.php */
@@ -1670,10 +1670,10 @@ final class WP_Customize_Widgets {
 			wp_send_json_error( 'missing_widget-id' );
 		}
 
-		/** This action is documented in wp-admin/includes/ajax-actions.php */
+		/** This action is documented in wp-admin/inc/ajax-actions.php */
 		do_action( 'load-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
-		/** This action is documented in wp-admin/includes/ajax-actions.php */
+		/** This action is documented in wp-admin/inc/ajax-actions.php */
 		do_action( 'widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
 		/** This action is documented in wp-admin/widgets.php */
@@ -2130,7 +2130,7 @@ final class WP_Customize_Widgets {
 		if ( isset( $this->_captured_options[ $option_name ] ) ) {
 			$value = $this->_captured_options[ $option_name ];
 
-			/** This filter is documented in wp-includes/option.php */
+			/** This filter is documented in wp-inc/option.php */
 			$value = apply_filters( 'option_' . $option_name, $value, $option_name );
 		}
 

@@ -697,11 +697,11 @@ function dynamic_sidebar( $index = 1 ) {
 
 	$sidebars_widgets = wp_get_sidebars_widgets();
 	if ( empty( $wp_registered_sidebars[ $index ] ) || empty( $sidebars_widgets[ $index ] ) || ! is_array( $sidebars_widgets[ $index ] ) ) {
-		/** This action is documented in wp-includes/widget.php */
+		/** This action is documented in wp-inc/widget.php */
 		do_action( 'dynamic_sidebar_before', $index, false );
-		/** This action is documented in wp-includes/widget.php */
+		/** This action is documented in wp-inc/widget.php */
 		do_action( 'dynamic_sidebar_after', $index, false );
-		/** This filter is documented in wp-includes/widget.php */
+		/** This filter is documented in wp-inc/widget.php */
 		return apply_filters( 'dynamic_sidebar_has_widgets', false, $index );
 	}
 
@@ -1202,7 +1202,7 @@ function the_widget( $widget, $instance = array(), $args = array() ) {
 
 	$instance = wp_parse_args( $instance );
 
-	/** This filter is documented in wp-includes/class-wp-widget.php */
+	/** This filter is documented in wp-inc/class-wp-widget.php */
 	$instance = apply_filters( 'widget_display_callback', $instance, $widget_obj, $args );
 
 	if ( false === $instance ) {
@@ -1963,14 +1963,14 @@ function wp_render_widget( $widget_id, $sidebar_id ) {
 	$classname_                 = ltrim( $classname_, '_' );
 	$params[0]['before_widget'] = sprintf( $params[0]['before_widget'], $widget_id, $classname_ );
 
-	/** This filter is documented in wp-includes/widgets.php */
+	/** This filter is documented in wp-inc/widgets.php */
 	$params = apply_filters( 'dynamic_sidebar_params', $params );
 
 	$callback = $wp_registered_widgets[ $widget_id ]['callback'];
 
 	ob_start();
 
-	/** This filter is documented in wp-includes/widgets.php */
+	/** This filter is documented in wp-inc/widgets.php */
 	do_action( 'dynamic_sidebar', $wp_registered_widgets[ $widget_id ] );
 
 	if ( is_callable( $callback ) ) {

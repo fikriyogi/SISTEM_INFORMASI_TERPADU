@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/admin-bar.js
+ * @output wp-inc/js/admin-bar.js
  */
 /**
  * Admin bar with Vanilla JS, no external dependencies.

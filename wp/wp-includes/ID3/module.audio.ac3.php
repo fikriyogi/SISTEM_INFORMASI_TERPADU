@@ -55,7 +55,7 @@ class getid3_ac3 extends getid3_handler
 		// of each frame contains information needed to acquire and maintain synchronization. A
 		// bit stream information (BSI) header follows SI, and contains parameters describing the coded
 		// audio service. The coded audio blocks may be followed by an auxiliary data (Aux) field. At the
-		// end of each frame is an error check field that includes a CRC word for error detection. An
+		// end of each frame is an error check field that inc a CRC word for error detection. An
 		// additional CRC word is located in the SI header, the use of which, by a decoder, is optional.
 		//
 		// syncinfo() | bsi() | AB0 | AB1 | AB2 | AB3 | AB4 | AB5 | Aux | CRC

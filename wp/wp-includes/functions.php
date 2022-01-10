@@ -2866,7 +2866,7 @@ function wp_upload_bits( $name, $deprecated, $bits, $time = null ) {
 		clean_dirsize_cache( $new_file );
 	}
 
-	/** This filter is documented in wp-admin/includes/file.php */
+	/** This filter is documented in wp-admin/inc/file.php */
 	return apply_filters(
 		'wp_handle_upload',
 		array(

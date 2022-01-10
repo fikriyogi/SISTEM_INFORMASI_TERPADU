@@ -1665,7 +1665,7 @@ $this->warning('incomplete/incorrect handling of "stsd" with Parrot metadata in 
 						$atom_structure['keys'][$i]['key_size']      = getid3_lib::BigEndian2Int(substr($atom_data, $keys_atom_offset + 0, 4));
 						$atom_structure['keys'][$i]['key_namespace'] =                           substr($atom_data, $keys_atom_offset + 4, 4);
 						$atom_structure['keys'][$i]['key_value']     =                           substr($atom_data, $keys_atom_offset + 8, $atom_structure['keys'][$i]['key_size'] - 8);
-						$keys_atom_offset += $atom_structure['keys'][$i]['key_size']; // key_size includes the 4+4 bytes for key_size and key_namespace
+						$keys_atom_offset += $atom_structure['keys'][$i]['key_size']; // key_size inc the 4+4 bytes for key_size and key_namespace
 
 						$info['quicktime']['temp_meta_key_names'][$i] = $atom_structure['keys'][$i]['key_value'];
 					}

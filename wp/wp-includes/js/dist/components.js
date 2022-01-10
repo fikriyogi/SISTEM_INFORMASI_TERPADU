@@ -42209,7 +42209,7 @@ function ToolbarContainer({
   ...props
 }, ref) {
   // https://reakit.io/docs/basic-concepts/#state-hooks
-  // Passing baseId for server side rendering (which includes snapshots)
+  // Passing baseId for server side rendering (which inc snapshots)
   // If an id prop is passed to Toolbar, toolbar items will use it as a base for their ids
   const toolbarState = useToolbarState({
     loop: true,
@@ -53045,7 +53045,7 @@ function calculateDimension(el, axis) {
   // Only read styles if we need to
   var style = !borderBox || withMargin ? window.getComputedStyle(el) : null;
 
-  // Offset includes border and padding
+  // Offset inc border and padding
   var offsetWidth = el.offsetWidth,
       offsetHeight = el.offsetHeight;
 
@@ -53367,7 +53367,7 @@ each(['Width', 'Height'], function (name) {
   };
 
   domUtils['viewport' + name] = function (win) {
-    // pc browser includes scrollbar in window.innerWidth
+    // pc browser inc scrollbar in window.innerWidth
     var prop = 'client' + name;
     var doc = win.document;
     var body = doc.body;
@@ -58749,7 +58749,7 @@ var ToInteger = __webpack_require__("ddK1");
 
 module.exports = function ToLength(argument) {
 	var len = ToInteger(argument);
-	if (len <= 0) { return 0; } // includes converting -0 to +0
+	if (len <= 0) { return 0; } // inc converting -0 to +0
 	if (len > MAX_SAFE_INTEGER) { return MAX_SAFE_INTEGER; }
 	return len;
 };

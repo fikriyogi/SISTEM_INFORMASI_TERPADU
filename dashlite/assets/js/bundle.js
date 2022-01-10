@@ -5718,7 +5718,7 @@ function(e, t) {
         if (!r) {
             var o = "`" + t + "`"
               , a = "`" + n + "`";
-            console.warn(a + " modifier is required by " + o + " modifier in order to work, be sure to includes it before " + o + "!")
+            console.warn(a + " modifier is required by " + o + " modifier in order to work, be sure to inc it before " + o + "!")
         }
         return r
     }
@@ -16990,7 +16990,7 @@ function(e, t) {
         function e() {
             if (t(this, e),
             "undefined" != typeof window) {
-                "undefined" == typeof Promise && q("This package requires a Promise library, please includes a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)"),
+                "undefined" == typeof Promise && q("This package requires a Promise library, please inc a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)"),
                 ht = this;
                 for (var n = arguments.length, i = new Array(n), r = 0; r < n; r++)
                     i[r] = arguments[r];

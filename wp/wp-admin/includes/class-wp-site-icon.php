@@ -183,7 +183,7 @@ class WP_Site_Icon {
 	 * @return string[] Array of image size names.
 	 */
 	public function intermediate_image_sizes( $sizes = array() ) {
-		/** This filter is documented in wp-admin/includes/class-wp-site-icon.php */
+		/** This filter is documented in wp-admin/inc/class-wp-site-icon.php */
 		$this->site_icon_sizes = apply_filters( 'site_icon_image_sizes', $this->site_icon_sizes );
 		foreach ( $this->site_icon_sizes as $size ) {
 			$sizes[] = 'site_icon-' . $size;

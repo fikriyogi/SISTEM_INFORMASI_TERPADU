@@ -9,7 +9,7 @@ header( 'Content-Type: ' . feed_content_type( 'rss2' ) . '; charset=' . get_opti
 
 echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>';
 
-/** This action is documented in wp-includes/feed-rss2.php */
+/** This action is documented in wp-inc/feed-rss2.php */
 do_action( 'rss_tag_pre', 'rss2-comments' );
 ?>
 <rss version="2.0"
@@ -18,7 +18,7 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	<?php
-	/** This action is documented in wp-includes/feed-rss2.php */
+	/** This action is documented in wp-inc/feed-rss2.php */
 	do_action( 'rss2_ns' );
 	?>
 
@@ -52,13 +52,13 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 	<lastBuildDate><?php echo get_feed_build_date( 'r' ); ?></lastBuildDate>
 	<sy:updatePeriod>
 	<?php
-		/** This filter is documented in wp-includes/feed-rss2.php */
+		/** This filter is documented in wp-inc/feed-rss2.php */
 		echo apply_filters( 'rss_update_period', 'hourly' );
 	?>
 	</sy:updatePeriod>
 	<sy:updateFrequency>
 	<?php
-		/** This filter is documented in wp-includes/feed-rss2.php */
+		/** This filter is documented in wp-inc/feed-rss2.php */
 		echo apply_filters( 'rss_update_frequency', '1' );
 	?>
 	</sy:updateFrequency>
@@ -80,7 +80,7 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 		<?php
 		if ( ! is_singular() ) {
 			$title = get_the_title( $comment_post->ID );
-			/** This filter is documented in wp-includes/feed.php */
+			/** This filter is documented in wp-inc/feed.php */
 			$title = apply_filters( 'the_title_rss', $title );
 			/* translators: Individual comment title. 1: Post title, 2: Comment author name. */
 			printf( ent2ncr( __( 'Comment on %1$s by %2$s' ) ), $title, get_comment_author_rss() );

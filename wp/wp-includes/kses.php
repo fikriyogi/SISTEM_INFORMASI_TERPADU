@@ -866,7 +866,7 @@ function wp_kses_allowed_html( $context = '' ) {
 
 	switch ( $context ) {
 		case 'post':
-			/** This filter is documented in wp-includes/kses.php */
+			/** This filter is documented in wp-inc/kses.php */
 			$tags = apply_filters( 'wp_kses_allowed_html', $allowedposttags, $context );
 
 			// 5.0.1 removed the `<form>` tag, allow it if a filter is allowing it's sub-elements `<input>` or `<select>`.
@@ -883,7 +883,7 @@ function wp_kses_allowed_html( $context = '' ) {
 					'target'         => true,
 				);
 
-				/** This filter is documented in wp-includes/kses.php */
+				/** This filter is documented in wp-inc/kses.php */
 				$tags = apply_filters( 'wp_kses_allowed_html', $tags, $context );
 			}
 
@@ -893,20 +893,20 @@ function wp_kses_allowed_html( $context = '' ) {
 		case 'pre_user_description':
 			$tags             = $allowedtags;
 			$tags['a']['rel'] = true;
-			/** This filter is documented in wp-includes/kses.php */
+			/** This filter is documented in wp-inc/kses.php */
 			return apply_filters( 'wp_kses_allowed_html', $tags, $context );
 
 		case 'strip':
-			/** This filter is documented in wp-includes/kses.php */
+			/** This filter is documented in wp-inc/kses.php */
 			return apply_filters( 'wp_kses_allowed_html', array(), $context );
 
 		case 'entities':
-			/** This filter is documented in wp-includes/kses.php */
+			/** This filter is documented in wp-inc/kses.php */
 			return apply_filters( 'wp_kses_allowed_html', $allowedentitynames, $context );
 
 		case 'data':
 		default:
-			/** This filter is documented in wp-includes/kses.php */
+			/** This filter is documented in wp-inc/kses.php */
 			return apply_filters( 'wp_kses_allowed_html', $allowedtags, $context );
 	}
 }
@@ -985,7 +985,7 @@ function wp_kses_split( $string, $allowed_html, $allowed_protocols ) {
  * This function returns a list of all HTML attributes that must contain
  * a URL according to the HTML specification.
  *
- * This list includes URI attributes both allowed and disallowed by KSES.
+ * This list inc URI attributes both allowed and disallowed by KSES.
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
  *

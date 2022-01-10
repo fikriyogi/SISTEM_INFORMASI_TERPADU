@@ -11,10 +11,10 @@
  * Core class used for updating core.
  *
  * It allows for WordPress to upgrade itself in combination with
- * the wp-admin/includes/update-core.php file.
+ * the wp-admin/inc/update-core.php file.
  *
  * @since 2.8.0
- * @since 4.6.0 Moved to its own file from wp-admin/includes/class-wp-upgrader.php.
+ * @since 4.6.0 Moved to its own file from wp-admin/inc/class-wp-upgrader.php.
  *
  * @see WP_Upgrader
  */
@@ -127,7 +127,7 @@ class Core_Upgrader extends WP_Upgrader {
 		// WARNING: This may be removed in the future.
 		if ( is_wp_error( $download ) && $download->get_error_data( 'softfail-filename' ) ) {
 			// Outout the failure error as a normal feedback, and not as an error:
-			/** This filter is documented in wp-admin/includes/update-core.php */
+			/** This filter is documented in wp-admin/inc/update-core.php */
 			apply_filters( 'update_feedback', $download->get_error_message() );
 
 			// Report this failure back to WordPress.org for debugging purposes.
@@ -154,14 +154,14 @@ class Core_Upgrader extends WP_Upgrader {
 		}
 
 		// Copy update-core.php from the new version into place.
-		if ( ! $wp_filesystem->copy( $working_dir . '/wordpress/wp-admin/includes/update-core.php', $wp_dir . 'wp-admin/includes/update-core.php', true ) ) {
+		if ( ! $wp_filesystem->copy( $working_dir . '/wordpress/wp-admin/inc/update-core.php', $wp_dir . 'wp-admin/inc/update-core.php', true ) ) {
 			$wp_filesystem->delete( $working_dir, true );
 			WP_Upgrader::release_lock( 'core_updater' );
-			return new WP_Error( 'copy_failed_for_update_core_file', __( 'The update cannot be installed because we will be unable to copy some files. This is usually due to inconsistent file permissions.' ), 'wp-admin/includes/update-core.php' );
+			return new WP_Error( 'copy_failed_for_update_core_file', __( 'The update cannot be installed because we will be unable to copy some files. This is usually due to inconsistent file permissions.' ), 'wp-admin/inc/update-core.php' );
 		}
-		$wp_filesystem->chmod( $wp_dir . 'wp-admin/includes/update-core.php', FS_CHMOD_FILE );
+		$wp_filesystem->chmod( $wp_dir . 'wp-admin/inc/update-core.php', FS_CHMOD_FILE );
 
-		wp_opcache_invalidate( ABSPATH . 'wp-admin/includes/update-core.php' );
+		wp_opcache_invalidate( ABSPATH . 'wp-admin/inc/update-core.php' );
 		require_once ABSPATH . 'wp-admin/includes/update-core.php';
 
 		if ( ! function_exists( 'update_core' ) ) {
@@ -191,10 +191,10 @@ class Core_Upgrader extends WP_Upgrader {
 			}
 
 			if ( $try_rollback ) {
-				/** This filter is documented in wp-admin/includes/update-core.php */
+				/** This filter is documented in wp-admin/inc/update-core.php */
 				apply_filters( 'update_feedback', $result );
 
-				/** This filter is documented in wp-admin/includes/update-core.php */
+				/** This filter is documented in wp-admin/inc/update-core.php */
 				apply_filters( 'update_feedback', $this->strings['start_rollback'] );
 
 				$rollback_result = $this->upgrade( $current, array_merge( $parsed_args, array( 'do_rollback' => true ) ) );
@@ -211,7 +211,7 @@ class Core_Upgrader extends WP_Upgrader {
 			}
 		}
 
-		/** This action is documented in wp-admin/includes/class-wp-upgrader.php */
+		/** This action is documented in wp-admin/inc/class-wp-upgrader.php */
 		do_action(
 			'upgrader_process_complete',
 			$this,

@@ -38,7 +38,7 @@ get_current_screen()->add_help_tab(
 			) . '</p>' .
 			'<p>' . sprintf(
 				/* translators: 1: %category%, 2: %tag% */
-				__( 'When you assign multiple categories or tags to a post, only one can show up in the permalink: the lowest numbered category. This applies if your custom structure includes %1$s or %2$s.' ),
+				__( 'When you assign multiple categories or tags to a post, only one can show up in the permalink: the lowest numbered category. This applies if your custom structure inc %1$s or %2$s.' ),
 				'<code>%category%</code>',
 				'<code>%tag%</code>'
 			) . '</p>' .

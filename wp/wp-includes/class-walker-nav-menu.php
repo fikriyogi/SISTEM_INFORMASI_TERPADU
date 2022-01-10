@@ -209,7 +209,7 @@ class Walker_Nav_Menu extends Walker {
 			}
 		}
 
-		/** This filter is documented in wp-includes/post-template.php */
+		/** This filter is documented in wp-inc/post-template.php */
 		$title = apply_filters( 'the_title', $item->title, $item->ID );
 
 		/**
@@ -233,7 +233,7 @@ class Walker_Nav_Menu extends Walker {
 		/**
 		 * Filters a menu item's starting output.
 		 *
-		 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
+		 * The menu item's starting output only inc `$args->before`, the opening `<a>`,
 		 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
 		 * no filter for modifying the opening and closing `<li>` for a menu item.
 		 *

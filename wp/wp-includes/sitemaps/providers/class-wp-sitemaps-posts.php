@@ -27,7 +27,7 @@ class WP_Sitemaps_Posts extends WP_Sitemaps_Provider {
 
 	/**
 	 * Returns the public post types, which excludes nav_items and similar types.
-	 * Attachments are also excluded. This includes custom post types with public = true.
+	 * Attachments are also excluded. This inc custom post types with public = true.
 	 *
 	 * @since 5.5.0
 	 *

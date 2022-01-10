@@ -100,20 +100,20 @@ var toIndexedObject = require('../internals/to-indexed-object');
 var toLength = require('../internals/to-length');
 var toAbsoluteIndex = require('../internals/to-absolute-index');
 
-// `Array.prototype.{ indexOf, includes }` methods implementation
+// `Array.prototype.{ indexOf, inc }` methods implementation
 var createMethod = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIndexedObject($this);
     var length = toLength(O.length);
     var index = toAbsoluteIndex(fromIndex, length);
     var value;
-    // Array#includes uses SameValueZero equality algorithm
+    // Array#inc uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare
     if (IS_INCLUDES && el != el) while (length > index) {
       value = O[index++];
       // eslint-disable-next-line no-self-compare
       if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
+    // Array#indexOf ignores holes, Array#inc - not
     } else for (;length > index; index++) {
       if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
@@ -121,7 +121,7 @@ var createMethod = function (IS_INCLUDES) {
 };
 
 module.exports = {
-  // `Array.prototype.includes` method
+  // `Array.prototype.inc` method
   // https://tc39.github.io/ecma262/#sec-array.prototype.includes
   includes: createMethod(true),
   // `Array.prototype.indexOf` method
@@ -1013,7 +1013,7 @@ module.exports = CORRECT_PROTOTYPE_GETTER ? Object.getPrototypeOf : function (O)
 },{"../internals/correct-prototype-getter":12,"../internals/has":28,"../internals/shared-key":63,"../internals/to-object":72}],52:[function(require,module,exports){
 var has = require('../internals/has');
 var toIndexedObject = require('../internals/to-indexed-object');
-var indexOf = require('../internals/array-includes').indexOf;
+var indexOf = require('../internals/array-inc').indexOf;
 var hiddenKeys = require('../internals/hidden-keys');
 
 module.exports = function (object, names) {
@@ -1086,7 +1086,7 @@ var getOwnPropertyNamesModule = require('../internals/object-get-own-property-na
 var getOwnPropertySymbolsModule = require('../internals/object-get-own-property-symbols');
 var anObject = require('../internals/an-object');
 
-// all object keys, includes non-enumerable and symbols
+// all object keys, inc non-enumerable and symbols
 module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
   var keys = getOwnPropertyNamesModule.f(anObject(it));
   var getOwnPropertySymbols = getOwnPropertySymbolsModule.f;

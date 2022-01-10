@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-emoji-loader.js
+ * @output wp-inc/js/wp-emoji-loader.js
  */
 
 ( function( window, document, settings ) {

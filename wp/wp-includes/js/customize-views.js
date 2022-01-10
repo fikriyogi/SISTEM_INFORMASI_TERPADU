@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/customize-views.js
+ * @output wp-inc/js/customize-views.js
  */
 
 (function( $, wp, _ ) {

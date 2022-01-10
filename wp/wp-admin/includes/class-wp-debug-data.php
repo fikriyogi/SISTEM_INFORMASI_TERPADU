@@ -1185,7 +1185,7 @@ class WP_Debug_Data {
 				$auto_updates_string = __( 'Disabled' );
 			}
 
-			/** This filter is documented in wp-admin/includes/class-wp-debug-data.php */
+			/** This filter is documented in wp-admin/inc/class-wp-debug-data.php */
 			$auto_updates_string = apply_filters( 'theme_auto_update_debug_string', $auto_updates_string, $active_theme, $enabled );
 
 			$info['wp-active-theme']['fields']['auto_update'] = array(
@@ -1271,7 +1271,7 @@ class WP_Debug_Data {
 					$parent_theme_auto_update_string = __( 'Disabled' );
 				}
 
-				/** This filter is documented in wp-admin/includes/class-wp-debug-data.php */
+				/** This filter is documented in wp-admin/inc/class-wp-debug-data.php */
 				$parent_theme_auto_update_string = apply_filters( 'theme_auto_update_debug_string', $auto_updates_string, $parent_theme, $enabled );
 
 				$info['wp-parent-theme']['fields']['auto_update'] = array(

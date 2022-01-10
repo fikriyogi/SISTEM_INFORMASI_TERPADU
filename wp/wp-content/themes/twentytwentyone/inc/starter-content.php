@@ -84,7 +84,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Twenty Twenty-One inc stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -94,7 +94,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Twenty Twenty-One also inc an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->

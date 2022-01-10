@@ -1884,7 +1884,7 @@ function get_compat_media_markup( $attachment_id, $args = null ) {
 
 	$args = wp_parse_args( $args, $default_args );
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$args = apply_filters( 'get_media_item_args', $args );
 
 	$form_fields = array();
@@ -1932,7 +1932,7 @@ function get_compat_media_markup( $attachment_id, $args = null ) {
 	 */
 	$form_fields = array_merge_recursive( $form_fields, (array) $args['errors'] );
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$form_fields = apply_filters( 'attachment_fields_to_edit', $form_fields, $post );
 
 	unset(
@@ -1947,7 +1947,7 @@ function get_compat_media_markup( $attachment_id, $args = null ) {
 		$form_fields['image_url']
 	);
 
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$media_meta = apply_filters( 'media_meta', '', $post );
 
 	$defaults = array(
@@ -2401,7 +2401,7 @@ function media_upload_type_url_form( $type = null, $errors = null, $id = null ) 
 	$post_id = isset( $_REQUEST['post_id'] ) ? (int) $_REQUEST['post_id'] : 0;
 
 	$form_action_url = admin_url( "media-upload.php?type=$type&tab=type&post_id=$post_id" );
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$form_action_url = apply_filters( 'media_upload_form_url', $form_action_url, $type );
 	$form_class      = 'media-upload-form type-form validate';
 
@@ -2433,7 +2433,7 @@ function media_upload_type_url_form( $type = null, $errors = null, $id = null ) 
 			alt = f.alt.value.replace(/'/g, '&#039;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 		<?php
-		/** This filter is documented in wp-admin/includes/media.php */
+		/** This filter is documented in wp-admin/inc/media.php */
 		if ( ! apply_filters( 'disable_captions', '' ) ) {
 			?>
 			if ( f.caption.value ) {
@@ -2548,7 +2548,7 @@ function media_upload_gallery_form( $errors ) {
 
 	$post_id         = (int) $_REQUEST['post_id'];
 	$form_action_url = admin_url( "media-upload.php?type=$type&tab=gallery&post_id=$post_id" );
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$form_action_url = apply_filters( 'media_upload_form_url', $form_action_url, $type );
 	$form_class      = 'media-upload-form validate';
 
@@ -2712,7 +2712,7 @@ function media_upload_library_form( $errors ) {
 	$post_id = isset( $_REQUEST['post_id'] ) ? (int) $_REQUEST['post_id'] : 0;
 
 	$form_action_url = admin_url( "media-upload.php?type=$type&tab=library&post_id=$post_id" );
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$form_action_url = apply_filters( 'media_upload_form_url', $form_action_url, $type );
 	$form_class      = 'media-upload-form validate';
 
@@ -2914,7 +2914,7 @@ function media_upload_library_form( $errors ) {
  * @return string the form html
  */
 function wp_media_insert_url_form( $default_view = 'image' ) {
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	if ( ! apply_filters( 'disable_captions', '' ) ) {
 		$caption = '
 		<tr class="image-only">
@@ -3051,7 +3051,7 @@ function media_upload_flash_bypass() {
 function media_upload_html_bypass() {
 	?>
 	<p class="upload-html-bypass hide-if-no-js">
-		<?php _e( 'You are using the browser&#8217;s built-in file uploader. The WordPress uploader includes multiple file selection and drag and drop capability. <a href="#">Switch to the multi-file uploader</a>.' ); ?>
+		<?php _e( 'You are using the browser&#8217;s built-in file uploader. The WordPress uploader inc multiple file selection and drag and drop capability. <a href="#">Switch to the multi-file uploader</a>.' ); ?>
 	</p>
 	<?php
 }
@@ -3301,7 +3301,7 @@ function attachment_submitbox_metadata() {
 	if ( isset( $meta['width'], $meta['height'] ) ) {
 		$media_dims .= "<span id='media-dims-$attachment_id'>{$meta['width']}&nbsp;&times;&nbsp;{$meta['height']}</span> ";
 	}
-	/** This filter is documented in wp-admin/includes/media.php */
+	/** This filter is documented in wp-admin/inc/media.php */
 	$media_dims = apply_filters( 'media_meta', $media_dims, $post );
 
 	$att_url = wp_get_attachment_url( $attachment_id );

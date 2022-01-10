@@ -680,7 +680,7 @@ function get_attachment_template() {
 /**
  * Retrieve the name of the highest priority template file that exists.
  *
- * Searches in the STYLESHEETPATH before TEMPLATEPATH and wp-includes/theme-compat
+ * Searches in the STYLESHEETPATH before TEMPLATEPATH and wp-inc/theme-compat
  * so that themes which inherit from a parent theme can just overload one file.
  *
  * @since 2.7.0

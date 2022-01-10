@@ -859,7 +859,7 @@ module.exports = VideoDetails;
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * @output wp-includes/js/media-audiovideo.js
+ * @output wp-inc/js/media-audiovideo.js
  */
 
 var media = wp.media,

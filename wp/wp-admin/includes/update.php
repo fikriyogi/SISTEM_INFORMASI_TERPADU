@@ -1076,7 +1076,7 @@ function wp_is_auto_update_enabled_for_type( $type ) {
  * @return bool True if auto-updates are forced for `$item`, false otherwise.
  */
 function wp_is_auto_update_forced_for_item( $type, $update, $item ) {
-	/** This filter is documented in wp-admin/includes/class-wp-automatic-updater.php */
+	/** This filter is documented in wp-admin/inc/class-wp-automatic-updater.php */
 	return apply_filters( "auto_update_{$type}", $update, $item );
 }
 

@@ -2838,7 +2838,7 @@ function wp_count_posts( $type = 'post', $perm = '' ) {
 			}
 		}
 
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-inc/post.php */
 		return apply_filters( 'wp_count_posts', $counts, $type, $perm );
 	}
 
@@ -3143,7 +3143,7 @@ function wp_post_mime_type_where( $post_mime_types, $table_alias = '' ) {
  * Trash or delete a post or page.
  *
  * When the post and page is permanently deleted, everything that is tied to
- * it is deleted also. This includes comments, post meta fields, and terms
+ * it is deleted also. This inc comments, post meta fields, and terms
  * associated with the post.
  *
  * The post or page is moved to Trash instead of permanently deleted unless
@@ -4629,19 +4629,19 @@ function wp_publish_post( $post ) {
 	$post->post_status = 'publish';
 	wp_transition_post_status( 'publish', $old_status, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( "edit_post_{$post->post_type}", $post->ID, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'edit_post', $post->ID, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( "save_post_{$post->post_type}", $post->ID, $post, true );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'save_post', $post->ID, $post, true );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'wp_insert_post', $post->ID, $post, true );
 
 	wp_after_insert_post( $post, true, $post_before );
@@ -5788,7 +5788,7 @@ function get_pages( $args = array() ) {
 
 		// Convert to WP_Post instances.
 		$pages = array_map( 'get_post', $cache );
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-inc/post.php */
 		$pages = apply_filters( 'get_pages', $pages, $parsed_args );
 
 		return $pages;
@@ -5949,7 +5949,7 @@ function get_pages( $args = array() ) {
 	if ( empty( $pages ) ) {
 		wp_cache_set( $cache_key, array(), 'posts' );
 
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-inc/post.php */
 		$pages = apply_filters( 'get_pages', array(), $parsed_args );
 
 		return $pages;
@@ -6178,13 +6178,13 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 		delete_metadata_by_mid( 'post', $mid );
 	}
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'delete_post', $post_id, $post );
 	$result = $wpdb->delete( $wpdb->posts, array( 'ID' => $post_id ) );
 	if ( ! $result ) {
 		return false;
 	}
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-inc/post.php */
 	do_action( 'deleted_post', $post_id, $post );
 
 	wp_delete_attachment_files( $post_id, $meta, $backup_sizes, $file );

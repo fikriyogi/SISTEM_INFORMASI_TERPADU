@@ -255,7 +255,7 @@ const DEFAULT_STATUS = 'info';
  * @param {Array<WPNoticeAction>} [options.actions]            User actions to be
  *                                                             presented with notice.
  * @param {Object}                [options.icon]               An icon displayed with the notice.
- * @param {boolean}               [options.explicitDismiss]    Whether the notice includes
+ * @param {boolean}               [options.explicitDismiss]    Whether the notice inc
  *                                                             an explict dismiss button and
  *                                                             can't be dismissed by clicking
  *                                                             the body of the notice.

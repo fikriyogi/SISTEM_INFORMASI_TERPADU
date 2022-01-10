@@ -1065,7 +1065,7 @@ function link_submit_meta_box( $link ) {
 
 <div id="major-publishing-actions">
 	<?php
-	/** This action is documented in wp-admin/includes/meta-boxes.php */
+	/** This action is documented in wp-admin/inc/meta-boxes.php */
 	do_action( 'post_submitbox_start', null );
 	?>
 <div id="delete-action">
@@ -1602,8 +1602,8 @@ function register_and_do_post_meta_boxes( $post ) {
 	 *                                         an empty string on Dashboard screen.
 	 */
 	do_action( 'do_meta_boxes', $post_type, 'normal', $post );
-	/** This action is documented in wp-admin/includes/meta-boxes.php */
+	/** This action is documented in wp-admin/inc/meta-boxes.php */
 	do_action( 'do_meta_boxes', $post_type, 'advanced', $post );
-	/** This action is documented in wp-admin/includes/meta-boxes.php */
+	/** This action is documented in wp-admin/inc/meta-boxes.php */
 	do_action( 'do_meta_boxes', $post_type, 'side', $post );
 }

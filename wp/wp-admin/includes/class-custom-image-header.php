@@ -899,7 +899,7 @@ endif;
 				wp_die( __( 'Image could not be processed. Please go back and try again.' ), __( 'Image Processing Error' ) );
 			}
 
-			/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
+			/** This filter is documented in wp-admin/inc/class-custom-image-header.php */
 			$image = apply_filters( 'wp_create_file_in_uploads', $image, $attachment_id ); // For replication.
 
 			$url    = str_replace( wp_basename( $url ), wp_basename( $image ), $url );
@@ -1058,7 +1058,7 @@ endif;
 			wp_die( __( 'Image could not be processed. Please go back and try again.' ), __( 'Image Processing Error' ) );
 		}
 
-		/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
+		/** This filter is documented in wp-admin/inc/class-custom-image-header.php */
 		$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 
 		$object = $this->create_attachment_object( $cropped, $attachment_id );
@@ -1401,7 +1401,7 @@ endif;
 			wp_send_json_error( array( 'message' => __( 'Image could not be processed. Please go back and try again.' ) ) );
 		}
 
-		/** This filter is documented in wp-admin/includes/class-custom-image-header.php */
+		/** This filter is documented in wp-admin/inc/class-custom-image-header.php */
 		$cropped = apply_filters( 'wp_create_file_in_uploads', $cropped, $attachment_id ); // For replication.
 
 		$object = $this->create_attachment_object( $cropped, $attachment_id );

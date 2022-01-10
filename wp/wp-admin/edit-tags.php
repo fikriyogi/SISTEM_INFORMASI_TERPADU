@@ -621,7 +621,7 @@ if ( $can_edit_terms ) {
 	printf(
 		/* translators: %s: Default category. */
 		__( 'Deleting a category does not delete the posts in that category. Instead, posts that were only assigned to the deleted category are set to the default category %s. The default category cannot be deleted.' ),
-		/** This filter is documented in wp-includes/category-template.php */
+		/** This filter is documented in wp-inc/category-template.php */
 		'<strong>' . apply_filters( 'the_category', get_cat_name( get_option( 'default_category' ) ), '', '' ) . '</strong>'
 	);
 	?>

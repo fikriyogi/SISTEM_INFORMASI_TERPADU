@@ -831,7 +831,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 
 		$post = get_post( $post_id );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-posts-controller.php */
 		do_action( "rest_insert_{$this->post_type}", $post, $request, false );
 
 		$schema = $this->get_item_schema();
@@ -885,7 +885,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			return rest_ensure_response( $response );
 		}
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-posts-controller.php */
 		do_action( "rest_after_insert_{$this->post_type}", $post, $request, false );
 
 		wp_after_insert_post( $post, true, $post_before );
@@ -1713,7 +1713,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 
 		if ( rest_is_field_included( 'guid', $fields ) ) {
 			$data['guid'] = array(
-				/** This filter is documented in wp-includes/post-template.php */
+				/** This filter is documented in wp-inc/post-template.php */
 				'rendered' => apply_filters( 'get_the_guid', $post->guid, $post->ID ),
 				'raw'      => $post->guid,
 			);
@@ -1788,7 +1788,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			$data['content']['raw'] = $post->post_content;
 		}
 		if ( rest_is_field_included( 'content.rendered', $fields ) ) {
-			/** This filter is documented in wp-includes/post-template.php */
+			/** This filter is documented in wp-inc/post-template.php */
 			$data['content']['rendered'] = post_password_required( $post ) ? '' : apply_filters( 'the_content', $post->post_content );
 		}
 		if ( rest_is_field_included( 'content.protected', $fields ) ) {
@@ -1799,10 +1799,10 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		}
 
 		if ( rest_is_field_included( 'excerpt', $fields ) ) {
-			/** This filter is documented in wp-includes/post-template.php */
+			/** This filter is documented in wp-inc/post-template.php */
 			$excerpt = apply_filters( 'get_the_excerpt', $post->post_excerpt, $post );
 
-			/** This filter is documented in wp-includes/post-template.php */
+			/** This filter is documented in wp-inc/post-template.php */
 			$excerpt = apply_filters( 'the_excerpt', $excerpt );
 
 			$data['excerpt'] = array(

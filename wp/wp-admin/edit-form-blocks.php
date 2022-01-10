@@ -121,7 +121,7 @@ wp_add_inline_script(
 $available_templates = wp_get_theme()->get_page_templates( get_post( $post->ID ) );
 $available_templates = ! empty( $available_templates ) ? array_replace(
 	array(
-		/** This filter is documented in wp-admin/includes/meta-boxes.php */
+		/** This filter is documented in wp-admin/inc/meta-boxes.php */
 		'' => apply_filters( 'default_page_template_title', __( 'Default template' ), 'rest-api' ),
 	),
 	$available_templates
@@ -132,7 +132,7 @@ $user_id = wp_check_post_lock( $post->ID );
 if ( $user_id ) {
 	$locked = false;
 
-	/** This filter is documented in wp-admin/includes/post.php */
+	/** This filter is documented in wp-admin/inc/post.php */
 	if ( apply_filters( 'show_post_locked_dialog', true, $post, $user_id ) ) {
 		$locked = true;
 	}

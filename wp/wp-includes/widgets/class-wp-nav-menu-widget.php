@@ -50,7 +50,7 @@ class WP_Nav_Menu_Widget extends WP_Widget {
 		$default_title = __( 'Menu' );
 		$title         = ! empty( $instance['title'] ) ? $instance['title'] : '';
 
-		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+		/** This filter is documented in wp-inc/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		echo $args['before_widget'];

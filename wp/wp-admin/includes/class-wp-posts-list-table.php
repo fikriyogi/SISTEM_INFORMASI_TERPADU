@@ -173,7 +173,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 		$post_type = $this->screen->post_type;
 		$per_page  = $this->get_items_per_page( 'edit_' . $post_type . '_per_page' );
 
-		/** This filter is documented in wp-admin/includes/post.php */
+		/** This filter is documented in wp-admin/inc/post.php */
 		$per_page = apply_filters( 'edit_posts_per_page', $per_page, $post_type );
 
 		if ( $this->hierarchical_display ) {
@@ -1055,7 +1055,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 					$find_main_page = (int) $parent->post_parent;
 
 					if ( ! isset( $parent_name ) ) {
-						/** This filter is documented in wp-includes/post-template.php */
+						/** This filter is documented in wp-inc/post-template.php */
 						$parent_name = apply_filters( 'the_title', $parent->post_title, $parent->ID );
 					}
 				}
@@ -1803,7 +1803,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 							<option value="-1"><?php _e( '&mdash; No Change &mdash;' ); ?></option>
 							<?php endif; // $bulk ?>
 							<?php
-							/** This filter is documented in wp-admin/includes/meta-boxes.php */
+							/** This filter is documented in wp-admin/inc/meta-boxes.php */
 							$default_title = apply_filters( 'default_page_template_title', __( 'Default template' ), 'quick-edit' );
 							?>
 							<option value="default"><?php echo esc_html( $default_title ); ?></option>

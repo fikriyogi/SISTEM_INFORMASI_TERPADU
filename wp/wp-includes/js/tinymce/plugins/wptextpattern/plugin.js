@@ -3,7 +3,7 @@
  *
  * @since 4.3.0
  *
- * This plugin can automatically format text patterns as you type. It includes several groups of patterns.
+ * This plugin can automatically format text patterns as you type. It inc several groups of patterns.
  *
  * Start of line patterns:
  *  As-you-type:

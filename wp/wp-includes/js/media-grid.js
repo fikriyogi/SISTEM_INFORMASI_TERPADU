@@ -327,7 +327,7 @@ module.exports = Details;
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * @output wp-includes/js/media-grid.js
+ * @output wp-inc/js/media-grid.js
  */
 
 var media = wp.media;

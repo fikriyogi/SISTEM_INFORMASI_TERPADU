@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-sanitize.js
+ * @output wp-inc/js/wp-sanitize.js
  */
 
 ( function () {

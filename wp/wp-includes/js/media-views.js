@@ -10196,7 +10196,7 @@ module.exports = Iframe;
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * @output wp-includes/js/media-views.js
+ * @output wp-inc/js/media-views.js
  */
 
 var media = wp.media,

@@ -2357,7 +2357,7 @@ final class WP_Customize_Manager {
 				$validity = $setting->validate( $unsanitized_value );
 			}
 			if ( ! is_wp_error( $validity ) ) {
-				/** This filter is documented in wp-includes/class-wp-customize-setting.php */
+				/** This filter is documented in wp-inc/class-wp-customize-setting.php */
 				$late_validity = apply_filters( "customize_validate_{$setting->id}", new WP_Error(), $unsanitized_value, $setting );
 				if ( is_wp_error( $late_validity ) && $late_validity->has_errors() ) {
 					$validity = $late_validity;
@@ -3070,13 +3070,13 @@ final class WP_Customize_Manager {
 			return false;
 		}
 
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-inc/post.php */
 		$check = apply_filters( 'pre_trash_post', null, $post );
 		if ( null !== $check ) {
 			return $check;
 		}
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( 'wp_trash_post', $post_id );
 
 		add_post_meta( $post_id, '_wp_trash_meta_status', $post->post_status );
@@ -3090,26 +3090,26 @@ final class WP_Customize_Manager {
 		$post->post_status = $new_status;
 		wp_transition_post_status( $new_status, $old_status, $post );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( "edit_post_{$post->post_type}", $post->ID, $post );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( 'edit_post', $post->ID, $post );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( "save_post_{$post->post_type}", $post->ID, $post, true );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( 'save_post', $post->ID, $post, true );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( 'wp_insert_post', $post->ID, $post, true );
 
 		wp_after_insert_post( get_post( $post_id ), true, $post );
 
 		wp_trash_post_comments( $post_id );
 
-		/** This action is documented in wp-includes/post.php */
+		/** This action is documented in wp-inc/post.php */
 		do_action( 'trashed_post', $post_id );
 
 		return $post;
@@ -3755,10 +3755,10 @@ final class WP_Customize_Manager {
 		} else {
 			$class = 'WP_Customize_Setting';
 
-			/** This filter is documented in wp-includes/class-wp-customize-manager.php */
+			/** This filter is documented in wp-inc/class-wp-customize-manager.php */
 			$args = apply_filters( 'customize_dynamic_setting_args', $args, $id );
 
-			/** This filter is documented in wp-includes/class-wp-customize-manager.php */
+			/** This filter is documented in wp-inc/class-wp-customize-manager.php */
 			$class = apply_filters( 'customize_dynamic_setting_class', $class, $id, $args );
 
 			$setting = new $class( $this, $id, $args );
@@ -5840,7 +5840,7 @@ final class WP_Customize_Manager {
 				wp_send_json_error();
 			}
 
-			// This list matches the allowed tags in wp-admin/includes/theme-install.php.
+			// This list matches the allowed tags in wp-admin/inc/theme-install.php.
 			$themes_allowedtags                     = array_fill_keys(
 				array( 'a', 'abbr', 'acronym', 'code', 'pre', 'em', 'strong', 'div', 'p', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img' ),
 				array()

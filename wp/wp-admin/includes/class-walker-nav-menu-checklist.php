@@ -93,7 +93,7 @@ class Walker_Nav_Menu_Checklist extends Walker_Nav_Menu {
 		if ( ! empty( $item->label ) ) {
 			$title = $item->label;
 		} elseif ( isset( $item->post_type ) ) {
-			/** This filter is documented in wp-includes/post-template.php */
+			/** This filter is documented in wp-inc/post-template.php */
 			$title = apply_filters( 'the_title', $item->post_title, $item->ID );
 		}
 

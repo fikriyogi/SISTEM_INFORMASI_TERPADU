@@ -408,7 +408,7 @@
 	/**
 	 * Decrements the update counts throughout the various menus.
 	 *
-	 * This includes the toolbar, the "Updates" menu item and the menu items
+	 * This inc the toolbar, the "Updates" menu item and the menu items
 	 * for plugins and themes.
 	 *
 	 * @since 3.9.0
@@ -2785,7 +2785,7 @@
 
 			switch ( message.action ) {
 
-				// Called from `wp-admin/includes/class-wp-upgrader-skins.php`.
+				// Called from `wp-admin/inc/class-wp-upgrader-skins.php`.
 				case 'decrementUpdateCount':
 					/** @property {string} message.upgradeType */
 					wp.updates.decrementCount( message.upgradeType );

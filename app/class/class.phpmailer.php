@@ -187,7 +187,7 @@ class PHPMailer {
 
   /**
    * Path to PHPMailer plugins.  Useful if the SMTP class
-   * is in a different directory than the PHP includes path.
+   * is in a different directory than the PHP inc path.
    * @var string
    */
   public $PluginDir         = '';
@@ -2200,7 +2200,7 @@ class PHPMailer {
 
   /**
    * Add an embedded attachment from a file.
-   * This can includes images, sounds, and just about any other document type.
+   * This can inc images, sounds, and just about any other document type.
    * @param string $path Path to the attachment.
    * @param string $cid Content ID of the attachment; Use this to reference
    *        the content when using an embedded image in HTML.
@@ -2243,7 +2243,7 @@ class PHPMailer {
 
   /**
    * Add an embedded stringified attachment.
-   * This can includes images, sounds, and just about any other document type.
+   * This can inc images, sounds, and just about any other document type.
    * Be sure to set the $type to an image type for images:
    * JPEG images use 'image/jpeg', GIF uses 'image/gif', PNG uses 'image/png'.
    * @param string $string The attachment binary data.

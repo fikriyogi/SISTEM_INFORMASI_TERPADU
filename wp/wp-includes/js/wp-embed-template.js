@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-embed-template.js
+ * @output wp-inc/js/wp-embed-template.js
  */
 (function ( window, document ) {
 	'use strict';

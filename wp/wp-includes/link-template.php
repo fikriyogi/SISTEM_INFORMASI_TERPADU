@@ -1271,7 +1271,7 @@ function get_search_comments_feed_link( $search_query = '', $feed = '' ) {
 		$link = add_query_arg( 'withcomments', 1, $link );
 	}
 
-	/** This filter is documented in wp-includes/link-template.php */
+	/** This filter is documented in wp-inc/link-template.php */
 	return apply_filters( 'search_feed_link', $link, $feed, 'comments' );
 }
 
@@ -1304,7 +1304,7 @@ function get_post_type_archive_link( $post_type ) {
 		} else {
 			$link = get_home_url();
 		}
-		/** This filter is documented in wp-includes/link-template.php */
+		/** This filter is documented in wp-inc/link-template.php */
 		return apply_filters( 'post_type_archive_link', $link, $post_type );
 	}
 
@@ -2270,7 +2270,7 @@ function get_adjacent_post_link( $format, $link, $in_same_term = false, $exclude
 			$title = $previous ? __( 'Previous Post' ) : __( 'Next Post' );
 		}
 
-		/** This filter is documented in wp-includes/post-template.php */
+		/** This filter is documented in wp-inc/post-template.php */
 		$title = apply_filters( 'the_title', $title, $post->ID );
 
 		$date = mysql2date( get_option( 'date_format' ), $post->post_date );
@@ -3447,12 +3447,12 @@ function get_admin_url( $blog_id = null, $path = '', $scheme = 'admin' ) {
 }
 
 /**
- * Retrieves the URL to the includes directory.
+ * Retrieves the URL to the inc directory.
  *
  * @since 2.6.0
  *
- * @param string      $path   Optional. Path relative to the includes URL. Default empty.
- * @param string|null $scheme Optional. Scheme to give the includes URL context. Accepts
+ * @param string      $path   Optional. Path relative to the inc URL. Default empty.
+ * @param string|null $scheme Optional. Scheme to give the inc URL context. Accepts
  *                            'http', 'https', or 'relative'. Default null.
  * @return string Includes URL link with optional path appended.
  */
@@ -3464,15 +3464,15 @@ function includes_url( $path = '', $scheme = null ) {
 	}
 
 	/**
-	 * Filters the URL to the includes directory.
+	 * Filters the URL to the inc directory.
 	 *
 	 * @since 2.8.0
 	 * @since 5.8.0 The `$scheme` parameter was added.
 	 *
-	 * @param string      $url    The complete URL to the includes directory including scheme and path.
-	 * @param string      $path   Path relative to the URL to the wp-includes directory. Blank string
+	 * @param string      $url    The complete URL to the inc directory including scheme and path.
+	 * @param string      $path   Path relative to the URL to the wp-inc directory. Blank string
 	 *                            if no path is specified.
-	 * @param string|null $scheme Scheme to give the includes URL context. Accepts
+	 * @param string|null $scheme Scheme to give the inc URL context. Accepts
 	 *                            'http', 'https', 'relative', or null. Default null.
 	 */
 	return apply_filters( 'includes_url', $url, $path, $scheme );
@@ -3760,7 +3760,7 @@ function self_admin_url( $path = '', $scheme = 'admin' ) {
  * @since 3.4.0
  * @since 4.4.0 The 'rest' scheme was added.
  *
- * @param string      $url    Absolute URL that includes a scheme
+ * @param string      $url    Absolute URL that inc a scheme
  * @param string|null $scheme Optional. Scheme to give $url. Currently 'http', 'https', 'login',
  *                            'login_post', 'admin', 'relative', 'rest', 'rpc', or null. Default null.
  * @return string URL with chosen scheme.
@@ -4300,7 +4300,7 @@ function get_avatar_data( $id_or_email, $args = null ) {
 	$args = apply_filters( 'pre_get_avatar_data', $args, $id_or_email );
 
 	if ( isset( $args['url'] ) ) {
-		/** This filter is documented in wp-includes/link-template.php */
+		/** This filter is documented in wp-inc/link-template.php */
 		return apply_filters( 'get_avatar_data', $args, $id_or_email );
 	}
 
@@ -4332,7 +4332,7 @@ function get_avatar_data( $id_or_email, $args = null ) {
 	} elseif ( $id_or_email instanceof WP_Comment ) {
 		if ( ! is_avatar_comment_type( get_comment_type( $id_or_email ) ) ) {
 			$args['url'] = false;
-			/** This filter is documented in wp-includes/link-template.php */
+			/** This filter is documented in wp-inc/link-template.php */
 			return apply_filters( 'get_avatar_data', $args, $id_or_email );
 		}
 

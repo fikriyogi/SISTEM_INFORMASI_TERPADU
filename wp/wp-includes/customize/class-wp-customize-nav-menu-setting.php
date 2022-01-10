@@ -440,7 +440,7 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 			$value['name'] = _x( '(unnamed)', 'Missing menu name.' );
 		}
 
-		/** This filter is documented in wp-includes/class-wp-customize-setting.php */
+		/** This filter is documented in wp-inc/class-wp-customize-setting.php */
 		return apply_filters( "customize_sanitize_{$this->id}", $value, $this );
 	}
 

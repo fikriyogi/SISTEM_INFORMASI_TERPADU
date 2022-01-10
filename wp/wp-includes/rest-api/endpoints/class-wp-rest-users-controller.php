@@ -756,7 +756,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 
 		$user = get_user_by( 'id', $user_id );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-users-controller.php */
 		do_action( 'rest_insert_user', $user, $request, false );
 
 		if ( ! empty( $request['roles'] ) ) {
@@ -782,7 +782,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 
 		$request->set_param( 'context', 'edit' );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php */
+		/** This action is documented in wp-inc/rest-api/endpoints/class-wp-rest-users-controller.php */
 		do_action( 'rest_after_insert_user', $user, $request, false );
 
 		$response = $this->prepare_item_for_response( $user, $request );
@@ -1231,7 +1231,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 	/**
 	 * Check a username for the REST API.
 	 *
-	 * Performs a couple of checks like edit_user() in wp-admin/includes/user.php.
+	 * Performs a couple of checks like edit_user() in wp-admin/inc/user.php.
 	 *
 	 * @since 4.7.0
 	 *
@@ -1251,7 +1251,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 			);
 		}
 
-		/** This filter is documented in wp-includes/user.php */
+		/** This filter is documented in wp-inc/user.php */
 		$illegal_logins = (array) apply_filters( 'illegal_user_logins', array() );
 
 		if ( in_array( strtolower( $username ), array_map( 'strtolower', $illegal_logins ), true ) ) {
@@ -1268,7 +1268,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 	/**
 	 * Check a user password for the REST API.
 	 *
-	 * Performs a couple of checks like edit_user() in wp-admin/includes/user.php.
+	 * Performs a couple of checks like edit_user() in wp-admin/inc/user.php.
 	 *
 	 * @since 4.7.0
 	 *

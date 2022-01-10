@@ -273,7 +273,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 				$args['orderby'] = 'date ID';
 			}
 
-			/** This filter is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+			/** This filter is documented in wp-inc/rest-api/endpoints/class-wp-rest-posts-controller.php */
 			$args       = apply_filters( 'rest_revision_query', $args, $request );
 			$query_args = $this->prepare_items_query( $args, $request );
 
@@ -510,7 +510,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 		$query_args = array();
 
 		foreach ( $prepared_args as $key => $value ) {
-			/** This filter is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+			/** This filter is documented in wp-inc/rest-api/endpoints/class-wp-rest-posts-controller.php */
 			$query_args[ $key ] = apply_filters( "rest_query_var-{$key}", $value ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 
@@ -582,7 +582,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 
 		if ( in_array( 'guid', $fields, true ) ) {
 			$data['guid'] = array(
-				/** This filter is documented in wp-includes/post-template.php */
+				/** This filter is documented in wp-inc/post-template.php */
 				'rendered' => apply_filters( 'get_the_guid', $post->guid, $post->ID ),
 				'raw'      => $post->guid,
 			);
@@ -599,7 +599,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 
 			$data['content'] = array(
 				'raw'      => $post->post_content,
-				/** This filter is documented in wp-includes/post-template.php */
+				/** This filter is documented in wp-inc/post-template.php */
 				'rendered' => apply_filters( 'the_content', $post->post_content ),
 			);
 		}
@@ -822,7 +822,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 	 */
 	protected function prepare_excerpt_response( $excerpt, $post ) {
 
-		/** This filter is documented in wp-includes/post-template.php */
+		/** This filter is documented in wp-inc/post-template.php */
 		$excerpt = apply_filters( 'the_excerpt', $excerpt, $post );
 
 		if ( empty( $excerpt ) ) {

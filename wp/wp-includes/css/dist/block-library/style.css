@@ -409,7 +409,7 @@
   padding: 1em;
   box-sizing: border-box;
   /**
-   * Set a default background color for has-background-dim _unless_ it includes another
+   * Set a default background color for has-background-dim _unless_ it inc another
    * background-color class (e.g. has-green-background-color). The presence of another
    * background-color class implies that another style will provide the background color
    * for the overlay.

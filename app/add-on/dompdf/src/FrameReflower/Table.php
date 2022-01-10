@@ -95,7 +95,7 @@ class Table extends AbstractFrameReflower
 
         $min_table_width = (float)$style->length_in_pt($style->min_width, $cb["w"] - $delta);
 
-        // min & max widths already includes borders & padding
+        // min & max widths already inc borders & padding
         $min_width -= $delta;
         $max_width -= $delta;
 
@@ -230,7 +230,7 @@ class Table extends AbstractFrameReflower
 
                 }
 
-                // This works because $used_width includes the min-width of each
+                // This works because $used_width inc the min-width of each
                 // unassigned column
                 if (count($auto) > 0) {
                     $increment = ($width - $used_width) / count($auto);
