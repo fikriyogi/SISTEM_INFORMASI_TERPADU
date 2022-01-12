@@ -73,6 +73,8 @@ define( 'SI_JS',    'si-inc/js/' );
 define( 'SI_IMG',   'si-inc/img/' );
 define( 'SI_THEME', 'si-theme/' );
 define( 'SI_ADMIN_PAGE', 'si-admin/' );
+define( 'SI_API',   'api/');
+
 /**
  * WordPress database table prefix.
  *

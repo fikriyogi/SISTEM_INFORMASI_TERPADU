@@ -4,6 +4,9 @@ class CallStatic{
         echo "static";
     }
 }
+function SI_ClassValidation() {
+	echo "class-validation.php";
+}
 function input_data($data)
 {
     $data = trim($data);
@@ -90,7 +93,7 @@ function phone_formatting($phone){
     }
 
     // Print the given format
-//    return $format;
+    return $format;
 
 }
 function web_validation($web) {

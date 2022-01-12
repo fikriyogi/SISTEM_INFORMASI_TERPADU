@@ -21,7 +21,7 @@ echo $stat::test_static() . '<br>';
 
 echo SI_LoadAdminLink("index.php") . '<br>';
 echo SI_LoadPage("default") . '<br>';
-echo SI_CreateTokenIdLogin();
+echo SI_Tes(+62852);
 
 ?>
 <!doctype html>

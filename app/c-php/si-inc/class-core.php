@@ -1,5 +1,5 @@
 <?php
-class Database {
+class Data {
 
     private $host 		= DB_HOST;
     private $db_name 	= DB_DATABASE;
@@ -19,6 +19,7 @@ class Database {
 
         return $this->conn;
     }
+
 
     public function app_config($limit_pass_error)
     {

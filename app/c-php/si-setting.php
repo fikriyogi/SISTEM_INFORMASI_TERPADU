@@ -8,6 +8,7 @@ require_once ABSPATH . 'si-tables.php';
  * All Files in Class/App Load
  *
  */
+require ABSPATH . SI_INC . 'class-core.php';
 require ABSPATH . SI_INC . 'class-register.php';
 require ABSPATH . SI_INC . 'class-login.php';
 require ABSPATH . SI_INC . 'class-encryption.php';
@@ -16,10 +17,14 @@ require ABSPATH . SI_INC . 'class-upload.php';
 require ABSPATH . SI_INC . 'class-validation.php';
 require ABSPATH . SI_INC . 'class-themes.php';
 require ABSPATH . SI_INC . 'function_general.php';
+require ABSPATH . SI_INC . 'class-api.php';
+require ABSPATH . SI_INC . 'class-warga.php';
 
+/*API CONFIG*/
 
+require ABSPATH . SI_API . 'api-config.php';
 
-
+require ABSPATH . SI
 //$DB = new Db();
 /** @var TYPE_NAME $GLOBALS */
 $GLOBALS['call_class'] = new Validation();
