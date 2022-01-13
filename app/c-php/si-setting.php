@@ -23,8 +23,12 @@ require ABSPATH . SI_INC . 'class-warga.php';
 /*API CONFIG*/
 
 require ABSPATH . SI_API . 'api-config.php';
+/*
+Libraries Folder
+*/
+require ABSPATH . SI_LIBRARIES . 'phpqrcode/qrlib.php';
 
-require ABSPATH . SI
+// require ABSPATH . SI
 //$DB = new Db();
 /** @var TYPE_NAME $GLOBALS */
 $GLOBALS['call_class'] = new Validation();

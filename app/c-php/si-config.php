@@ -49,31 +49,32 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY', 'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY', 'put your unique phrase here' );
-define( 'LOGGED_IN_KEY', 'put your unique phrase here' );
-define( 'NONCE_KEY', 'put your unique phrase here' );
-define( 'AUTH_SALT', 'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT', 'put your unique phrase here' );
-define( 'NONCE_SALT', 'put your unique phrase here' );
+define( 'AUTH_KEY',             'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',      'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',        'put your unique phrase here' );
+define( 'NONCE_KEY',            'put your unique phrase here' );
+define( 'AUTH_SALT',            'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT',     'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',       'put your unique phrase here' );
+define( 'NONCE_SALT',           'put your unique phrase here' );
 
-define( 'FIRSTKEY',  'Lk5Uz3slx3BrAghS');
-define( 'SECONDKEY', 'EZ44mFi3TlAey1b2w4Y7lVDuqO+SRxGXsa7nctnr/JmMrA2vN6EJhrvdVZbxaQs5jpSe34X3ejFK/o9+Y5c83w==');
-define( 'CHIPER',    'aes-256-ctr');
-define( 'CHARSET',   'utf-8');
-define( 'SI_LANG',   'en');
+define( 'FIRSTKEY',             'Lk5Uz3slx3BrAghS');
+define( 'SECONDKEY',            'EZ44mFi3TlAey1b2w4Y7lVDuqO+SRxGXsa7nctnr/JmMrA2vN6EJhrvdVZbxaQs5jpSe34X3ejFK/o9+Y5c83w==');
+define( 'CHIPER',               'aes-256-ctr');
+define( 'CHARSET',              'utf-8');
+define( 'SI_LANG',              'en');
 
 /**#@-*/
-define( 'SITE_URL',   'localhost/app/c-php/');
+define( 'SITE_URL',             'localhost/app/c-php/');
 
-define( 'SI_INC',   'si-inc/');
-define( 'SI_CSS',   'si-inc/css/' );
-define( 'SI_JS',    'si-inc/js/' );
-define( 'SI_IMG',   'si-inc/img/' );
-define( 'SI_THEME', 'si-theme/' );
-define( 'SI_ADMIN_PAGE', 'si-admin/' );
-define( 'SI_API',   'api/');
+define( 'SI_INC',               'si-inc/');
+define( 'SI_CSS',               'si-inc/css/' );
+define( 'SI_JS',                'si-inc/js/' );
+define( 'SI_IMG',               'si-inc/img/' );
+define( 'SI_THEME',             'si-theme/' );
+define( 'SI_ADMIN_PAGE',        'si-admin/' );
+define( 'SI_API',               'api/');
+define( 'SI_LIBRARIES',         'si-inc/libraries/');
 
 /**
  * WordPress database table prefix.

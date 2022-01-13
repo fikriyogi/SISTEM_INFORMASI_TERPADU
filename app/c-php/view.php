@@ -9,18 +9,10 @@ if(isset($_GET['appKey'])){
 	$data->execute([$id]);
 	$a = $data->fetchAll();
 }
-?>
-<!doctype html>
-<html lang="<?= SI_LANG; ?>">
-<head>
-	<!-- Required meta tags -->
-	<meta charset="<?= CHARSET; ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<?= SI_CSS; ?>bootstrap.min.css" rel="stylesheet">
+require_once SI_THEME . 'default/header.php';
 
-	<title>Hello, world!</title>
-</head>
-<body>
+?>
+
 <table class="table table-bordered" width="90%">
     <tr>
         <th>No</th>

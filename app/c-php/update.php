@@ -12,13 +12,13 @@ if(isset($_GET['appKey'])){
 if (isset($_POST['update'])) {
 	// This part is similar to the create.php, but instead we update a record and not insert
 	$nik = isset($_POST['nik']) ? $_POST['nik'] : NULL;
-	$nama = isset($_POST['user_name']) ? $_POST['user_name'] : '';
-	$kk = isset($_POST['user_email']) ? $_POST['user_email'] : '';
+	$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
+	$kk = isset($_POST['kk']) ? $_POST['kk'] : '';
 	// $title = isset($_POST['title']) ? $_POST['title'] : '';
-	// $created = isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
+	$tgl_lahir = isset($_POST['tgl_lahir']) ? $_POST['tgl_lahir'] : date('Y-m-d');
 	// Update the record
-	$stmt = $user_home->runQuery('UPDATE warga SET nama = ?, kk = ? WHERE nik = ?');
-	$stmt->execute([$nama, $kk, $nik]);
+	$stmt = $user_home->runQuery('UPDATE warga SET nama = ?, kk = ?, tgl_lahir = ? WHERE nik = ?');
+	$stmt->execute([$nama, $kk, $tgl_lahir, $nik]);
 
 	// $statement = $user_home->runQuery('INSERT INTO history (user_id, action, create_at) VALUES (?,?,?)')  ;
 	// $statement->execute([$_SESSION['user_id'], 'Update Profil', $created]);
@@ -29,9 +29,9 @@ if (isset($_POST['update'])) {
 		if ($row['is_notif']==1) {
 			$user_home->send_mail($row['kk'],'Update Profil Success','Update Profil');
 			// header('location:settings.php');
-			$user_home->redirect('settings.php');
+			$user_home->redirect('view.php?appKey='.$_GET['appKey'].'');
 		} else {
-			$user_home->redirect('settings.php');
+			$user_home->redirect('view.php?appKey='.$_GET['appKey'].'');
 		}
 		$msg = 'Update berhasil';
 	} else {
@@ -61,14 +61,14 @@ if (isset($_POST['update'])) {
         <label for="name">Nama</label>
         <input type="hidden" name="nik" placeholder="1" value="<?=$_GET['appKey']?>" id="nik">
         <input type="text" name="nama" placeholder="John Doe" value="<?=$row['nama']?>" id="nama">
+        <label for="email">NIK</label>
+        <input type="text" name="nik" placeholder="johndoe@example.com" value="<?=$row['nik']?>" id="nik">
         <label for="email">KK</label>
         <input type="text" name="kk" placeholder="johndoe@example.com" value="<?=$row['kk']?>" id="kk">
         <label for="name">Set OTP Code When Login</label>
 
-        <!-- <label for="title">Title</label>
-				        <label for="created">Created</label>
-				        <input type="text" name="title" placeholder="Employee" value="<?=$row['title']?>" id="title">
-				        <input type="datetime-local" name="created" value="<?=date('Y-m-d\TH:i', strtotime($row['created']))?>" id="created"> -->
+        <label for="tgl_lahir">tgl_lahir</label>
+        <input type="date" name="tgl_lahir" value="<?=$row['tgl_lahir']?>" id="tgl_lahir"> 
         <input type="submit" name="update" value="Update">
     </form>
 </div>

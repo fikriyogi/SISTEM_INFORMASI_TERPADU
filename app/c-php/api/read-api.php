@@ -14,13 +14,13 @@ $stmt = $items->getEmployees();
 $itemCount = $stmt->rowCount();
 
 
-echo json_encode($itemCount);
+// echo json_encode($itemCount);
 
 if($itemCount > 0){
 
 	$employeeArr = array();
-	$employeeArr["body"] = array();
-	$employeeArr["itemCount"] = $itemCount;
+	// $employeeArr["body"] = array();
+	// $employeeArr["itemCount"] = $itemCount;
 
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		extract($row);
@@ -33,20 +33,17 @@ if($itemCount > 0){
 			"tgl_lahir" => $tgl_lahir
 		);
 
-		array_push($employeeArr["body"], $e);
+		// array_push($employeeArr["body"], $e);
 	}
-	$data =  json_encode($employeeArr);
+	echo  json_encode($employeeArr);
 
+// 	foreach($data as $key => $e) {
+//     $name = $data[$key]["nama"];
+//     $age = $data[$key]["alias"];
+    
+//     echo $name.' is '.$age.' years old.';
+// }
 
-		// Cycle through the array
-		foreach ($data->stand as $idx => $stand) {
-
-			// Output a row
-			echo "<tr>";
-			echo "<td>$stand->nama</td>";
-			echo "<td>$stand->alias</td>";
-			echo "</tr>";
-		}
 
 
 }

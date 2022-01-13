@@ -21,6 +21,7 @@ function SI_RegisterPage() {
 
 }
 
+
 function SI_GetMyPage( $user_id ) {
 
 }
