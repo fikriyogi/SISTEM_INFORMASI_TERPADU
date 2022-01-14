@@ -21,6 +21,7 @@ class Data {
     }
 
 
+
     public function app_config($limit_pass_error)
     {
             $stmt = $this->conn->prepare("SELECT * FROM tb_setting");

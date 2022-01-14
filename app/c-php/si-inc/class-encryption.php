@@ -1,7 +1,7 @@
 <?php
 class Validation
 {
-    public function ssl_encrypt($string): bool|string {
+    public function SI_SSLEncrypt($string): bool|string {
         // Use OpenSSl Encryption method
         $iv_length = openssl_cipher_iv_length(CHIPER);
         $options = 0;
@@ -13,7 +13,7 @@ class Validation
     }
 
 ##############################################################
-    public function ssl_decrypt($string): bool|string {
+    public function SI_SSLDecrypt($string): bool|string {
         $options = 0;
 
         $encryption = openssl_encrypt($string, CHIPER,
