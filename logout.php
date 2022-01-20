@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once 'class.user.php';
-$user = new USER();
+require_once 'si-config.php';
+$user = new Data();
 
 if (!$user->is_logged_in()) {
     $user->redirect('index.php');
