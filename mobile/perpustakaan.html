@@ -1,0 +1,891 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"/>
+        <title>StickyMobile BootStrap</title>
+        <link rel="stylesheet" type="text/css" href="styles/defaults.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+        <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+        <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+    </head>
+    <body class="theme-light" data-highlight="highlight-red" data-gradient="body-default">
+        <div id="preloader">
+            <div class="spinner-border color-highlight" role="status"></div>
+        </div>
+        <div id="page">
+            <div class="header header-fixed header-logo-center header-auto-show">
+                <a href="index.html" class="header-title">Sticky Mobile</a>
+                <a href="#" data-back-button class="header-icon header-icon-1">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#" data-toggle-theme class="header-icon header-icon-4">
+                    <i class="fas fa-lightbulb"></i>
+                </a>
+                <a href="#" data-menu="menu-cart" class="header-icon header-icon-3">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+            <div id="footer-bar" class="footer-bar-1">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="index-components.html">
+                    <i class="fa fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="index-pages.html" class="active-nav">
+                    <i class="fa fa-heart"></i>
+                    <span>Pages</span>
+                </a>
+                <a href="index-search.html">
+                    <i class="fa fa-search"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" data-menu="menu-settings">
+                    <i class="fa fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            <div class="page-content">
+                <div class="content notch-clear">
+                    <div class="d-flex pt-2">
+                        <div class="align-self-center me-auto">
+                            <strong class="text-uppercase opacity-60 font-12">Welcome Back</strong>
+                            <h1 class="mt-n2 font-27">Grocery Home</h1>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" class="d-block" data-menu="menu-cart">
+                                <img src="images/grocery/6s.jpg" class="img-fluid shadow-xl rounded-circle" width="52" alt="img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content mt-n1">
+                    <div class="search-box bg-theme color-theme rounded-m shadow-l">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="border-0" placeholder="Cari Judul, Pengarang atau ISBN " data-search>
+                        <a href="#" class="clear-search disabled mt-0">
+                            <i class="fa fa-times color-red-dark"></i>
+                        </a>
+                    </div>
+                    <div class="search-results disabled-search-list mt-3">
+                        <div class="card card-style mx-0 px-2 p-0 mb-0">
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all coffee milk fresh dairy taste">
+                                <div>
+                                    <img src="images/grocery/6s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">Local Farm</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Fresh Milk</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $4.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per Gallon</span>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all fruit orange europe">
+                                <div>
+                                    <img src="images/grocery/7s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">European Import</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Oranges</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $6.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per 12 Pcs</span>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all fruit peach carolina usa">
+                                <div>
+                                    <img src="images/grocery/5s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">From Carolina</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Peaches</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $8.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per 6 Pcs</span>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all fruit tomato legume europe">
+                                <div>
+                                    <img src="images/grocery/12s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">Asian Import</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Tomatos</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $4.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per 8 Pcs</span>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all cucumber pickle legume europe">
+                                <div>
+                                    <img src="images/grocery/4s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">Australian Import</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Cucumber</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $4.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per 12 Pcs</span>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all salad cabbage legume europe">
+                                <div>
+                                    <img src="images/grocery/11s.jpg" class="rounded-sm me-3" width="50" alt="img">
+                                </div>
+                                <div>
+                                    <span class="color-highlight font-400 d-block pt-0 text-uppercase font-10">Local Farm</span>
+                                    <strong class="color-theme font-16 d-block mt-n2">Cabbage</strong>
+                                </div>
+                                <div class="ms-auto text-center align-self-center pe-2">
+                                    <h5 class="line-height-xs font-18 pt-3">
+                                        $1.<sup class="font-14">50</sup>
+                                    </h5>
+                                    <span class="font-9 d-block mt-n2">Price per 10 Pcs</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-no-results disabled mt-4">
+                    <div class="card card-style">
+                        <div class="content">
+                            <h1>Buku tidak ditemukan</h1>
+                            <p>Your search brought up no results. Try using a different keyword. Or try typying all
+to see all items in the demo. These can be linked to anything you want.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex px-3 mb-n3">
+                    <div class="align-self-center">
+                        <h4 class="mb-0">Featured Categories</h4>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" class="font-12">View All</a>
+                    </div>
+                </div>
+                <div class="splide double-slider slider-no-dots text-center visible-slider" id="double-slider-1a">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <a href="#" class="mx-3">
+                                    <div class="card card-style me-0 mb-0" style="background-image:url(images/grocery/10m.jpg);" data-card-height="150">
+                                        <div class="card-bottom p-2 px-3">
+                                            <h4 class="color-white">Specials</h4>
+                                        </div>
+                                        <div class="card-overlay bg-gradient opacity-80"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide">
+                                <a href="#" class="mx-3">
+                                    <div class="card card-style me-0 mb-0" style="background-image:url(images/grocery/7m.jpg);" data-card-height="150">
+                                        <div class="card-bottom p-2 px-3">
+                                            <h4 class="color-white">Fruit</h4>
+                                        </div>
+                                        <div class="card-overlay bg-gradient opacity-80"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide">
+                                <a href="#" class="mx-3">
+                                    <div class="card card-style me-0 mb-0" style="background-image:url(images/grocery/9m.jpg);" data-card-height="150">
+                                        <div class="card-bottom p-2 px-3">
+                                            <h4 class="color-white">Veggies</h4>
+                                        </div>
+                                        <div class="card-overlay bg-gradient opacity-80"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide">
+                                <a href="#" class="mx-3">
+                                    <div class="card card-style me-0 mb-0" style="background-image:url(images/grocery/2m.jpg);" data-card-height="150">
+                                        <div class="card-bottom p-2 px-3">
+                                            <h4 class="color-white">Grains</h4>
+                                        </div>
+                                        <div class="card-overlay bg-gradient opacity-80"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide">
+                                <a href="#" class="mx-3">
+                                    <div class="card card-style me-0 mb-0" style="background-image:url(images/grocery/6m.jpg);" data-card-height="150">
+                                        <div class="card-bottom p-2 px-3">
+                                            <h4 class="color-white">Dariy</h4>
+                                        </div>
+                                        <div class="card-overlay bg-gradient opacity-80"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex px-3">
+                    <div class="align-self-center">
+                        <h4 class="mb-0">Trending Produce</h4>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" class="font-12">View All</a>
+                    </div>
+                </div>
+                <div class="content mt-2 mb-n3">
+                    <div class="row">
+                        <div class="col-6 pe-2">
+                            <a href="#" class="card card-style mx-0 mb-3" data-menu="menu-product">
+                                <div class="card-top m-2">
+                                    <span class="bg-blue-dark font-11 px-2 py-1 font-700 rounded-xs shadow-xxl">15% OFF</span>
+                                </div>
+                                <img src="images/grocery/isolated/11.png" alt="img" width="100" class="mx-auto">
+                                <div class="p-2">
+                                    <h4 class="mb-0">Fresh Oranges</h4>
+                                    <p class="mb-0 font-11 mt-n1">Imported from Europe</p>
+                                </div>
+                                <div class="divider mb-0"></div>
+                                <h5 class="p-2 font-12">
+                                    $5.40 / pack <span class="float-end font-400 font-11 color-green-dark">In Stock</span>
+                                </h5>
+                            </a>
+                        </div>
+                        <div class="col-6 ps-2">
+                            <a href="#" class="card card-style mx-0 mb-3" data-menu="menu-product">
+                                <div class="card-top m-2">
+                                    <span class="bg-blue-dark font-11 px-2 py-1 font-700 rounded-xs shadow-xxl">25% OFF</span>
+                                </div>
+                                <img src="images/grocery/isolated/6.png" alt="img" width="100" class="mx-auto">
+                                <div class="p-2">
+                                    <h4 class="mb-0">Iceberg Salad</h4>
+                                    <p class="mb-0 font-11 mt-n1">Local Farm Imported</p>
+                                </div>
+                                <div class="divider mb-0"></div>
+                                <h5 class="p-2 font-12">
+                                    $3.20 / pack <span class="float-end font-400 font-11 color-yellow-dark">Low Stock</span>
+                                </h5>
+                            </a>
+                        </div>
+                        <div class="col-6 pe-2">
+                            <a href="#" class="card card-style mx-0 mb-3" data-menu="menu-product">
+                                <div class="card-top m-2">
+                                    <span class="bg-blue-dark font-11 px-2 py-1 font-700 rounded-xs shadow-xxl">5% OFF</span>
+                                </div>
+                                <img src="images/grocery/isolated/3.png" alt="img" width="100" class="mx-auto">
+                                <div class="p-2">
+                                    <h4 class="mb-0">Strawberries</h4>
+                                    <p class="mb-0 font-11 mt-n1">Imported from Australia</p>
+                                </div>
+                                <div class="divider mb-0"></div>
+                                <h5 class="p-2 font-12">
+                                    $7.30 / pack <span class="float-end font-400 font-11 color-red-dark">Out of Stock</span>
+                                </h5>
+                            </a>
+                        </div>
+                        <div class="col-6 ps-2">
+                            <a href="#" class="card card-style mx-0 mb-3" data-menu="menu-product">
+                                <div class="card-top m-2">
+                                    <span class="bg-blue-dark font-11 px-2 py-1 font-700 rounded-xs shadow-xxl">35% OFF</span>
+                                </div>
+                                <img src="images/grocery/isolated/7.png" alt="img" width="100" class="mx-auto">
+                                <div class="p-2">
+                                    <h4 class="mb-0">Bananas</h4>
+                                    <p class="mb-0 font-11 mt-n1">Local Farm Imported</p>
+                                </div>
+                                <div class="divider mb-0"></div>
+                                <h5 class="p-2 font-12">
+                                    $9.50 / pack <span class="float-end font-400 font-11 color-blue-dark">Order Now</span>
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex px-3 mb-2">
+                    <div class="align-self-center">
+                        <h4 class="mb-0">Offers for You</h4>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" class="font-12">View All</a>
+                    </div>
+                </div>
+                <div class="card card-style" style="background-image:url(images/grocery/5.jpg)" data-card-height="170">
+                    <div class="card-top p-3">
+                        <a href="#" data-menu="menu-offer" class="btn btn-s bg-white color-black rounded-s scale-box font-700 text-uppercase float-end">Get Offer</a>
+                    </div>
+                    <div class="card-center">
+                        <div class="bg-white d-inline-block px-4 py-3 ms-n3 rounded-m">
+                            <h1 class="ps-2 color-black font-24 font-800 mb-n1">40% Off</h1>
+                            <p class="ps-2 color-black font-12 mb-0">All Fruits Today</p>
+                        </div>
+                    </div>
+                    <div class="card-overlay bg-black opacity-40"></div>
+                </div>
+                <div class="d-flex px-3 mb-2">
+                    <div class="align-self-center">
+                        <h4 class="mb-0">What we Recommend</h4>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" data-menu="menu-cart" class="font-12">View Cart</a>
+                    </div>
+                </div>
+                <div class="splide single-slider slider-no-dots slider-no-arrows visible-slider" id="single-slider-3">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="card card-style">
+                                    <img src="images/grocery/5w.jpg" alt="img" class="img-fluid">
+                                    <div class="content mt-3">
+                                        <h2>
+                                            Peaches <span class="float-end">$7.50</span>
+                                        </h2>
+                                        <p class="mb-3">Freshly delivered from exotic regions for an added sweet taste.
+</p>
+                                        <div>
+                                            <div class="stepper rounded-s ms-n1 float-start">
+                                                <a href="#" class="stepper-sub">
+                                                    <i class="fa fa-minus color-theme opacity-40"></i>
+                                                </a>
+                                                <input type="number" min="1" max="99" value="3">
+                                                <a href="#" class="stepper-add">
+                                                    <i class="fa fa-plus color-theme opacity-40"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-s rounded-s text-uppercase bg-blue-dark float-end font-700" data-toast="snackbar-1">Add to Bag</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="card card-style">
+                                    <img src="images/grocery/2w.jpg" alt="img" class="img-fluid">
+                                    <div class="content mt-3">
+                                        <h2>
+                                            Bread <span class="float-end">$1.30</span>
+                                        </h2>
+                                        <p class="mb-3">With wheat from local farms for added richness, texture and flavor.
+</p>
+                                        <div>
+                                            <div class="stepper rounded-s ms-n1 float-start">
+                                                <a href="#" class="stepper-sub">
+                                                    <i class="fa fa-minus color-theme opacity-40"></i>
+                                                </a>
+                                                <input type="number" min="1" max="99" value="3">
+                                                <a href="#" class="stepper-add">
+                                                    <i class="fa fa-plus color-theme opacity-40"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-s rounded-s text-uppercase bg-blue-dark float-end font-700" data-toast="snackbar-1">Add to Bag</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="card card-style">
+                                    <img src="images/grocery/1w.jpg" alt="img" class="img-fluid">
+                                    <div class="content mt-3">
+                                        <h2>
+                                            Cranberries <span class="float-end">$3.45</span>
+                                        </h2>
+                                        <p class="mb-3">Freshly farmed from the mountain, grown organically with no preservatives.
+</p>
+                                        <div>
+                                            <div class="stepper rounded-s ms-n1 float-start">
+                                                <a href="#" class="stepper-sub">
+                                                    <i class="fa fa-minus color-theme opacity-40"></i>
+                                                </a>
+                                                <input type="number" min="1" max="99" value="3">
+                                                <a href="#" class="stepper-add">
+                                                    <i class="fa fa-plus color-theme opacity-40"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-s rounded-s text-uppercase bg-blue-dark float-end font-700" data-toast="snackbar-1">Add to Bag</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex px-3 mb-2">
+                    <div class="align-self-center">
+                        <h4 class="mb-0">Tap to your Cart</h4>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" data-menu="menu-cart" class="font-12">View Cart</a>
+                    </div>
+                </div>
+                <div class="splide single-slider slider-no-arrows visible-slider slider-no-dots" id="single-slider-2">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide ps-3">
+                                <a href="#" data-toast="snackbar-1" class="card card-style mx-0">
+                                    <div class="content">
+                                        <div class="d-flex">
+                                            <div>
+                                                <img src="images/grocery/6t.jpg" class="rounded-m me-3" alt="milk" width="110">
+                                            </div>
+                                            <div>
+                                                <h3>Milk</h3>
+                                                <p class="line-height-s mb-3">Delivered from the farm this morning.
+</p>
+                                                <strong class="color-theme font-15">$3.40</strong>
+                                                <span class="float-end px-2 py-1 mt-n1 color-blue-dark">Order</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide ps-3">
+                                <a href="#" data-toast="snackbar-1" class="card card-style mx-0">
+                                    <div class="content">
+                                        <div class="d-flex">
+                                            <div>
+                                                <img src="images/grocery/5t.jpg" class="rounded-m me-3" alt="milk" width="110">
+                                            </div>
+                                            <div>
+                                                <h3>Peaches</h3>
+                                                <p class="line-height-s mb-3">Local farm provides daily fresh.
+</p>
+                                                <strong class="color-theme font-15">$3.40</strong>
+                                                <span class="float-end px-2 py-1 mt-n1 color-blue-dark">Order</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="splide__slide ps-3">
+                                <a href="#" data-toast="snackbar-1" class="card card-style mx-0">
+                                    <div class="content">
+                                        <div class="d-flex">
+                                            <div>
+                                                <img src="images/grocery/11t.jpg" class="rounded-m me-3" alt="milk" width="110">
+                                            </div>
+                                            <div>
+                                                <h3>Iceberg</h3>
+                                                <p class="line-height-s mb-3">Fresh and always crunchy just for you
+</p>
+                                                <strong class="color-theme font-15">$3.40</strong>
+                                                <span class="float-end px-2 py-1 mt-n1 color-blue-dark">Order</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer card card-style">
+                    <a href="#" class="footer-title">
+                        <span class="color-highlight">StickyMobile</span>
+                    </a>
+                    <p class="footer-text">
+                        <span>
+                            Made with <i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>
+                            by Enabled
+                        </span>
+                        <br>
+                        <br>Powered by the best Mobile Website Developer on Envato Market. Elite Quality. Elite Products.
+                    </p>
+                    <div class="text-center mb-3">
+                        <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-phone">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                        <a href="#" data-menu="menu-share" class="icon icon-xs rounded-sm me-1 shadow-l bg-red-dark">
+                            <i class="fa fa-share-alt"></i>
+                        </a>
+                        <a href="#" class="back-to-top icon icon-xs rounded-sm shadow-l bg-dark-light">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                    </div>
+                    <p class="footer-copyright">
+                        Copyright &copy;Enabled <span id="copyright-year">2017</span>
+                        . All Rights Reserved.
+                    </p>
+                    <p class="footer-links">
+                        <a href="#" class="color-highlight">Privacy Policy</a>
+                        | <a href="#" class="color-highlight">Terms and Conditions</a>
+                        | <a href="#" class="back-to-top color-highlight">Back to Top</a>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="snackbar-1" class="snackbar-toast bg-green-dark color-white" data-bs-delay="1000" data-autohide="true">
+                <i class="fa fa-check-circle me-3"></i>
+                Added Produce to Cart
+            </div>
+            <div id="menu-offer" class="menu menu-box-bottom menu-box-detached" data-menu-height="360">
+                <div class="card card-style mx-0 rounded-0" style="background-image:url(images/grocery/5.jpg)" data-card-height="170">
+                    <div class="card-center">
+                        <div class="bg-white d-inline-block px-4 py-3 ms-n3 rounded-m">
+                            <h1 class="ps-2 color-black font-22 font-800 mb-n1">40% Off for You</h1>
+                            <p class="ps-2 color-black font-12 mb-0">Help your Local Businesses</p>
+                        </div>
+                    </div>
+                    <div class="card-overlay bg-black opacity-40 rounded-0"></div>
+                </div>
+                <div class="content mt-n2">
+                    <h1>Here for Small Owners</h1>
+                    <p class="mb-3">This offer applies to any product from the fruit category from locals and applies directly in your cart.
+</p>
+                    <a href="#" class="btn btn-m rounded-sm text-uppercase font-700 btn-full bg-highlight">View Categories</a>
+                </div>
+            </div>
+            <div id="menu-product" class="menu menu-box-bottom menu-box-detached" data-menu-height="410">
+                <div class="card card-style mx-0 rounded-0" style="background-image:url(images/grocery/7m.jpg)" data-card-height="200">
+                    <div class="card-top">
+                        <a href="#" class="btn btn-s bg-white color-black text-uppercase font-700 float-end m-3 scale-box">Order</a>
+                    </div>
+                    <div class="card-top">
+                        <a href="#" class="icon icon-xxs rounded-s bg-white color-black text-uppercase font-700 m-3">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="card-bottom p-3">
+                        <div class="d-flex">
+                            <div>
+                                <h1 class="color-white mb-n1">Oranges</h1>
+                                <p class="color-white mb-0 opacity-70 font-12">Imported from Europe</p>
+                            </div>
+                            <div class="ms-auto">
+                                <h1 class="color-white mb-n1 text-end">$2.99</h1>
+                                <p class="color-white opacity-30 mb-0 font-11 text-end">per 1 pack</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-overlay bg-gradient rounded-0"></div>
+                </div>
+                <div class="content mt-n3">
+                    <p class="mb-2">A rich source of vitamins and energy, the starter of any day and a rich source of Vitamin C.
+</p>
+                    <div class="divider mb-3"></div>
+                    <h5 class="font-12 mb-3">Nutritional Values</h5>
+                    <div class="row mb-0 text-center">
+                        <div class="col-3">
+                            <div class="border border-theme rounded-s p-1">
+                                <span class="d-block font-9 mb-n2 color-theme">Calories</span>
+                                <strong class="d-block font-14 color-theme font-800">151</strong>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="border border-theme rounded-s p-1">
+                                <span class="d-block font-9 mb-n2 color-theme">Protein</span>
+                                <strong class="d-block font-14 color-theme font-800">5.5 g</strong>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="border border-theme rounded-s p-1">
+                                <span class="d-block font-9 mb-n2 color-theme">Fat</span>
+                                <strong class="d-block font-14 color-theme font-800">1.5 g</strong>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="border border-theme rounded-s p-1">
+                                <span class="d-block font-9 mb-n2 color-theme">Carbs</span>
+                                <strong class="d-block font-14 color-theme font-800">86.5 g</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-cart" class="menu menu-box-bottom menu-box-detached">
+                <div class="menu-title">
+                    <h1>Shopping Bag</h1>
+                    <p class="color-highlight">Your Current Cart Products</p>
+                    <a href="#" class="close-menu">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="divider divider-margins"></div>
+                <div class="content mb-0">
+                    <div class="d-flex mb-4">
+                        <div>
+                            <img src="images/grocery/7s.jpg" class="rounded-m shadow-xl" width="100" alt="img">
+                        </div>
+                        <div class="ms-3 w-100">
+                            <h3>Organic Oranges</h3>
+                            <p class="mb-3 mt-n1">European Imported</p>
+                            <div class="stepper rounded-s scale-switch ms-n1 float-start">
+                                <a href="#" class="stepper-sub">
+                                    <i class="fa fa-minus color-theme opacity-40"></i>
+                                </a>
+                                <input type="number" min="1" max="99" value="3">
+                                <a href="#" class="stepper-add">
+                                    <i class="fa fa-plus color-theme opacity-40"></i>
+                                </a>
+                            </div>
+                            <h5 class="float-end pt-1">$12.10</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div>
+                            <img src="images/grocery/5s.jpg" class="rounded-m shadow-xl" width="100" alt="img">
+                        </div>
+                        <div class="ms-3 w-100">
+                            <h3>Ripe Peaches</h3>
+                            <p class="mb-3 mt-n1">From Our Local Farms</p>
+                            <div class="stepper rounded-s scale-switch ms-n1 float-start">
+                                <a href="#" class="stepper-sub">
+                                    <i class="fa fa-minus color-theme opacity-40"></i>
+                                </a>
+                                <input type="number" min="1" max="99" value="3">
+                                <a href="#" class="stepper-add">
+                                    <i class="fa fa-plus color-theme opacity-40"></i>
+                                </a>
+                            </div>
+                            <h5 class="float-end pt-1">$12.10</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider divider-margins"></div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="btn btn-full btn-m font-800 rounded-sm text-uppercase bg-green-dark">Cart Page</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn btn-full btn-m font-800 rounded-sm text-uppercase bg-blue-dark">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
+                <div class="menu-title mt-0 pt-0">
+                    <h1>Settings</h1>
+                    <p class="color-highlight">Flexible and Easy to Use</p>
+                    <a href="#" class="close-menu">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="divider divider-margins mb-n2"></div>
+                <div class="content">
+                    <div class="list-group list-custom-small">
+                        <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ms-n1">
+                            <i class="fa font-12 fa-moon rounded-s bg-highlight color-white me-3"></i>
+                            <span>Dark Mode</span>
+                            <div class="custom-control scale-switch ios-switch">
+                                <input data-toggle-theme type="checkbox" class="ios-input" id="switch-dark-mode">
+                                <label class="custom-control-label" for="switch-dark-mode"></label>
+                            </div>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div class="list-group list-custom-large">
+                        <a data-menu="menu-highlights" href="#">
+                            <i class="fa font-14 fa-tint bg-green-dark rounded-s"></i>
+                            <span>Page Highlight</span>
+                            <strong>16 Colors Highlights Included</strong>
+                            <span class="badge bg-highlight color-white">HOT</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a data-menu="menu-backgrounds" href="#" class="border-0">
+                            <i class="fa font-14 fa-cog bg-blue-dark rounded-s"></i>
+                            <span>Background Color</span>
+                            <strong>10 Page Gradients Included</strong>
+                            <span class="badge bg-highlight color-white">NEW</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached">
+                <div class="menu-title">
+                    <h1>Highlights</h1>
+                    <p class="color-highlight">Any Element can have a Highlight Color</p>
+                    <a href="#" class="close-menu">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="divider divider-margins mb-n2"></div>
+                <div class="content">
+                    <div class="highlight-changer">
+                        <a href="#" data-change-highlight="blue">
+                            <i class="fa fa-circle color-blue-dark"></i>
+                            <span class="color-blue-light">Default</span>
+                        </a>
+                        <a href="#" data-change-highlight="red">
+                            <i class="fa fa-circle color-red-dark"></i>
+                            <span class="color-red-light">Red</span>
+                        </a>
+                        <a href="#" data-change-highlight="orange">
+                            <i class="fa fa-circle color-orange-dark"></i>
+                            <span class="color-orange-light">Orange</span>
+                        </a>
+                        <a href="#" data-change-highlight="pink2">
+                            <i class="fa fa-circle color-pink2-dark"></i>
+                            <span class="color-pink-dark">Pink</span>
+                        </a>
+                        <a href="#" data-change-highlight="magenta">
+                            <i class="fa fa-circle color-magenta-dark"></i>
+                            <span class="color-magenta-light">Purple</span>
+                        </a>
+                        <a href="#" data-change-highlight="aqua">
+                            <i class="fa fa-circle color-aqua-dark"></i>
+                            <span class="color-aqua-light">Aqua</span>
+                        </a>
+                        <a href="#" data-change-highlight="teal">
+                            <i class="fa fa-circle color-teal-dark"></i>
+                            <span class="color-teal-light">Teal</span>
+                        </a>
+                        <a href="#" data-change-highlight="mint">
+                            <i class="fa fa-circle color-mint-dark"></i>
+                            <span class="color-mint-light">Mint</span>
+                        </a>
+                        <a href="#" data-change-highlight="green">
+                            <i class="fa fa-circle color-green-light"></i>
+                            <span class="color-green-light">Green</span>
+                        </a>
+                        <a href="#" data-change-highlight="grass">
+                            <i class="fa fa-circle color-green-dark"></i>
+                            <span class="color-green-dark">Grass</span>
+                        </a>
+                        <a href="#" data-change-highlight="sunny">
+                            <i class="fa fa-circle color-yellow-light"></i>
+                            <span class="color-yellow-light">Sunny</span>
+                        </a>
+                        <a href="#" data-change-highlight="yellow">
+                            <i class="fa fa-circle color-yellow-dark"></i>
+                            <span class="color-yellow-light">Goldish</span>
+                        </a>
+                        <a href="#" data-change-highlight="brown">
+                            <i class="fa fa-circle color-brown-dark"></i>
+                            <span class="color-brown-light">Wood</span>
+                        </a>
+                        <a href="#" data-change-highlight="night">
+                            <i class="fa fa-circle color-dark-dark"></i>
+                            <span class="color-dark-light">Night</span>
+                        </a>
+                        <a href="#" data-change-highlight="dark">
+                            <i class="fa fa-circle color-dark-light"></i>
+                            <span class="color-dark-light">Dark</span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a href="#" data-menu="menu-settings" class="mb-3 btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
+                </div>
+            </div>
+            <div id="menu-backgrounds" class="menu menu-box-bottom menu-box-detached">
+                <div class="menu-title">
+                    <h1>Backgrounds</h1>
+                    <p class="color-highlight">Change Page Color Behind Content Boxes</p>
+                    <a href="#" class="close-menu">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="divider divider-margins mb-n2"></div>
+                <div class="content">
+                    <div class="background-changer">
+                        <a href="#" data-change-background="default">
+                            <i class="bg-theme"></i>
+                            <span class="color-dark-dark">Default</span>
+                        </a>
+                        <a href="#" data-change-background="plum">
+                            <i class="body-plum"></i>
+                            <span class="color-plum-dark">Plum</span>
+                        </a>
+                        <a href="#" data-change-background="magenta">
+                            <i class="body-magenta"></i>
+                            <span class="color-dark-dark">Magenta</span>
+                        </a>
+                        <a href="#" data-change-background="dark">
+                            <i class="body-dark"></i>
+                            <span class="color-dark-dark">Dark</span>
+                        </a>
+                        <a href="#" data-change-background="violet">
+                            <i class="body-violet"></i>
+                            <span class="color-violet-dark">Violet</span>
+                        </a>
+                        <a href="#" data-change-background="red">
+                            <i class="body-red"></i>
+                            <span class="color-red-dark">Red</span>
+                        </a>
+                        <a href="#" data-change-background="green">
+                            <i class="body-green"></i>
+                            <span class="color-green-dark">Green</span>
+                        </a>
+                        <a href="#" data-change-background="sky">
+                            <i class="body-sky"></i>
+                            <span class="color-sky-dark">Sky</span>
+                        </a>
+                        <a href="#" data-change-background="orange">
+                            <i class="body-orange"></i>
+                            <span class="color-orange-dark">Orange</span>
+                        </a>
+                        <a href="#" data-change-background="yellow">
+                            <i class="body-yellow"></i>
+                            <span class="color-yellow-dark">Yellow</span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a href="#" data-menu="menu-settings" class="mb-3 btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
+                </div>
+            </div>
+            <div id="menu-share" class="menu menu-box-bottom menu-box-detached">
+                <div class="menu-title mt-n1">
+                    <h1>Share the Love</h1>
+                    <p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p>
+                    <a href="#" class="close-menu">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="content mb-0">
+                    <div class="divider mb-0"></div>
+                    <div class="list-group list-custom-small list-icon-0">
+                        <a href="auto_generated" class="shareToFacebook external-link">
+                            <i class="font-18 fab fa-facebook-square color-facebook"></i>
+                            <span class="font-13">Facebook</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="auto_generated" class="shareToTwitter external-link">
+                            <i class="font-18 fab fa-twitter-square color-twitter"></i>
+                            <span class="font-13">Twitter</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="auto_generated" class="shareToLinkedIn external-link">
+                            <i class="font-18 fab fa-linkedin color-linkedin"></i>
+                            <span class="font-13">LinkedIn</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="auto_generated" class="shareToWhatsApp external-link">
+                            <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
+                            <span class="font-13">WhatsApp</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="auto_generated" class="shareToMail external-link border-0">
+                            <i class="font-18 fa fa-envelope-square color-mail"></i>
+                            <span class="font-13">Email</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/custom.js"></script>
+    </body>

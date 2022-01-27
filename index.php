@@ -23,7 +23,6 @@ echo $stat::test_static() . '<br>';
 echo SI_LoadAdminLink("index.php") . '<br>';
 //echo SI_LoadPage("default") . '<br>';
 
-?>
-<?php
+
 require_once SI_THEME . 'default/footer.php';
 ?>
